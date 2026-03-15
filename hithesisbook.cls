@@ -380,8 +380,6 @@
 }
 \ifhit@english
 \makenoidxglossaries
-\else
-\makeglossaries
 \fi
 \ifhit@library\hit@openrightfalse\else\relax\fi
 \let\hit@cleardoublepage\cleardoublepage
@@ -1271,7 +1269,7 @@
     \parbox[t][3.4cm][t]{\textwidth}{
   \begin{center}\erhao[0]\heiti\hit@ctitlecover\end{center} }
     \parbox[t][9cm][t]{\textwidth}{
-    \begin{center}\xiaoer[0]\songti\textbf{\hit@cauthor}\end{center}
+    \begin{center}\xiaoer[0]\hitsongfakebf{\hit@cauthor}\end{center}
   }
   \begin{center}
     \setlength{\hit@title@width}{4em}
@@ -1302,7 +1300,7 @@
     \end{tabular}
     \end{center}
     \vspace{2.6cm}
-    {\xiaosi[0]\songti\textbf{%
+    {\xiaosi[0]\hitsongfakebf{%
       \hit@firstpagecdate
       }
     }
@@ -1426,12 +1424,12 @@
     \ifhit@subtitle\hit@title@esep\MakeUppercase{\hit@esubtitle}\fi}\end{center}}
 
     \parbox[t][7.4cm][t]{\textwidth}{
-    \begin{center}\xiaoer\songti\textbf{\hit@cauthor}\end{center}}\\
+    \begin{center}\xiaoer\hitsongfakebf{\hit@cauthor}\end{center}}\\
     \ifhit@harbin\ifhit@bachelor
     \vspace{-12.5mm}
     \fi\fi
     \parbox[t][\hit@schoolname@nddate][t]{\textwidth}{\centering{\CJKfontspec[AutoFakeBold=3.0]{KaiTi}\xiaoer\bfseries\hit@cschoolname}}
-    {\songti\xiaoer\textbf{\hit@firstpagecdate}}
+    {\xiaoer\hitsongfakebf{\hit@firstpagecdate}}
 \end{center}
 }
 
@@ -2035,6 +2033,8 @@
 \endinput
 %%
 %% End of file `examples/hitbook/chinese/hithesisbook.cls'.
+
+
 
 
 

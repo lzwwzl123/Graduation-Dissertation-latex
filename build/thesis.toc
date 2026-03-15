@@ -51,42 +51,42 @@
 \contentsline {section}{\numberline {2.6}图片}{14}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}博士毕业论文双语题注}{14}{subsection.2.6.1}%
 \contentsline {subsection}{\numberline {2.6.2}本硕论文题注}{15}{subsection.2.6.2}%
-\contentsline {subsection}{\numberline {2.6.3}引用图示例}{15}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.3}引用图示例}{16}{subsection.2.6.3}%
 \contentsline {subsection}{\numberline {2.6.4}并排图和子图}{16}{subsection.2.6.4}%
 \contentsline {subsubsection}{\numberline {2.6.4.1}并排图}{16}{subsubsection.2.6.4.1}%
 \contentsline {subsubsection}{\numberline {2.6.4.2}子图}{16}{subsubsection.2.6.4.2}%
 \contentsline {section}{\numberline {2.7}如何做出符合规范的漂亮的图}{22}{section.2.7}%
 \contentsline {subsection}{\numberline {2.7.1}Tikz作图举例}{22}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}R作图}{22}{subsection.2.7.2}%
 \contentsline {section}{\numberline {2.8}表格}{22}{section.2.8}%
 \contentsline {subsection}{\numberline {2.8.1}普通表格的绘制方法}{23}{subsection.2.8.1}%
-\contentsline {subsection}{\numberline {2.8.2}长表格的绘制方法}{24}{subsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.8.2}长表格的绘制方法}{23}{subsection.2.8.2}%
 \contentsline {subsection}{\numberline {2.8.3}列宽可调表格的绘制方法}{25}{subsection.2.8.3}%
 \contentsline {subsubsection}{\numberline {2.8.3.1}表格内某单元格内容过长的情况}{25}{subsubsection.2.8.3.1}%
-\contentsline {subsubsection}{\numberline {2.8.3.2}对物理量符号进行注释的情况}{26}{subsubsection.2.8.3.2}%
-\contentsline {subsubsection}{\numberline {2.8.3.3}排版横版表格的举例}{27}{subsubsection.2.8.3.3}%
-\contentsline {section}{\numberline {2.9}公式}{27}{section.2.9}%
-\contentsline {section}{\numberline {2.10}其他杂项}{27}{section.2.10}%
-\contentsline {subsection}{\numberline {2.10.1}右翻页}{27}{subsection.2.10.1}%
-\contentsline {subsection}{\numberline {2.10.2}算法}{27}{subsection.2.10.2}%
-\contentsline {subsection}{\numberline {2.10.3}脚注}{27}{subsection.2.10.3}%
-\contentsline {subsection}{\numberline {2.10.4}源码}{27}{subsection.2.10.4}%
-\contentsline {subsection}{\numberline {2.10.5}思源宋体}{29}{subsection.2.10.5}%
-\contentsline {subsection}{\numberline {2.10.6}专业绘图工具}{29}{subsection.2.10.6}%
-\contentsline {subsection}{\numberline {2.10.7}术语词汇管理}{29}{subsection.2.10.7}%
-\contentsline {subsection}{\numberline {2.10.8}\TeX \ 源码编辑器}{29}{subsection.2.10.8}%
-\contentsline {subsection}{\numberline {2.10.9}\LaTeX \ 排版重要原则}{29}{subsection.2.10.9}%
+\contentsline {subsubsection}{\numberline {2.8.3.2}对物理量符号进行注释的情况}{25}{subsubsection.2.8.3.2}%
+\contentsline {subsubsection}{\numberline {2.8.3.3}排版横版表格的举例}{26}{subsubsection.2.8.3.3}%
+\contentsline {section}{\numberline {2.9}公式}{26}{section.2.9}%
+\contentsline {section}{\numberline {2.10}其他杂项}{26}{section.2.10}%
+\contentsline {subsection}{\numberline {2.10.1}右翻页}{26}{subsection.2.10.1}%
+\contentsline {subsection}{\numberline {2.10.2}算法}{26}{subsection.2.10.2}%
+\contentsline {subsection}{\numberline {2.10.3}脚注}{28}{subsection.2.10.3}%
+\contentsline {subsection}{\numberline {2.10.4}源码}{28}{subsection.2.10.4}%
+\contentsline {subsection}{\numberline {2.10.5}中文伪斜体}{28}{subsection.2.10.5}%
+\contentsline {subsection}{\numberline {2.10.6}思源宋体}{28}{subsection.2.10.6}%
+\contentsline {subsection}{\numberline {2.10.7}专业绘图工具}{28}{subsection.2.10.7}%
+\contentsline {subsection}{\numberline {2.10.8}术语词汇管理}{28}{subsection.2.10.8}%
+\contentsline {subsection}{\numberline {2.10.9}\TeX \ 源码编辑器}{29}{subsection.2.10.9}%
+\contentsline {subsection}{\numberline {2.10.10}\LaTeX \ 排版重要原则}{29}{subsection.2.10.10}%
 \contentsline {section}{\numberline {2.11}关于捐助}{29}{section.2.11}%
-\contentsline {chapter}{\numberline {第3章}哈尔滨工业大学初砚硕课题组招(聘)全日制硕士、博士、助理研究员}{31}{chapter.3}%
-\contentsline {section}{\numberline {3.1}导师简介}{31}{section.3.1}%
-\contentsline {section}{\numberline {3.2}主要研究方向}{31}{section.3.2}%
-\contentsline {section}{\numberline {3.3}学术成果}{31}{section.3.3}%
-\contentsline {section}{\numberline {3.4}团队介绍}{31}{section.3.4}%
-\contentsline {section}{\numberline {3.5}其他介绍}{31}{section.3.5}%
-\contentsline {section}{\numberline {3.6}硕博士招生要求}{32}{section.3.6}%
-\contentsline {section}{\numberline {3.7}助理研究员招聘需求和待遇}{32}{section.3.7}%
-\contentsline {section}{\numberline {3.8}申请方式}{32}{section.3.8}%
-\contentsline {chapter}{\heiti 结\hspace {\ccwd }论}{33}{section*.11}%
-\contentsline {chapter}{\heiti 参考文献}{34}{section*.14}%
-\contentsline {chapter}{哈尔滨工业大学本科毕业论文（设计）原创性声明和使用权限}{35}{chapter*.16}%
-\contentsline {chapter}{\heiti 致\hspace {\ccwd }谢}{36}{section*.17}%
+\contentsline {chapter}{\numberline {第3章}哈尔滨工业大学初砚硕课题组招(聘)全日制硕士、博士、助理研究员}{30}{chapter.3}%
+\contentsline {section}{\numberline {3.1}导师简介}{30}{section.3.1}%
+\contentsline {section}{\numberline {3.2}主要研究方向}{30}{section.3.2}%
+\contentsline {section}{\numberline {3.3}学术成果}{30}{section.3.3}%
+\contentsline {section}{\numberline {3.4}团队介绍}{30}{section.3.4}%
+\contentsline {section}{\numberline {3.5}其他介绍}{30}{section.3.5}%
+\contentsline {section}{\numberline {3.6}硕博士招生要求}{31}{section.3.6}%
+\contentsline {section}{\numberline {3.7}助理研究员招聘需求和待遇}{31}{section.3.7}%
+\contentsline {section}{\numberline {3.8}申请方式}{31}{section.3.8}%
+\contentsline {chapter}{\heiti 结\hspace {\ccwd }论}{32}{section*.11}%
+\contentsline {chapter}{\heiti 参考文献}{33}{section*.14}%
+\contentsline {chapter}{哈尔滨工业大学本科毕业论文（设计）原创性声明和使用权限}{34}{chapter*.16}%
+\contentsline {chapter}{\heiti 致\hspace {\ccwd }谢}{35}{section*.17}%
