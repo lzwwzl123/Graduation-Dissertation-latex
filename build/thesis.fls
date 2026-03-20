@@ -550,6 +550,9 @@ INPUT E:\ctex\MiKTeX\tex\latex\jknappen\ursfs.fd
 INPUT E:\ctex\UserData\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT E:\ctex\UserData\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT E:\ctex\UserData\fonts\tfm\public\rsfs\rsfs10.tfm
+INPUT d:\桌面\毕业设计\毕业论文latex\build\thesis.toc
+INPUT d:\桌面\毕业设计\毕业论文latex\build\thesis.toc
+INPUT d:\桌面\毕业设计\毕业论文latex\build\thesis.toc
 INPUT E:\ctex\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-ot1.tfm
 INPUT E:\ctex\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-ot1.tfm
 INPUT E:\ctex\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-ot1.tfm
@@ -594,9 +597,6 @@ INPUT E:\ctex\MiKTeX\fonts\tfm\public\newtx\ntxbexx.tfm
 INPUT E:\ctex\MiKTeX\fonts\tfm\public\newtx\ntxbexx.tfm
 INPUT E:\ctex\UserData\fonts\tfm\public\rsfs\rsfs10.tfm
 INPUT E:\ctex\UserData\fonts\tfm\public\rsfs\rsfs5.tfm
-INPUT d:\桌面\毕业设计\毕业论文latex\build\thesis.toc
-INPUT d:\桌面\毕业设计\毕业论文latex\build\thesis.toc
-INPUT d:\桌面\毕业设计\毕业论文latex\build\thesis.toc
 OUTPUT d:\桌面\毕业设计\毕业论文latex\build\thesis.toc
 INPUT .\body\pre_introduction.tex
 INPUT .\body\pre_introduction.tex
@@ -633,6 +633,10 @@ INPUT E:\latex\fonts\tfm\public\cm\cmsy9.tfm
 INPUT .\figures\golfer.eps
 INPUT .\figures\golfer.eps
 INPUT figures\golfer.eps
+INPUT .\figures\golfer.eps
+INPUT .\figures\golfer.eps
+INPUT .\figures\golfer.eps
+INPUT .\figures\golfer.eps
 INPUT E:\ctex\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-ot1.tfm
 INPUT E:\ctex\MiKTeX\fonts\tfm\public\newtx\ntx-Regular-tlf-ot1.tfm
 INPUT E:\ctex\MiKTeX\fonts\tfm\public\newtx\ntxmi7.tfm
@@ -663,10 +667,6 @@ INPUT E:\ctex\MiKTeX\fonts\tfm\public\newtx\ntxbexx.tfm
 INPUT E:\ctex\MiKTeX\fonts\tfm\public\newtx\ntxbexx.tfm
 INPUT E:\ctex\UserData\fonts\tfm\public\rsfs\rsfs7.tfm
 INPUT E:\ctex\UserData\fonts\tfm\public\rsfs\rsfs5.tfm
-INPUT .\figures\golfer.eps
-INPUT .\figures\golfer.eps
-INPUT .\figures\golfer.eps
-INPUT .\figures\golfer.eps
 INPUT .\figures\golfer.eps
 INPUT .\figures\golfer.eps
 INPUT .\figures\golfer.eps

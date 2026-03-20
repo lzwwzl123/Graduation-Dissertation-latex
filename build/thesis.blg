@@ -24,44 +24,72 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Database file #1: reference.bib
-You've used 3 entries,
+Warning--Require citedate: barker1961simulator
+Warning--Require citedate: mohajer2021centrifugedesign
+Warning--Require citedate: winter2023centrifugeopt
+Warning--Require citedate: tu2020gtolerance
+Warning--Require citedate: liu2024centrifuge
+Warning--Require citedate: zhang2020groundsimulation
+Warning--Require citedate: zhang2022stateoftheart
+Warning--Require citedate: wang2025review
+Warning--Require citedate: chen2025cdprreview
+Warning--Require citedate: tempel2015expo
+Warning--Require citedate: lan2022sprayreview
+Warning--Require citedate: zhang2009greenhouse
+Warning--Require citedate: gouttefarde2007wrench
+Warning--Require citedate: phan2021wrenchclosure
+Warning--Require citedate: wang2022schonflies
+Warning--Require citedate: gonzalez2023singleloop
+Warning--Require citedate: juarez2022dynamiccontrol
+Warning--Require citedate: tang2015trajectory
+Warning--Require citedate: feiler2023mechatronic
+Warning--Require citedate: wang2024dynamictension
+Warning--Require citedate: piao2019indirectforce
+Warning--Require citedate: cao2023realtimetension
+Warning--Require citedate: song2024realtimemethod
+Warning--Require citedate: su2016cablemass
+Warning--Require citedate: chen2023hybrid
+Warning--Require citedate: li2019spherical
+Warning--Require citedate: cheah2024adaptive
+You've used 30 entries,
             3100 wiz_defined-function locations,
-            734 strings with 6432 characters,
-and the built_in function-call counts, 10421 in all, are:
-= -- 1300
-> -- 13
-< -- 13
-+ -- 1185
-- -- 46
-* -- 156
-:= -- 1331
+            951 strings with 14196 characters,
+and the built_in function-call counts, 155700 in all, are:
+= -- 20137
+> -- 164
+< -- 164
++ -- 18555
+- -- 581
+* -- 2281
+:= -- 20430
 add.period$ -- 0
-call.type$ -- 3
+call.type$ -- 30
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 3
-duplicate$ -- 1456
-empty$ -- 214
-format.name$ -- 40
-if$ -- 2872
+cite$ -- 57
+duplicate$ -- 22216
+empty$ -- 2378
+format.name$ -- 536
+if$ -- 42847
 int.to.chr$ -- 0
-int.to.str$ -- 3
+int.to.str$ -- 30
 missing$ -- 0
-newline$ -- 36
-num.names$ -- 3
-pop$ -- 80
+newline$ -- 117
+num.names$ -- 30
+pop$ -- 985
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 52
+skip$ -- 384
 stack$ -- 0
-substring$ -- 1328
-swap$ -- 133
+substring$ -- 20510
+swap$ -- 1679
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 83
-width$ -- 4
-write$ -- 66
+warning$ -- 27
+while$ -- 1011
+width$ -- 32
+write$ -- 518
+(There were 27 warnings)
