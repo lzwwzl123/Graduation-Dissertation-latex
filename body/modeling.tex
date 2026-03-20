@@ -1,0 +1,699 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{平面四绳机器人运动学、动力学与力分配建模}
+
+本章围绕高动态连续旋转平面四绳绳驱并联机器人的理论建模展开，结合本文仿真与控制程序中的
+实际实现方式，对机构的正逆运动学、速度雅可比关系、动力学方程以及冗余驱动条件下的张力分
+配算法进行系统推导。由于本文重点关注高动态加速度跟踪与力控制机理，为突出张力分配与加速
+度输出之间的关系，建模中将末端平台视为平面刚体，暂不考虑绳索质量、绳索弹性、空气阻力、摩擦力和
+重力项，将系统的主要非线性集中在几何缠绕关系与冗余张力分配问题中。
+
+\section{系统构型与符号定义}
+
+本文研究对象为平面四绳冗余驱动绳驱并联机器人，其末端动平台具有两个平移自由度和一个转动自由度，因此系统广义坐标定义为
+\begin{equation}
+  \bm q=\begin{bmatrix}
+    x & y & \theta
+  \end{bmatrix}^{\mathrm T},
+  \label{eq:model-q}
+\end{equation}
+其中，$x$、$y$ 分别为末端平台圆心在基坐标系中的位置坐标，$\theta$ 为动平台绕平面法向的转角，逆时针方向取正。
+
+在基坐标系 $\Sigma_b$ 下，四个基座锚点坐标分别记为
+\begin{equation}
+  \bm B_1=\begin{bmatrix}
+    b_x \\ b_y
+  \end{bmatrix},\quad
+  \bm B_2=\begin{bmatrix}
+    -b_x \\ b_y
+  \end{bmatrix},\quad
+  \bm B_3=\begin{bmatrix}
+    -b_x \\ -b_y
+  \end{bmatrix},\quad
+  \bm B_4=\begin{bmatrix}
+    b_x \\ -b_y
+  \end{bmatrix}.
+  \label{eq:model-base-anchor}
+\end{equation}
+根据仿真参数设置，有
+\begin{equation}
+  b_x=b_y=0.19\ \mathrm{m}.
+\end{equation}
+
+末端平台等效为半径为 $r_e$ 的圆盘，绕线轮半径为 $r_m$，平台质量为 $m$，绕质心转动惯量为 $I$。对应参数取值为
+\begin{equation}
+  r_e=0.03\ \mathrm{m},\qquad
+  r_m=0.055\ \mathrm{m},\qquad
+  m=0.25\ \mathrm{kg},\qquad
+  I=2.0\times 10^{-4}\ \mathrm{kg\cdot m^2}.
+\end{equation}
+
+设末端平台圆心位置为
+\begin{equation}
+  \bm p=\begin{bmatrix}
+    x \\ y
+  \end{bmatrix}.
+\end{equation}
+对第 $i$ 根绳，定义电机侧切点为 $\bm A_i$，平台侧切点为 $\bm E_i$，则绳索直线段向量为
+\begin{equation}
+  \bm c_i=\bm A_i-\bm E_i.
+  \label{eq:model-ci}
+\end{equation}
+其模长记为
+\begin{equation}
+  l_i=\|\bm c_i\|,
+\end{equation}
+相应的单位方向向量为
+\begin{equation}
+  \bm u_i=\frac{\bm c_i}{\|\bm c_i\|}.
+  \label{eq:model-ui}
+\end{equation}
+由于绳索只能承受拉力，故第 $i$ 根绳张力记为 $f_i$，满足
+\begin{equation}
+  f_i\ge 0.
+\end{equation}
+
+\section{逆运动学建模}
+
+\subsection{几何切线关系}
+
+在给定平台位姿 $\bm q$ 时，逆运动学的目标是求取四根绳的实际长度。由于本文机器人采用圆形末端平台与圆形绕线轮出绳方式，理论模型回对绕线盘（或出绳滑轮）上绳索长度进行补偿，每根绳索均可视为连接两个圆的外公切线。对第 $i$ 根绳而言，源圆为以 $\bm B_i$ 为圆心、半径为 $r_m$ 的绕线轮，目标圆为以 $\bm p$ 为圆心、半径为 $r_e$ 的末端平台。
+
+定义源圆指向目标圆的向量为
+\begin{equation}
+  \bm d_i=\bm p-\bm B_i,\qquad d_i=\|\bm d_i\|.
+  \label{eq:model-di}
+\end{equation}
+同时定义两圆半径差
+\begin{equation}
+  \Delta r=r_m-r_e.
+  \label{eq:model-dr}
+\end{equation}
+当
+\begin{equation}
+  d_i\ge |\Delta r|
+  \label{eq:model-tangent-exist}
+\end{equation}
+时，两圆存在外公切线。
+
+设外公切线对应的单位法向量为 $\bm n_i$，则其必须同时满足
+\begin{equation}
+  \bm d_i^{\mathrm T}\bm n_i=\Delta r,
+  \label{eq:model-ni-cond1}
+\end{equation}
+\begin{equation}
+  \|\bm n_i\|=1.
+  \label{eq:model-ni-cond2}
+\end{equation}
+记
+\begin{equation}
+  \bm d_i^\perp=
+  \begin{bmatrix}
+    -d_{iy} \\ d_{ix}
+  \end{bmatrix},
+\end{equation}
+则由平面几何关系可得两组候选法向量
+\begin{equation}
+  \bm n_i^{(\pm)}
+  =
+  \frac{\Delta r\,\bm d_i \pm \sqrt{d_i^2-\Delta r^2}\,\bm d_i^\perp}{d_i^2}.
+  \label{eq:model-ni-pm}
+\end{equation}
+
+进而得到两组候选切点
+\begin{equation}
+  \bm A_i^{(\pm)}=\bm B_i+r_m\bm n_i^{(\pm)},
+  \label{eq:model-ai-pm}
+\end{equation}
+\begin{equation}
+  \bm E_i^{(\pm)}=\bm p+r_e\bm n_i^{(\pm)}.
+  \label{eq:model-ei-pm}
+\end{equation}
+
+由于每个绕线轮存在预定缠绕方向，因此两组候选切线中仅有一组满足实际物理缠绕约束。设源圆半径向量和缆绳方向向量分别为
+\begin{equation}
+  \bm r_{a,i}^{(\pm)}=\bm A_i^{(\pm)}-\bm B_i,
+\end{equation}
+\begin{equation}
+  \bm l_i^{(\pm)}=\bm E_i^{(\pm)}-\bm A_i^{(\pm)}.
+\end{equation}
+则其二维叉乘
+\begin{equation}
+  \chi_i^{(\pm)}=
+  r_{a,ix}^{(\pm)} l_{iy}^{(\pm)}-
+  r_{a,iy}^{(\pm)} l_{ix}^{(\pm)}
+  \label{eq:model-winding-cross}
+\end{equation}
+可用于判定该切线对应的缠绕方向。当 $\chi_i^{(\pm)}>0$ 时，表示逆时针缠绕；当 $\chi_i^{(\pm)}<0$ 时，表示顺时针缠绕。根据四个电机预设的缠绕方向，即可从两组候选切线中选出唯一有效切线，从而得到实际切点 $\bm A_i$ 和 $\bm E_i$。
+
+\subsection{绳长表达式}
+
+在选定有效切线后，第 $i$ 根绳的直线段长度为
+\begin{equation}
+  L_{i,\mathrm{line}}=\|\bm A_i-\bm E_i\|=\sqrt{d_i^2-(r_m-r_e)^2}.
+  \label{eq:model-line-length}
+\end{equation}
+
+需要指出的是，本文机器人绳长并不仅包含两切点之间的直线距离，还包括平台侧和绕线轮侧的包络圆弧长度以及平台转角引起的附加缠绕长度。故总绳长写为
+\begin{equation}
+  L_i=\Delta L_{i,\theta}+L_{i,\mathrm{arc}}+L_{i,\mathrm{line}}+\Delta L_{i,m}.
+  \label{eq:model-total-length}
+\end{equation}
+
+其中，平台转角造成的平台侧附加长度记为
+\begin{equation}
+  \Delta L_{i,\theta}=s_i r_e\theta,
+  \label{eq:model-delta-theta}
+\end{equation}
+式中，方向符号
+\begin{equation}
+  \bm s=
+  \begin{bmatrix}
+    1 & -1 & 1 & -1
+  \end{bmatrix}^{\mathrm T}
+  \label{eq:model-s-sign}
+\end{equation}
+由本文四个电机的缠绕拓扑共同决定。
+
+设第 $i$ 根绳在平台侧的包角为 $\varphi_i$，则平台侧圆弧长度为
+\begin{equation}
+  L_{i,\mathrm{arc}}=r_e\varphi_i.
+  \label{eq:model-arc-length}
+\end{equation}
+同时，绕线轮侧包角取为平台侧包角的余角，则有
+\begin{equation}
+  \Delta L_{i,m}=r_m\left(\frac{\pi}{2}-\varphi_i\right).
+  \label{eq:model-delta-motor}
+\end{equation}
+
+于是第 $i$ 根绳总长度最终表示为
+\begin{equation}
+  L_i=s_i r_e\theta+r_e\varphi_i+\|\bm A_i-\bm E_i\|+r_m\left(\frac{\pi}{2}-\varphi_i\right).
+  \label{eq:model-li-final}
+\end{equation}
+
+在程序实现中，平台包角 $\varphi_i$ 通过切线方向角计算获得。设
+\begin{equation}
+  \alpha_i=\operatorname{atan2}(c_{iy},c_{ix}),
+\end{equation}
+则四根绳分别采用
+\begin{equation}
+  \varphi_1=\frac{\pi}{2}-\alpha_1,\qquad
+  \varphi_2=-\frac{\pi}{2}+\alpha_2,
+  \label{eq:model-angle12}
+\end{equation}
+\begin{equation}
+  \varphi_3=-\alpha_3-\frac{\pi}{2},\qquad
+  \varphi_4=\alpha_4+\frac{\pi}{2}.
+  \label{eq:model-angle34}
+\end{equation}
+由此即可在给定平台位姿 $\bm q$ 时求得四根绳长
+\begin{equation}
+  \bm L(\bm q)=
+  \begin{bmatrix}
+    L_1(\bm q) & L_2(\bm q) & L_3(\bm q) & L_4(\bm q)
+  \end{bmatrix}^{\mathrm T}.
+\end{equation}
+
+\section{正运动学建模}
+
+与逆运动学相比，正运动学需要根据四根绳长反求平台位姿，即已知
+\begin{equation}
+  \bm L^{d}=
+  \begin{bmatrix}
+    L_1^{d} & L_2^{d} & L_3^{d} & L_4^{d}
+  \end{bmatrix}^{\mathrm T},
+\end{equation}
+求解满足
+\begin{equation}
+  \bm L(\bm q)=\bm L^{d}
+  \label{eq:model-forward-basic}
+\end{equation}
+的位姿 $\bm q$。由于绳长表达式中包含外公切线选择、平台包角和绕线轮包角等非线性几何因素，难以得到解析形式的显式逆映射，因此本文采用数值优化方式求解正运动学。
+
+定义残差函数
+\begin{equation}
+  \bm e(\bm q)=\bm L(\bm q)-\bm L^{d},
+  \label{eq:model-e-q}
+\end{equation}
+相应地构造目标函数
+\begin{equation}
+  \Phi(\bm q)=\frac{1}{2}\bm e^{\mathrm T}(\bm q)\bm e(\bm q)
+  =\frac{1}{2}\sum_{i=1}^{4}\left(L_i(\bm q)-L_i^{d}\right)^2.
+  \label{eq:model-forward-objective}
+\end{equation}
+于是正运动学问题可转化为
+\begin{equation}
+  \bm q^\star=\arg\min_{\bm q}\Phi(\bm q).
+  \label{eq:model-forward-opt}
+\end{equation}
+
+当求得最优位姿时，应满足一阶必要条件
+\begin{equation}
+  \nabla\Phi(\bm q)=\bm J_L^{\mathrm T}(\bm q)\bm e(\bm q)=\bm 0,
+  \label{eq:model-forward-stationary}
+\end{equation}
+其中
+\begin{equation}
+  \bm J_L(\bm q)=\frac{\partial \bm L(\bm q)}{\partial \bm q}
+  \label{eq:model-jl}
+\end{equation}
+为绳长雅可比矩阵。
+
+若采用 Gauss--Newton 迭代思想，则位姿更新形式可写为
+\begin{equation}
+  \bm q_{k+1}
+  =
+  \bm q_k-
+  \left(\bm J_L^{\mathrm T}\bm J_L\right)^{-1}
+  \bm J_L^{\mathrm T}
+  \bm e(\bm q_k).
+  \label{eq:model-gauss-newton}
+\end{equation}
+本文程序实现中则通过非线性优化求解器直接对 \cref{eq:model-forward-opt} 进行求解，并以前一时刻位姿作为初值，以提升迭代收敛速度和轨迹连续性。
+
+\section{速度雅可比与结构矩阵}
+
+\subsection{绳长速度关系}
+
+设第 $i$ 根绳在平台侧切点相对于平台圆心的位置向量为
+\begin{equation}
+  \bm r_i=\bm E_i-\bm p.
+  \label{eq:model-ri}
+\end{equation}
+则切点速度可表示为平台平动速度与转动速度叠加：
+\begin{equation}
+  \dot{\bm E}_i=\dot{\bm p}+\dot{\theta}\bm r_i^\perp,
+  \label{eq:model-eidot}
+\end{equation}
+其中
+\begin{equation}
+  \bm r_i^\perp=
+  \begin{bmatrix}
+    -r_{iy} \\ r_{ix}
+  \end{bmatrix}.
+\end{equation}
+
+绳长变化率等于切点速度在绳索方向上的负投影，因此有
+\begin{equation}
+  \dot{L}_i=-\bm u_i^{\mathrm T}\dot{\bm E}_i.
+  \label{eq:model-lidot-1}
+\end{equation}
+代入 \cref{eq:model-eidot} 可得
+\begin{equation}
+  \dot{L}_i=
+  -\bm u_i^{\mathrm T}\dot{\bm p}
+  -\dot{\theta}\bm u_i^{\mathrm T}\bm r_i^\perp.
+  \label{eq:model-lidot-2}
+\end{equation}
+
+根据二维叉乘关系
+\begin{equation}
+  \bm r_i\times \bm u_i=r_{ix}u_{iy}-r_{iy}u_{ix},
+  \label{eq:model-cross2d}
+\end{equation}
+并利用
+\begin{equation}
+  \bm u_i^{\mathrm T}\bm r_i^\perp=-(\bm r_i\times \bm u_i),
+  \label{eq:model-perp-cross}
+\end{equation}
+可将 \cref{eq:model-lidot-2} 化为
+\begin{equation}
+  \dot{L}_i=
+  -
+  \begin{bmatrix}
+    u_{ix} & u_{iy} & \bm r_i\times \bm u_i
+  \end{bmatrix}
+  \dot{\bm q}.
+  \label{eq:model-lidot-final}
+\end{equation}
+
+\subsection{结构矩阵}
+
+定义第 $i$ 根绳对应的广义力映射列向量
+\begin{equation}
+  \bm w_i=
+  \begin{bmatrix}
+    u_{ix} \\ u_{iy} \\ \bm r_i\times \bm u_i
+  \end{bmatrix},
+  \label{eq:model-wi}
+\end{equation}
+则 \cref{eq:model-lidot-final} 可写为
+\begin{equation}
+  \dot{L}_i=-\bm w_i^{\mathrm T}\dot{\bm q}.
+\end{equation}
+将四根绳的关系叠加，有
+\begin{equation}
+  \dot{\bm L}=-\bm W^{\mathrm T}\dot{\bm q},
+  \label{eq:model-length-rate}
+\end{equation}
+其中
+\begin{equation}
+  \bm W=
+  \begin{bmatrix}
+    u_{1x} & u_{2x} & u_{3x} & u_{4x} \\
+    u_{1y} & u_{2y} & u_{3y} & u_{4y} \\
+    \bm r_1\times \bm u_1 &
+    \bm r_2\times \bm u_2 &
+    \bm r_3\times \bm u_3 &
+    \bm r_4\times \bm u_4
+  \end{bmatrix}.
+  \label{eq:model-wrench-matrix}
+\end{equation}
+矩阵 $\bm W$ 即本文程序中的结构矩阵或广义受力矩阵，其列向量表示单位张力在第 $i$ 根绳方向上作用时对平台产生的广义力贡献。
+
+\section{动力学建模}
+
+\subsection{末端平台广义受力}
+
+第 $i$ 根绳对平台施加的拉力为
+\begin{equation}
+  \bm F_i=f_i\bm u_i.
+  \label{eq:model-fi}
+\end{equation}
+该拉力对平台圆心的力矩为
+\begin{equation}
+  M_i=\bm r_i\times \bm F_i=f_i(\bm r_i\times \bm u_i).
+  \label{eq:model-mi}
+\end{equation}
+
+因此，四根绳共同产生的总广义力写为
+\begin{equation}
+  \bm \tau
+  =
+  \sum_{i=1}^{4}
+  \begin{bmatrix}
+    \bm F_i \\ M_i
+  \end{bmatrix}
+  =
+  \bm W\bm f,
+  \label{eq:model-tau}
+\end{equation}
+其中张力向量
+\begin{equation}
+  \bm f=
+  \begin{bmatrix}
+    f_1 & f_2 & f_3 & f_4
+  \end{bmatrix}^{\mathrm T}.
+  \label{eq:model-force-vector}
+\end{equation}
+
+\subsection{刚体动力学方程}
+
+为突出张力分配与加速度输出之间的主导关系，本文将末端平台视为平面刚体，并暂不计入重力、科氏项、绳索弹性和阻尼项。则末端平台广义惯性矩阵为
+\begin{equation}
+  \bm M=
+  \begin{bmatrix}
+    m & 0 & 0 \\
+    0 & m & 0 \\
+    0 & 0 & I
+  \end{bmatrix}.
+  \label{eq:model-matrix-m}
+\end{equation}
+由 Newton--Euler 方程可得平台动力学表达式
+\begin{equation}
+  \bm M\ddot{\bm q}=\bm W\bm f.
+  \label{eq:model-dynamics-basic}
+\end{equation}
+展开后有
+\begin{equation}
+  m\ddot{x}=\sum_{i=1}^{4}f_i u_{ix},
+  \label{eq:model-dyn-x}
+\end{equation}
+\begin{equation}
+  m\ddot{y}=\sum_{i=1}^{4}f_i u_{iy},
+  \label{eq:model-dyn-y}
+\end{equation}
+\begin{equation}
+  I\ddot{\theta}=\sum_{i=1}^{4}f_i\left(\bm r_i\times \bm u_i\right).
+  \label{eq:model-dyn-theta}
+\end{equation}
+
+若期望平台加速度为
+\begin{equation}
+  \ddot{\bm q}_d=
+  \begin{bmatrix}
+    \ddot{x}_d & \ddot{y}_d & \ddot{\theta}_d
+  \end{bmatrix}^{\mathrm T},
+  \label{eq:model-qdd-des}
+\end{equation}
+则所需目标广义力写为
+\begin{equation}
+  \bm \tau_d=\bm M\ddot{\bm q}_d
+  =
+  \begin{bmatrix}
+    m\ddot{x}_d \\ m\ddot{y}_d \\ I\ddot{\theta}_d
+  \end{bmatrix}.
+  \label{eq:model-target-wrench}
+\end{equation}
+故张力分配问题可以统一写成
+\begin{equation}
+  \bm W\bm f=\bm \tau_d.
+  \label{eq:model-balance}
+\end{equation}
+
+若采用更一般的写法，则平台动力学可表示为
+\begin{equation}
+  \bm M(\bm q)\ddot{\bm q}+\bm h(\bm q,\dot{\bm q})+\bm g(\bm q)=\bm W(\bm q)\bm f+\bm \tau_{\mathrm{ext}},
+  \label{eq:model-general-dynamics}
+\end{equation}
+本文当前仿真为突出力分配与加速度跟踪机理，取
+\begin{equation}
+  \bm h(\bm q,\dot{\bm q})=\bm 0,\qquad
+  \bm g(\bm q)=\bm 0,\qquad
+  \bm \tau_{\mathrm{ext}}=\bm 0,
+\end{equation}
+于是退化为 \cref{eq:model-dynamics-basic}。
+\section{本章小结}
+本章从平面四绳绳驱并联机器人的实际机构出发，建立了与程序实现一致的逆运动学、正运动学、速度雅可比、动力学和张力分配模型。首先，通过外公切线几何关系推导了平台侧和电机侧切点求解方法，并给出了包含平台缠绕、直线段和绕线轮包角的完整绳长表达式；其次，将正运动学转化为非线性最小二乘优化问题，建立了面向实际求解的位姿反算模型；随后，在广义力映射关系基础上推导了平面刚体动力学方程，明确了目标加速度与目标广义力之间的对应关系；最后，针对 4 索 3 自由度系统的 1 冗余特性，给出了张力平衡方程通解、可行区间求解以及重心法、最小范数法和解析中心法的详细推导，为后续控制器设计与仿真分析提供了理论基础。
+\chapter{冗余驱动下的张力分配与优化}
+
+\section{算法的数学推导}
+\subsection{问题描述}
+由于系统共有 4 根绳，而平台只有 3 个自由度，因此 \cref{eq:model-balance} 中未知张力数量多于平衡方程数量，属于 1 冗余度驱动系统。与此同时，绳索只能承受拉力，并受到执行器和机构安全约束，因此每根绳张力还必须满足上下界：
+\begin{equation}
+  f_{i,\min}\le f_i\le f_{i,\max},\qquad i=1,2,3,4.
+  \label{eq:model-force-bound}
+\end{equation}
+
+于是张力分配问题可表示为
+\begin{equation}
+  \text{求}\ \bm f,
+  \qquad
+  \text{s.t.}\ \bm W\bm f=\bm \tau_d,\quad
+  \bm f_{\min}\le \bm f\le \bm f_{\max}.
+  \label{eq:model-force-distribution}
+\end{equation}
+其中
+\begin{equation}
+  \bm f_{\min}=
+  \begin{bmatrix}
+    f_{1,\min} & f_{2,\min} & f_{3,\min} & f_{4,\min}
+  \end{bmatrix}^{\mathrm T},
+\end{equation}
+\begin{equation}
+  \bm f_{\max}=
+  \begin{bmatrix}
+    f_{1,\max} & f_{2,\max} & f_{3,\max} & f_{4,\max}
+  \end{bmatrix}^{\mathrm T}.
+\end{equation}
+
+\subsection{平衡方程通解}
+
+首先求取 \cref{eq:model-balance} 的一个特解。利用 Moore--Penrose 广义逆，有
+\begin{equation}
+  \bm f_p=\bm W^{+}\bm \tau_d.
+  \label{eq:model-fp}
+\end{equation}
+
+再考虑对应的齐次方程
+\begin{equation}
+  \bm W\bm f_h=\bm 0.
+  \label{eq:model-homo}
+\end{equation}
+由于当前系统冗余度为 1，矩阵 $\bm W$ 的零空间维数为 1，记其单位零空间基向量为 $\bm n_s$，则有
+\begin{equation}
+  \bm W\bm n_s=\bm 0.
+  \label{eq:model-nullvec}
+\end{equation}
+于是平衡方程的全部解可表示为
+\begin{equation}
+  \bm f=\bm f_p+\lambda \bm n_s,
+  \label{eq:model-force-general}
+\end{equation}
+其中 $\lambda$ 为标量自由变量。
+
+验证如下：将 \cref{eq:model-force-general} 代入 \cref{eq:model-balance}，得
+\begin{equation}
+  \bm W\bm f
+  =
+  \bm W\bm f_p+\lambda \bm W\bm n_s
+  =
+  \bm \tau_d+\lambda\bm 0
+  =
+  \bm \tau_d.
+\end{equation}
+可见，任意满足 \cref{eq:model-force-general} 的张力向量都满足动力学平衡方程。
+
+\subsection{可行张力区间推导}
+
+将通解 \cref{eq:model-force-general} 代入张力约束 \cref{eq:model-force-bound}，对第 $i$ 根绳有
+\begin{equation}
+  f_{i,\min}\le f_{p,i}+\lambda n_{s,i}\le f_{i,\max}.
+  \label{eq:model-lambda-basic}
+\end{equation}
+
+当 $n_{s,i}>0$ 时，由 \cref{eq:model-lambda-basic} 得
+\begin{equation}
+  \frac{f_{i,\min}-f_{p,i}}{n_{s,i}}
+  \le
+  \lambda
+  \le
+  \frac{f_{i,\max}-f_{p,i}}{n_{s,i}}.
+  \label{eq:model-lambda-positive}
+\end{equation}
+
+当 $n_{s,i}<0$ 时，不等式方向反转，可得
+\begin{equation}
+  \frac{f_{i,\max}-f_{p,i}}{n_{s,i}}
+  \le
+  \lambda
+  \le
+  \frac{f_{i,\min}-f_{p,i}}{n_{s,i}}.
+  \label{eq:model-lambda-negative}
+\end{equation}
+
+当 $n_{s,i}=0$ 时，第 $i$ 根绳张力与 $\lambda$ 无关，此时必须直接满足
+\begin{equation}
+  f_{i,\min}\le f_{p,i}\le f_{i,\max},
+  \label{eq:model-lambda-zero}
+\end{equation}
+否则系统不存在可行解。
+
+因此，由所有绳共同决定的全局可行区间可写为
+\begin{equation}
+  \lambda_{\min}=\max_i \lambda_{i,\mathrm{low}},
+  \qquad
+  \lambda_{\max}=\min_i \lambda_{i,\mathrm{up}}.
+  \label{eq:model-lambda-interval}
+\end{equation}
+只有当
+\begin{equation}
+  \lambda_{\min}\le \lambda_{\max}
+  \label{eq:model-feasible-condition}
+\end{equation}
+时，张力分配问题存在可行解。若不满足 \cref{eq:model-feasible-condition}，则表明在当前位姿、当前目标加速度和当前张力上下界约束下，系统无法通过 4 根绳同时满足平衡方程和正张力约束。
+
+\subsection{重心法}
+
+在 1 冗余度条件下，可行张力集合在零空间参数上退化为一条闭区间，因此最简单的分配方式是取区间中点，即
+\begin{equation}
+  \lambda_c=\frac{\lambda_{\min}+\lambda_{\max}}{2}.
+  \label{eq:model-lambda-center}
+\end{equation}
+于是得到重心法张力解
+\begin{equation}
+  \bm f_c=\bm f_p+\lambda_c \bm n_s.
+  \label{eq:model-bary-center}
+\end{equation}
+
+重心法的优点在于计算简单、实现稳定，且所得解位于可行区间内部，不会直接贴近上下边界；其不足在于该方法未显式考虑各绳距边界的裕度均衡，也未考虑在不同边界斜率下的“内点最优性”，因此在高动态工况下不一定能够获得最优的鲁棒性。
+
+\subsection{最小范数法}
+
+为便于与其他方法比较，还可构造最小范数张力分配问题
+\begin{equation}
+  \min_{\bm f}\ \|\bm f\|_2^2,
+  \qquad
+  \text{s.t.}\ \bm W\bm f=\bm \tau_d.
+  \label{eq:model-min-norm}
+\end{equation}
+当不考虑上下界约束时，其闭式解为
+\begin{equation}
+  \bm f_{\min\text{-}\mathrm{norm}}
+  =
+  \bm W^{\mathrm T}
+  \left(\bm W\bm W^{\mathrm T}\right)^{-1}
+  \bm \tau_d.
+  \label{eq:model-minnorm-sol}
+\end{equation}
+
+该方法倾向于减小张力总幅值，但其求得的解可能违反正张力约束或上界约束，因此在绳驱并联机器人中通常仅作为对照基线，而不能直接作为最终控制分配策略。
+
+\subsection{解析中心法}
+
+考虑到高动态运动下需要尽量避免某根绳张力过于接近上下界，本文采用解析中心法作为主要张力分配策略。其核心思想是在可行域内部寻找一个距离所有边界都尽量“均衡”的内点。
+
+定义对数障碍目标函数
+\begin{equation}
+  \phi(\bm f)=
+  -\sum_{i=1}^{4}\ln\left(f_i-f_{i,\min}\right)
+  -\sum_{i=1}^{4}\ln\left(f_{i,\max}-f_i\right).
+  \label{eq:model-log-barrier}
+\end{equation}
+于是解析中心张力分配问题写为
+\begin{equation}
+  \min_{\bm f}\ \phi(\bm f),
+  \qquad
+  \text{s.t.}\ \bm W\bm f=\bm \tau_d.
+  \label{eq:model-analytic-center-opt}
+\end{equation}
+
+将通解 \cref{eq:model-force-general} 代入 \cref{eq:model-log-barrier}，可将问题转化为单变量优化：
+\begin{equation}
+  \min_{\lambda\in[\lambda_{\min},\lambda_{\max}]}\ \phi(\lambda),
+  \label{eq:model-phi-lambda-opt}
+\end{equation}
+其中
+\begin{equation}
+  \phi(\lambda)=
+  -\sum_{i=1}^{4}\ln\left(f_{p,i}+n_{s,i}\lambda-f_{i,\min}\right)
+  -\sum_{i=1}^{4}\ln\left(f_{i,\max}-f_{p,i}-n_{s,i}\lambda\right).
+  \label{eq:model-phi-lambda}
+\end{equation}
+
+对 \cref{eq:model-phi-lambda} 求一阶导数，有
+\begin{equation}
+  \phi'(\lambda)
+  =
+  -\sum_{i=1}^{4}
+  \frac{n_{s,i}}{f_{p,i}+n_{s,i}\lambda-f_{i,\min}}
+  +
+  \sum_{i=1}^{4}
+  \frac{n_{s,i}}{f_{i,\max}-f_{p,i}-n_{s,i}\lambda}.
+  \label{eq:model-phi-prime}
+\end{equation}
+
+进一步求二阶导数，得
+\begin{equation}
+  \phi''(\lambda)
+  =
+  \sum_{i=1}^{4}
+  \frac{n_{s,i}^2}{\left(f_{p,i}+n_{s,i}\lambda-f_{i,\min}\right)^2}
+  +
+  \sum_{i=1}^{4}
+  \frac{n_{s,i}^2}{\left(f_{i,\max}-f_{p,i}-n_{s,i}\lambda\right)^2}.
+  \label{eq:model-phi-second}
+\end{equation}
+
+由 \cref{eq:model-phi-second} 可知
+\begin{equation}
+  \phi''(\lambda)>0,
+\end{equation}
+因此 \(\phi(\lambda)\) 在可行区间内部是严格凸函数，故存在唯一极小点 \(\lambda^\star\)。最终解析中心张力分配解为
+\begin{equation}
+  \bm f^\star=\bm f_p+\lambda^\star \bm n_s.
+  \label{eq:model-analytic-force}
+\end{equation}
+
+解析中心法的物理意义在于：在满足平衡方程的前提下，使所有绳张力尽可能远离上下界，从而获得更大的张力裕度和更好的抗扰动能力。对于高动态平面四绳机构，这种方法比单纯的最小范数法更利于避免某根绳提前松弛或过载，也更适合后续的力控制与加速度跟踪研究。
+\section{三种算法分配效果分析}
+为验证三种张力分配算法的实际效果，本文设计了一个高动态运动轨迹，并在仿真环境中分别应用重心法、最小范数法和解析中心法进行张力分配。通过比较各方法在不同时间点的张力分布以及平台加速度跟踪误差，可以直观评估它们在动态工况下的性能差异。
+\subsection{张力分配}
+这里放置三种方法的张力分配结果图，包括每根绳的张力随时间的变化曲线，以及与上下界的距离曲线。通过对比可以看出，重心法虽然简单，但在某些时间点可能会出现某根绳张力接近边界的情况；最小范数法则可能直接导致某根绳张力违反约束；而解析中心法则能够有效保持所有绳张力在安全范围内，并且相对均衡。
+\subsection{加速度跟踪误差}
+在同一高动态轨迹下，比较三种方法的加速度跟踪误差曲线。
+\subsection{最终算法确定}
+通过三种算法的对比以及最终的加速度跟踪效果，确定解析中心法作为本文后续控制器设计的主要张力分配策略。
+\section{本章小结}
+本章从平面四绳绳驱并联机器人的实际机构出发，建立了与程序实现一致的逆运动学、正运动学、速度雅可比、动力学和张力分配模型。首先，通过外公切线几何关系推导了平台侧和电机侧切点求解方法，并给出了包含平台缠绕、直线段和绕线轮包角的完整绳长表达式；其次，将正运动学转化为非线性最小二乘优化问题，建立了面向实际求解的位姿反算模型；随后，在广义力映射关系基础上推导了平面刚体动力学方程，明确了目标加速度与目标广义力之间的对应关系；最后，针对 4 索 3 自由度系统的 1 冗余特性，给出了张力平衡方程通解、可行区间求解以及重心法、最小范数法和解析中心法的详细推导，为后续控制器设计与仿真分析提供了理论基础。

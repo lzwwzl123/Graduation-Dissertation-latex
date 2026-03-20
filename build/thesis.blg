@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: thesis.aux
+Reallocating 'name_of_file' (item size: 1) to 26 items.
+A level-1 auxiliary file: body/pre_introduction.aux
+Reallocating 'name_of_file' (item size: 1) to 21 items.
+A level-1 auxiliary file: body/mech_design.aux
+Reallocating 'name_of_file' (item size: 1) to 18 items.
+A level-1 auxiliary file: body/modeling.aux
+Reallocating 'name_of_file' (item size: 1) to 14 items.
+A level-1 auxiliary file: body/regu.aux
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+A level-1 auxiliary file: body/introduction.aux
+Reallocating 'name_of_file' (item size: 1) to 17 items.
+A level-1 auxiliary file: body/recruit.aux
+Reallocating 'name_of_file' (item size: 1) to 20 items.
+A level-1 auxiliary file: back/conclusion.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: hithesis.bst
+Reallocating 'name_of_file' (item size: 1) to 10 items.
+Reallocating 'name_of_file' (item size: 1) to 26 items.
+A level-1 auxiliary file: back/acknowledgements.aux
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Database file #1: reference.bib
+You've used 3 entries,
+            3100 wiz_defined-function locations,
+            734 strings with 6432 characters,
+and the built_in function-call counts, 10421 in all, are:
+= -- 1300
+> -- 13
+< -- 13
++ -- 1185
+- -- 46
+* -- 156
+:= -- 1331
+add.period$ -- 0
+call.type$ -- 3
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 3
+duplicate$ -- 1456
+empty$ -- 214
+format.name$ -- 40
+if$ -- 2872
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 0
+newline$ -- 36
+num.names$ -- 3
+pop$ -- 80
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 52
+stack$ -- 0
+substring$ -- 1328
+swap$ -- 133
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 83
+width$ -- 4
+write$ -- 66
