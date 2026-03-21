@@ -76,8 +76,8 @@
 研究与仿真结果表明，基于逆运动学离散求解的常规位置控制虽能实现给定轨迹的基本跟随，但在轨迹离散、绳索柔性、摩擦及系统耦合等因素影响下，末端加速度易出现不连续和抖振，难以满足高动态平滑加速度模拟要求，同时由于模型精度与实际差异，极易发生绳索松脱。为此，本文将控制重点由位置控制转向力控制，围绕张力分配问题开展分析与优化。针对平面四绳冗余驱动机构中末端期望加速度对
 应多组可行绳力解的特点，分析了正张力约束、力分布均衡性及峰值载荷限制对张力分配结果的影响，并结合轨迹生成过程对末端加速度和理论绳索力进行了仿真计算。
 
-在此基础上，本文搭建了力控制实验平台，完成单电机闭环力矩控制、四电机协同张力控制以及末端平台加速度跟踪实验。综合理论分析、仿真研究与阶段性实验结果表明，所设计的高动态连续旋转平面绳驱并联机器人具备开展连续旋转与高动态控制研究的基础，采用力控制代替单纯位置控制是改善末端加速度连续性、提升动态响应品质的合理技术路线。
-本文研究可为连续旋转绳驱并联机器人的设计与控制提供参考，并为面向航天训练、飞行模拟及其他高动态运动模拟场景的装备研制提供理论依据与工程借鉴。
+在此基础上，本文搭建了力控制实验平台，完成单电机闭环力矩控制、四电机协同张力控制实验。综合分析、仿真与阶段性实验结果表明，所设计的平面绳驱并联机器人具备开展连续旋转与动态控制研究的基础，采用力控制代替单纯位置控制是改善末端加速度连续性、提升动态响应品质的合理技术路线。
+本文研究可为连续旋转绳驱并联机器人的设计与控制提供参考，并为面向航天训练及其他高动态运动模拟场景的装备研制提供理论依据与工程借鉴。
 
 \end{cabstract}
 
@@ -89,7 +89,7 @@ In this thesis, a planar four-cable redundantly actuated configuration is adopte
 
 Theoretical analysis and simulation results show that conventional position control based on discretized inverse kinematics can achieve basic trajectory tracking. However, under the combined effects of trajectory discretization, cable flexibility, friction, and system coupling, the end-platform acceleration tends to exhibit discontinuity and chattering, which makes it difficult to satisfy the requirement of smooth high-dynamic acceleration simulation.Meanwhile, owing to the mismatch between the mathematical model and the actual system, cable slackening is likely to occur. Therefore, the control focus is shifted from position control to force control. The tension-distribution problem is analyzed and optimized for the planar four-cable redundantly actuated mechanism, in which one desired end-platform acceleration generally corresponds to multiple feasible tension solutions. The influences of positive-tension constraints, load-balancing requirements, and peak-load limitations on the tension-distribution results are investigated, and simulations of end-platform acceleration and theoretical cable tensions along the planned trajectories are carried out.
 
-On this basis, a force-control experimental platform is developed, and experiments including single-motor closed-loop torque control, four-motor coordinated tension control, and end-platform acceleration tracking are conducted. The theoretical analysis, simulation results, and staged experimental validation indicate that the proposed high-dynamic continuously rotating planar cable-driven parallel robot provides a sound basis for continuous-rotation and high-dynamic control research. Replacing pure position control with force control is shown to be a reasonable technical route for improving acceleration continuity and dynamic performance. This work can provide useful references for the design and control of continuously rotating cable-driven parallel robots, and also offer theoretical and engineering support for equipment development in astronaut training, flight simulation, and other high-dynamic motion-simulation scenarios.
+On this basis, a force-control experimental platform is developed, and experiments including single-motor closed-loop torque control, four-motor coordinated tension control, and end-platform acceleration tracking are conducted. The theoretical analysis, simulation results, and staged experimental validation indicate that the proposed planar cable-driven parallel robot provides a sound basis for continuous-rotation and high-dynamic control research. Replacing pure position control with force control is shown to be a reasonable technical route for improving acceleration continuity and dynamic performance. This work can provide useful references for the design and control of continuously rotating cable-driven parallel robots, and also offer theoretical and engineering support for equipment development in astronaut training and other high-dynamic motion-simulation scenarios.
 
 \end{eabstract}
 

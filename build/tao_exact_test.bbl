@@ -1,0 +1,35 @@
+\begin{thebibliography}{1}
+\providecommand{\bibauthor}[1]{#1}
+\providecommand{\bibeditor}[1]{\bibauthor{#1}}
+\providecommand{\bibtranslator}[1]{#1}
+\providecommand{\bibtitle}[1]{#1}
+\providecommand{\bibbooktitle}[1]{#1}
+\providecommand{\bibjournal}[1]{#1}
+\providecommand{\bibmark}[1]{\mbox{#1}}
+\providecommand{\bibcountry}[1]{#1}
+\providecommand{\bibpatentid}[1]{#1}
+\providecommand{\bibedition}[1]{#1}
+\providecommand{\biborganization}[1]{#1}
+\providecommand{\bibaddress}[1]{#1}
+\providecommand{\bibpublisher}[1]{#1}
+\providecommand{\bibinstitution}[1]{#1}
+\providecommand{\bibschool}[1]{#1}
+\providecommand{\bibvolume}[1]{#1}
+\providecommand{\bibnumber}[1]{#1}
+\providecommand{\bibversion}[1]{#1}
+\providecommand{\bibpages}[1]{#1}
+\providecommand{\bibmodifydate}[1]{#1}
+\providecommand{\bibcitedate}[1]{#1}
+\providecommand{\bibyear}[1]{#1}
+\providecommand{\bibdate}[1]{#1}
+\providecommand{\biburl}[1]{\newline\url{#1}}
+
+\bibitem{tao2021tensiondistribution}
+\bibauthor{{, et~al}{陶冶}{, 张尚盈}{, 王彦伟}}\nolinebreak\@.
+  \bibtitle{冗余约束绳驱并联机器人的张力分配研究}\bibmark{[J/OL]}\nolinebreak\@.
+  \bibjournal{机械科学与技术}, \bibyear{2021},
+  \bibvolume{40}\bibnumber{(3)}\textnormal{:
+  }\bibpages{344\textnormal{-}349}\nolinebreak\@.
+  \url{https://journals.nwpu.edu.cn/jxkxyjs/article/doi/10.13433/j.cnki.1003-8728.20200061?viewType=HTML}\nolinebreak\@.
+
+\end{thebibliography}

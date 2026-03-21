@@ -218,18 +218,37 @@ Tu 等则从生理响应与抗荷效能角度分析了人体
 
 \begin{figure}[htbp]
   \centering
-  \fbox{\begin{minipage}[c][4.8cm][c]{0.82\textwidth}
-    \centering
-    建议插入图：典型载人离心机与二维动态平台拼图。\\
-    左侧可放载人离心机整体照片，右侧可放二维动态平台\\
-    或多自由度模拟平台实物图，用于把前文路线综述具体化。
-  \end{minipage}}
-  \caption{用于验证的二维动态平台}
+  \subfigure[二维动态测试平台\label{fig:apply_sci_1}]{%
+    \includegraphics[width=0.48\textwidth]{figures/applsci-g.png}}
+  \hfill
+  \subfigure[加速度验证结果\label{fig:apply_sci_2}]{%
+    \includegraphics[width=0.48\textwidth]{figures/applsci-verify.png}}
+  \caption{二维动态平台以及验证结果}
   \label{fig:intro-acceleration-history}
 \end{figure}
 
 \subsection{绳驱并联机器人构型与应用研究现状}
 
+\begin{figure}[htbp]
+  \centering
+  
+  \subfigure[EXPO 2015项目\label{fig:cdpr-app_1}]{%
+    \includegraphics[width=0.48\textwidth,height=3.8cm]{figures/expo2015.png}}
+  \hfill
+  \subfigure[Sky Camera\label{fig:cdpr-app_2}]{%
+    \includegraphics[width=0.48\textwidth,height=3.8cm]{figures/skycam.jpg}}
+    
+    \vspace{0.2em}
+  \subfigure[“RoboCrane”绳驱搬运机器人\label{fig:cdpr-app_3}]{%
+    \includegraphics[width=\textwidth,height=7.2cm]{figures/rabo.png}}
+    
+    \vspace{0.2em}
+  \subfigure[“NeReBot”康复机器人\label{fig:cdpr-app_4}]{%
+    \includegraphics[width=0.75\textwidth]{figures/nerebot.png}}
+  
+  \caption{空间绳驱并联机器人典型应用}
+  \label{fig:intro-cdpr-applications}
+\end{figure}
 在新型运动平台研究方面，绳驱并联机器人因其
 结构轻量化和大尺度运动潜力而受到广泛关注。
 Zhang 等对绳驱并联机器人的理论与应用进行了
@@ -248,30 +267,88 @@ Zhang 等对绳驱并联机器人的理论与应用进行了
 从工程应用角度看，绳驱并联机器人已经不再局
 限于实验室环境。德国馆 EXPO 2015 项目是典
 型的大型应用案例之一，Tempel 等对其设计与
-编程过程进行了总结，说明绳驱并联机器人在大
-尺度空间中的协调控制、任务组织和系统集成方
-面已经具备较高的工程成熟度
-\cite{tempel2015expo}。在面向作业任务的机
-器人研究中，农业喷雾和智能施药机器人也体现
+编程过程进行了总结\cite{tempel2015expo},
+如\cref{fig:cdpr-app_1}。
+在日常生活中、像\cref{fig:cdpr-app_2}所示的
+绳驱并联机器人已经被体育赛事直播所广泛应用。
+如\cref{fig:cdpr-app_3}所示的RoboCrane，
+可以看出绳驱并联机器人在大尺度空间中的协调
+控制、任务组织和系统集成方面已经具备较高的
+工程成熟度。来自意大利帕多瓦大学的Rosati等人也将
+绳驱机器人应用于医疗康复领域，为需要上肢
+康复训练的患者设计了一种如\cref{fig:cdpr-app_4}
+的名为“NeReBot”的绳驱并联机构系统\cite{chen2019waistrehab};
+。在面向作业任务的机器人研究中，农业喷雾和智能施药机器人也体现
 出对大工作空间、轻量化执行机构与复杂环境适
 应能力的强烈需求
 \cite{lan2022sprayreview,zhang2009greenhouse}。
 虽然这类应用与本文的加速度模拟场景并不相同，
 但它们说明绳驱或轻量化驱动结构在复杂环境中
 的广泛适用性，也从侧面验证了绳驱并联技术路
-线的工程潜力。典型应用案例可归纳为\cref{fig:intro-cdpr-applications}所示。
+线的工程潜力。
+
+
+从典型代表系统看，SkyCam、RoboCrane绳驱并联平台分别用于体育赛事直播和重载搬运，NeReBot系统则用于人机协作，
+体现了索驱机构在高速大范围跟踪、重载搬运、
+和人机协作等方向上的应用潜力。相关综述进一步
+指出，绳驱并联机器人的研究重点正在由大尺度
+低速搬运逐步拓展到高动态轨迹跟踪、视觉伺服
+、柔顺控制与复杂约束下的在线优化控制
+\cite{qian2018review,tho2022overview,begey2019dynamiccontrol,you2019vision}。
+这意味着，对于本文所关注的加速度模拟任务，
+绳驱并联平台不能仅被视为一般意义上的“位姿
+搬运装置”，而应被视为面向广义力输出与动态
+品质约束的综合运动执行平台。
+
+\subsection{工作空间、动力学建模与连续旋转研究现状}
+
+
+工作空间与受力可行性是绳驱并联机器人研究中
+的基础问题。由于绳索仅能承受拉力，末端执行
+器在某一位姿下能否产生期望广义力，不仅取决
+于几何可达性，还受到正张力约束和张力上下限
+约束的共同影响。Gouttefarde 等提出了绳驱并
+联机构的可受力工作空间概念，为分析机构在给
+定位姿下的广义力生成能力提供了经典方法
+\cite{gouttefarde2007wrench}；Phan Gia
+Luan 和 Nguyen Truong Thinh 则从绳驱并联机
+构的扳手闭包条件出发，进一步讨论了机构实现
+稳定受力输出的必要条件，为后续张力分配和构
+型优化研究提供了理论基础
+\cite{phan2021wrenchclosure}。这些成果说明，
+绳驱并联机器人的性能分析不能仅停留在几何运
+动学层面，还必须将张力约束与广义力生成能力
+纳入统一框架中加以讨论。
+
+
+在机构构型与动力学建模方面，学者们已经围绕
+不同类型的平面、空间与悬挂式绳驱系统开展了
+大量研究。Wang 等针对满足 Sch{\"o}nflies 运
+动的悬挂式平面绳驱并联机器人建立了运动学、动力
+学与工作空间分析模型，展示了绳驱机构在特定
+自由度任务中的建模思路
+\cite{wang2022schonflies}，如\cref{fig:intro-cdprplane}，这对我们的设计具有指导性。
 
 \begin{figure}[htbp]
   \centering
-  \fbox{\begin{minipage}[c][5.0cm][c]{0.82\textwidth}
-    \centering
-    建议插入图：绳驱并联机器人典型应用案例图。\\
-    推荐选取 SkyCam、RoboCrane、FAST 馈源支撑系统等\\
-    代表性案例拼图，突出大空间、高动态、重载、高精度特征。
-  \end{minipage}}
-  \caption{绳驱并联机器人典型应用案例图}
-  \label{fig:intro-cdpr-applications}
+  \subfigure[传统平面CDPR\label{fig:cdpr-plane_1}]{\includegraphics[width=0.85\textwidth]{figures/actuators-12-00200-g002.png}}
+  \vfill
+  \subfigure[差动缆路平面旋转CDPR\label{fig:cdpr-plane_2}]{\includegraphics[width=0.85\textwidth]{figures/actuators-12-00200-g005.png}}
+  \caption{平面内的绳驱并联结构}
+  \label{fig:intro-cdprplane}
 \end{figure}
+
+Gonz{\'a}lez-
+Rodr{\'i}guez 等研究了单绳环式平面绳驱并联机
+器人的动力学模型，说明在平面构型下，通过特
+殊的缠绕与传动方式可形成具有连续运动能力的
+系统结构\cite{gonzalez2023singleloop}；
+Ju{\'a}rez-P{\'e}rez 等进一步在大可受力工作
+空间条件下讨论了新型平面绳驱并联机器人的动
+态控制问题\cite{juarez2022dynamiccontrol}。
+这些工作表明，围绕平面绳驱系统开展连续旋转
+与高动态控制研究，既具有明确的理论基础，也
+具备较好的工程可实施性。
 
 在构型研究方面，平面机构由于自由度清晰、建
 模难度相对适中，常被作为绳驱并联机器人理论
@@ -291,70 +368,6 @@ Zhang 等对绳驱并联机器人的理论与应用进行了
   \caption{平面四绳连续旋转机构原理示意图}
   \label{fig:intro-planar-four-cable}
 \end{figure}
-
-从典型代表系统看，SkyCam、RoboCrane、FAST
-馈源支撑系统以及康复训练型绳驱并联平台分别
-体现了索驱机构在高速大范围跟踪、重载搬运、
-超大尺度高精定位和人机协作等方向上的应用潜
-力。相关综述进一步指出，绳驱并联机器人的研
-究重点正在由大尺度低速搬运逐步拓展到高动态
-轨迹跟踪、视觉伺服、柔顺控制与复杂约束下的
-在线优化控制
-\cite{qian2018review,tho2022overview,begey2019dynamiccontrol,you2019vision}。
-这意味着，对于本文所关注的加速度模拟任务，
-绳驱并联平台不能仅被视为一般意义上的“位姿
-搬运装置”，而应被视为面向广义力输出与动态
-品质约束的综合运动执行平台。
-
-\subsection{工作空间、动力学建模与连续旋转研究现状}
-
-工作空间与受力可行性是绳驱并联机器人研究中
-的基础问题。由于绳索仅能承受拉力，末端执行
-器在某一位姿下能否产生期望广义力，不仅取决
-于几何可达性，还受到正张力约束和张力上下限
-约束的共同影响。Gouttefarde 等提出了绳驱并
-联机构的可受力工作空间概念，为分析机构在给
-定位姿下的广义力生成能力提供了经典方法
-\cite{gouttefarde2007wrench}；Phan Gia
-Luan 和 Nguyen Truong Thinh 则从绳驱并联机
-构的扳手闭包条件出发，进一步讨论了机构实现
-稳定受力输出的必要条件，为后续张力分配和构
-型优化研究提供了理论基础
-\cite{phan2021wrenchclosure}。这些成果说明，
-绳驱并联机器人的性能分析不能仅停留在几何运
-动学层面，还必须将张力约束与广义力生成能力
-纳入统一框架中加以讨论。几何工作空间与可受
-力工作空间之间的关系可由\cref{fig:intro-workspace-wrench}直观说明。
-
-\begin{figure}[htbp]
-  \centering
-  \fbox{\begin{minipage}[c][4.8cm][c]{0.82\textwidth}
-    \centering
-    建议插入图：几何工作空间与可受力工作空间对比示意图。\\
-    可采用“外层几何可达区域 + 内层可受力区域”的嵌套区域图，\\
-    突出从“能到达”到“能稳定输出力”的逻辑转折。
-  \end{minipage}}
-  \caption{几何工作空间与可受力工作空间对比示意图}
-  \label{fig:intro-workspace-wrench}
-\end{figure}
-
-在机构构型与动力学建模方面，学者们已经围绕
-不同类型的平面、空间与悬挂式绳驱系统开展了
-大量研究。Wang 等针对满足 Sch{\"o}nflies 运
-动的悬挂式绳驱并联机器人建立了运动学、动力
-学与工作空间分析模型，展示了绳驱机构在特定
-自由度任务中的建模思路
-\cite{wang2022schonflies}。Gonz{\'a}lez-
-Rodr{\'i}guez 等研究了单绳环式平面绳驱并联机
-器人的动力学模型，说明在平面构型下，通过特
-殊的缠绕与传动方式可形成具有连续运动能力的
-系统结构\cite{gonzalez2023singleloop}；
-Ju{\'a}rez-P{\'e}rez 等进一步在大可受力工作
-空间条件下讨论了新型平面绳驱并联机器人的动
-态控制问题\cite{juarez2022dynamiccontrol}。
-这些工作表明，围绕平面绳驱系统开展连续旋转
-与高动态控制研究，既具有明确的理论基础，也
-具备较好的工程可实施性。
 
 从轨迹规划角度看，Tang 等针对平面二自由度冗
 余驱动绳悬挂机器人开展了动态轨迹规划研究，
@@ -389,10 +402,21 @@ Ju{\'a}rez-P{\'e}rez 等进一步在大可受力工作
 述工作则指出，绳驱机器人的动力学建模正在从
 刚性、无质量绳索的简化假设逐步转向考虑绳索
 弹性、阻尼和复杂耦合效应的更精细模型
-\cite{chen2025cdprreview}。这意味着，对于以
-高动态加速度输出为目标的系统，仅依赖静态几
-何关系开展控制分析是不够的，必须将动力学与
-张力演化过程结合起来加以研究。
+\cite{chen2025cdprreview}。
+如\cref{fig:force_assign_compare}所示，陶冶在文章
+中针对三种算法展开了分析\cite{tao2021tensiondistribution}。
+这些结果意味着，对于以高动态加速度输出为目标的系统，
+仅依赖静态几何关系开展控制分析是不够的，必须将
+动力学与张力演化过程结合起来加以研究。
+
+\begin{figure}[htbp]
+  \centering
+  \subfigure[改进QP算法\label{fig.force_assign_QP}]{\includegraphics[width=0.48\textwidth]{figures/jxkxyjs-1.jpg}}
+  \subfigure[Closed-form算法\label{fig.force_assign_ClosedForm}]{\includegraphics[width=0.48\textwidth]{figures/jxkxyjs-2.jpg}}
+  \hfill
+  \caption{对不同张力分配算法的分析}
+  \label{fig:force_assign_compare}
+\end{figure}
 
 在控制策略方面，陈科举等基于系统刚度开展了
 绳驱并联机器人的力/位混合控制研究，体现了
@@ -415,12 +439,7 @@ Ju{\'a}rez-P{\'e}rez 等进一步在大可受力工作
 
 \begin{figure}[htbp]
   \centering
-  \fbox{\begin{minipage}[c][4.8cm][c]{0.82\textwidth}
-    \centering
-    建议插入图：张力分配与控制方法分类图。\\
-    可分为“张力分配方法、力/位混合控制、实时优化控制、\\
-    间接力控制、自适应控制”等分支，用于收束前文综述。
-  \end{minipage}}
+  \includegraphics[width=\textwidth]{figures/张力分配与控制流程图.pdf}
   \caption{张力分配与控制方法分类图}
   \label{fig:intro-tension-methods}
 \end{figure}

@@ -1,0 +1,53 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: tao_exact_test.aux
+Reallocating 'name_of_file' (item size: 1) to 9 items.
+The style file: hithesis.bst
+Reallocating 'name_of_file' (item size: 1) to 25 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Database file #1: exact_tao_from_reference.bib
+Warning--Require citedate: tao2021tensiondistribution
+You've used 1 entry,
+            3100 wiz_defined-function locations,
+            715 strings with 6232 characters,
+and the built_in function-call counts, 2812 in all, are:
+= -- 328
+> -- 4
+< -- 4
++ -- 284
+- -- 15
+* -- 62
+:= -- 334
+add.period$ -- 0
+call.type$ -- 1
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 2
+duplicate$ -- 394
+empty$ -- 76
+format.name$ -- 12
+if$ -- 740
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 30
+num.names$ -- 1
+pop$ -- 33
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 11
+stack$ -- 0
+substring$ -- 346
+swap$ -- 56
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 30
+width$ -- 2
+write$ -- 44
+(There was 1 warning)

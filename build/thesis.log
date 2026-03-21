@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2026.3.15)  21 MAR 2026 21:12
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2026.3.15)  22 MAR 2026 02:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2187,16 +2187,16 @@ Underfull \hbox (badness 10000) detected at line 135
 
 
 
-] [2]
+]
 Underfull \hbox (badness 2418) in paragraph at lines 135--135
 []\TU/TeXGyreTermesX(0)/m/n/12.045 To meet the demands of manned spaceflight tr
 aining and complex motion-
  []
 
-[3
+[2
 
 
-] [4] (d:\桌面\毕业设计\毕业论文latex\build\thesis.toc
+] [3] (d:\桌面\毕业设计\毕业论文latex\build\thesis.toc
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
 (Font)              scaled to size 12.045pt on input line 1.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
@@ -2257,19 +2257,51 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 (Font)              scaled to size 8.0pt on input line 1.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 (Font)              scaled to size 6.0pt on input line 1.
- [5
+ [4
 
 
 ])
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
- [6]
+ [5]
 \openout2 = `body/pre_introduction.aux'.
 
 
 (body/pre_introduction.tex
 第1章
+
+Package natbib Warning: Citation `barker1961simulator' on page 1 undefined on i
+nput line 16.
+
+
+Package natbib Warning: Citation `mohajer2021centrifugedesign' on page 1 undefi
+ned on input line 20.
+
+
+Package natbib Warning: Citation `winter2023centrifugeopt' on page 1 undefined 
+on input line 20.
+
+
+Package natbib Warning: Citation `tu2020gtolerance' on page 1 undefined on inpu
+t line 20.
+
+
+Package natbib Warning: Citation `liu2024centrifuge' on page 1 undefined on inp
+ut line 20.
+
+
+Package natbib Warning: Citation `barker1961simulator' on page 1 undefined on i
+nput line 27.
+
+
+Package natbib Warning: Citation `mohajer2021centrifugedesign' on page 1 undefi
+ned on input line 27.
+
+
+Package natbib Warning: Citation `winter2023centrifugeopt' on page 1 undefined 
+on input line 27.
+
 File: figures/atfs400_31.jpg Graphic file (type bmp)
 <figures/atfs400_31.jpg>
 File: figures/atfs400_25.jpg Graphic file (type bmp)
@@ -2278,6 +2310,46 @@ File: figures/airfox_asd.png Graphic file (type bmp)
 <figures/airfox_asd.png>
 File: figures/desdemona.jpg Graphic file (type bmp)
 <figures/desdemona.jpg>
+
+Package natbib Warning: Citation `zhang2020groundsimulation' on page 1 undefine
+d on input line 56.
+
+
+Package natbib Warning: Citation `liu2024centrifuge' on page 1 undefined on inp
+ut line 56.
+
+
+Package natbib Warning: Citation `mohajer2021centrifugedesign' on page 1 undefi
+ned on input line 56.
+
+
+Package natbib Warning: Citation `winter2023centrifugeopt' on page 1 undefined 
+on input line 56.
+
+
+Package natbib Warning: Citation `zhang2022stateoftheart' on page 1 undefined o
+n input line 72.
+
+
+Package natbib Warning: Citation `wang2025review' on page 1 undefined on input 
+line 72.
+
+
+Package natbib Warning: Citation `chen2025cdprreview' on page 1 undefined on in
+put line 72.
+
+
+Package natbib Warning: Citation `tempel2015expo' on page 1 undefined on input 
+line 78.
+
+
+Package natbib Warning: Citation `lan2022sprayreview' on page 1 undefined on in
+put line 82.
+
+
+Package natbib Warning: Citation `zhang2009greenhouse' on page 1 undefined on i
+nput line 82.
+
 [1
 
 
@@ -2286,15 +2358,396 @@ File: figures/desdemona.jpg Graphic file (type bmp)
 ]
 File: figures/加速度模拟器方案对比图.pdf Graphic file (type pdf)
 <use figures/加速度模拟器方案对比图.pdf>
- [2] [3] [4] [5]
+
+
+Package natbib Warning: Citation `gouttefarde2007wrench' on page 2 undefined on
+ input line 109.
+
+
+Package natbib Warning: Citation `phan2021wrenchclosure' on page 2 undefined on
+ input line 109.
+
+
+Package natbib Warning: Citation `wang2022schonflies' on page 2 undefined on in
+put line 115.
+
+
+Package natbib Warning: Citation `gonzalez2023singleloop' on page 2 undefined o
+n input line 115.
+
+
+Package natbib Warning: Citation `juarez2022dynamiccontrol' on page 2 undefined
+ on input line 115.
+
+[2]
+
+Package natbib Warning: Citation `tang2015trajectory' on page 3 undefined on in
+put line 124.
+
+
+Package natbib Warning: Citation `feiler2023mechatronic' on page 3 undefined on
+ input line 124.
+
+
+Package natbib Warning: Citation `chen2025cdprreview' on page 3 undefined on in
+put line 132.
+
+
+Package natbib Warning: Citation `wang2024dynamictension' on page 3 undefined o
+n input line 132.
+
+
+Package natbib Warning: Citation `piao2019indirectforce' on page 3 undefined on
+ input line 136.
+
+
+Package natbib Warning: Citation `cao2023realtimetension' on page 3 undefined o
+n input line 136.
+
+
+Package natbib Warning: Citation `song2024realtimemethod' on page 3 undefined o
+n input line 136.
+
+
+Package natbib Warning: Citation `gonzalez2023singleloop' on page 3 undefined o
+n input line 147.
+
+
+Package natbib Warning: Citation `juarez2022dynamiccontrol' on page 3 undefined
+ on input line 147.
+
+
+Package natbib Warning: Citation `wang2024dynamictension' on page 3 undefined o
+n input line 147.
+
+[3]
+
+Package natbib Warning: Citation `zhang2022stateoftheart' on page 4 undefined o
+n input line 161.
+
+
+Package natbib Warning: Citation `wang2025review' on page 4 undefined on input 
+line 161.
+
+
+Package natbib Warning: Citation `su2016cablemass' on page 4 undefined on input
+ line 165.
+
+
+Package natbib Warning: Citation `cao2023realtimetension' on page 4 undefined o
+n input line 165.
+
+
+Package natbib Warning: Citation `wang2024dynamictension' on page 4 undefined o
+n input line 165.
+
+
+Package natbib Warning: Citation `tempel2015expo' on page 4 undefined on input 
+line 170.
+
+
+Package natbib Warning: Citation `lan2022sprayreview' on page 4 undefined on in
+put line 170.
+
+
+Package natbib Warning: Citation `zhang2009greenhouse' on page 4 undefined on i
+nput line 170.
+
+
+Package natbib Warning: Citation `barker1961simulator' on page 4 undefined on i
+nput line 180.
+
+
+Package natbib Warning: Citation `mohajer2021centrifugedesign' on page 4 undefi
+ned on input line 189.
+
+
+Package natbib Warning: Citation `winter2023centrifugeopt' on page 4 undefined 
+on input line 192.
+
+
+Package natbib Warning: Citation `tu2020gtolerance' on page 4 undefined on inpu
+t line 196.
+
+
+Package natbib Warning: Citation `zhang2020groundsimulation' on page 4 undefine
+d on input line 207.
+
+
+Package natbib Warning: Citation `liu2024centrifuge' on page 4 undefined on inp
+ut line 211.
+
+[4]
+File: figures/applsci-g.png Graphic file (type bmp)
+<figures/applsci-g.png>
+File: figures/applsci-verify.png Graphic file (type bmp)
+<figures/applsci-verify.png>
+File: figures/expo2015.png Graphic file (type bmp)
+<figures/expo2015.png>
+File: figures/skycam.jpg Graphic file (type bmp)
+<figures/skycam.jpg>
+File: figures/rabo.png Graphic file (type bmp)
+<figures/rabo.png>
+File: figures/nerebot.png Graphic file (type bmp)
+<figures/nerebot.png>
+
+
+Package natbib Warning: Citation `zhang2022stateoftheart' on page 5 undefined o
+n input line 257.
+
+
+Package natbib Warning: Citation `wang2025review' on page 5 undefined on input 
+line 261.
+
+
+Package natbib Warning: Citation `chen2025cdprreview' on page 5 undefined on in
+put line 265.
+
+
+Package natbib Warning: Citation `tempel2015expo' on page 5 undefined on input 
+line 270.
+
+
+Package natbib Warning: Citation `chen2019waistrehab' on page 5 undefined on in
+put line 280.
+
+
+Package natbib Warning: Citation `lan2022sprayreview' on page 5 undefined on in
+put line 284.
+
+
+Package natbib Warning: Citation `zhang2009greenhouse' on page 5 undefined on i
+nput line 284.
+
+[5] [6]
+
+Package natbib Warning: Citation `qian2018review' on page 7 undefined on input 
+line 297.
+
+
+Package natbib Warning: Citation `tho2022overview' on page 7 undefined on input
+ line 297.
+
+
+Package natbib Warning: Citation `begey2019dynamiccontrol' on page 7 undefined 
+on input line 297.
+
+
+Package natbib Warning: Citation `you2019vision' on page 7 undefined on input l
+ine 297.
+
+
+Package natbib Warning: Citation `gouttefarde2007wrench' on page 7 undefined on
+ input line 313.
+
+
+Package natbib Warning: Citation `phan2021wrenchclosure' on page 7 undefined on
+ input line 318.
+
+
+Package natbib Warning: Citation `wang2022schonflies' on page 7 undefined on in
+put line 330.
+
+File: figures/actuators-12-00200-g002.png Graphic file (type bmp)
+<figures/actuators-12-00200-g002.png>
+File: figures/actuators-12-00200-g005.png Graphic file (type bmp)
+<figures/actuators-12-00200-g005.png>
+
+Package natbib Warning: Citation `gonzalez2023singleloop' on page 7 undefined o
+n input line 345.
+
+
+Package natbib Warning: Citation `juarez2022dynamiccontrol' on page 7 undefined
+ on input line 348.
+
+
+Package natbib Warning: Citation `feiler2023mechatronic' on page 7 undefined on
+ input line 359.
+
+[7] [8]
 File: figures/旋转机构原理.pdf Graphic file (type pdf)
 <use figures/旋转机构原理.pdf>
- [6] [7] [8] [9] [10] [11] [12]) [13]
+
+
+Package natbib Warning: Citation `tang2015trajectory' on page 9 undefined on in
+put line 376.
+
+
+Package natbib Warning: Citation `zhang2016highspeedtraj' on page 9 undefined o
+n input line 376.
+
+
+Package natbib Warning: Citation `zhang2018spatialtraj' on page 9 undefined on 
+input line 376.
+
+
+Package natbib Warning: Citation `gouttefarde2007wrench' on page 9 undefined on
+ input line 394.
+
+
+Package natbib Warning: Citation `phan2021wrenchclosure' on page 9 undefined on
+ input line 394.
+
+
+Package natbib Warning: Citation `cao2023realtimetension' on page 9 undefined o
+n input line 394.
+
+
+Package natbib Warning: Citation `song2024realtimemethod' on page 9 undefined o
+n input line 394.
+
+[9]
+
+Package natbib Warning: Citation `su2016cablemass' on page 10 undefined on inpu
+t line 401.
+
+
+Package natbib Warning: Citation `chen2025cdprreview' on page 10 undefined on i
+nput line 405.
+
+
+Package natbib Warning: Citation `tao2021tensiondistribution' on page 10 undefi
+ned on input line 407.
+
+File: figures/jxkxyjs-1.jpg Graphic file (type bmp)
+<figures/jxkxyjs-1.jpg>
+File: figures/jxkxyjs-2.jpg Graphic file (type bmp)
+<figures/jxkxyjs-2.jpg>
+
+Package natbib Warning: Citation `chen2023hybrid' on page 10 undefined on input
+ line 424.
+
+
+Package natbib Warning: Citation `li2019spherical' on page 10 undefined on inpu
+t line 427.
+
+
+Package natbib Warning: Citation `piao2019indirectforce' on page 10 undefined o
+n input line 431.
+
+
+Package natbib Warning: Citation `cheah2024adaptive' on page 10 undefined on in
+put line 435.
+
+File: figures/张力分配与控制流程图.pdf Graphic file (type pdf)
+<use figures/张力分配与控制流程图.pdf>
+
+Package natbib Warning: Citation `cao2023realtimetension' on page 10 undefined 
+on input line 451.
+
+
+Package natbib Warning: Citation `song2024realtimemethod' on page 10 undefined 
+on input line 454.
+
+
+Package natbib Warning: Citation `wang2024dynamictension' on page 10 undefined 
+on input line 457.
+
+[10]
+
+Package natbib Warning: Citation `paty2021pulley' on page 11 undefined on input
+ line 467.
+
+
+Package natbib Warning: Citation `zhang2022calibration' on page 11 undefined on
+ input line 467.
+
+
+Package natbib Warning: Citation `santos2022nmpc' on page 11 undefined on input
+ line 467.
+
+
+Package natbib Warning: Citation `bettega2023pathtracking' on page 11 undefined
+ on input line 467.
+
+
+Package natbib Warning: Citation `jin2024controlreview' on page 11 undefined on
+ input line 467.
+
+
+Package natbib Warning: Citation `yu2024stability' on page 11 undefined on inpu
+t line 467.
+
+[11]
+
+Package natbib Warning: Citation `liu2024centrifuge' on page 12 undefined on in
+put line 517.
+
+
+Package natbib Warning: Citation `zhang2020groundsimulation' on page 12 undefin
+ed on input line 517.
+
+
+Package natbib Warning: Citation `qian2018review' on page 12 undefined on input
+ line 517.
+
+
+Package natbib Warning: Citation `wang2025review' on page 12 undefined on input
+ line 517.
+
+
+Package natbib Warning: Citation `gonzalez2023singleloop' on page 12 undefined 
+on input line 530.
+
+
+Package natbib Warning: Citation `feiler2023mechatronic' on page 12 undefined o
+n input line 530.
+
+
+Package natbib Warning: Citation `paty2021pulley' on page 12 undefined on input
+ line 530.
+
+
+Package natbib Warning: Citation `zhang2022calibration' on page 12 undefined on
+ input line 530.
+
+
+Package natbib Warning: Citation `chen2023hybrid' on page 12 undefined on input
+ line 546.
+
+
+Package natbib Warning: Citation `piao2019indirectforce' on page 12 undefined o
+n input line 546.
+
+
+Package natbib Warning: Citation `cao2023realtimetension' on page 12 undefined 
+on input line 546.
+
+
+Package natbib Warning: Citation `song2024realtimemethod' on page 12 undefined 
+on input line 546.
+
+
+Package natbib Warning: Citation `santos2022nmpc' on page 12 undefined on input
+ line 546.
+
+
+Package natbib Warning: Citation `bettega2023pathtracking' on page 12 undefined
+ on input line 546.
+
+[12]
+
+Package natbib Warning: Citation `su2016cablemass' on page 13 undefined on inpu
+t line 556.
+
+
+Package natbib Warning: Citation `wang2024dynamictension' on page 13 undefined 
+on input line 556.
+
+
+Package natbib Warning: Citation `zhao2023fast' on page 13 undefined on input l
+ine 556.
+
+
+Package natbib Warning: Citation `jin2024controlreview' on page 13 undefined on
+ input line 556.
+
+[13] [14]) [15]
 \openout2 = `body/mech_design.aux'.
 
  (body/mech_design.tex
 第2章
-) [14
+) [16
 
 
 
@@ -2309,34 +2762,34 @@ File: figures/系统构型示意图.pdf Graphic file (type pdf)
 <use figures/系统构型示意图.pdf>
 Package hyperref Info: bookmark level for unknown equation defaults to 0 on inp
 ut line 87.
-[15
+[17
 
 
 
 
 
-] [16] [17] [18]
+] [18] [19] [20]
 File: figures/绕线示意图.pdf Graphic file (type pdf)
 <use figures/绕线示意图.pdf>
- [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29])
-[30]
+ [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31])
+[32]
 \openout2 = `body/control.aux'.
 
  (body/control.tex
 第4章
-[31
+[33
 
 
 
 
 
-] [32] [33] [34] [35] [36] [37] [38] [39] [40]) [41]
+] [34] [35] [36] [37] [38] [39] [40] [41] [42]) [43]
 \openout2 = `body/force_assign.aux'.
 
  (body/force_assign.tex)
 \openout2 = `back/conclusion.aux'.
 
-(back/conclusion.tex) [42
+(back/conclusion.tex) [44
 
 
 
@@ -2346,27 +2799,22 @@ File: figures/绕线示意图.pdf Graphic file (type pdf)
 
 
 
-] (d:\桌面\毕业设计\毕业论文latex\build\thesis.bbl [43
+] (d:\桌面\毕业设计\毕业论文latex\build\thesis.bbl
+
+LaTeX Warning: Empty`thebibliography'environment on input line 27.
+
+) [45
 
 
 
 
-] [44]
-[45] [46]
-Underfull \hbox (badness 1122) in paragraph at lines 363--369
-[]\TU/SimSun(0)/m/n/12.045 赵 雅 聪\TU/TeXGyreTermesX(0)/m/n/12.045 , \TU/SimSun(0
-)/m/n/12.045 王 启 明\TU/TeXGyreTermesX(0)/m/n/12.045 . \TU/SimSun(0)/m/n/12.045 基
- 于 \TU/TeXGyreTermesX(0)/m/n/12.045 FAST \TU/SimSun(0)/m/n/12.045 馈 源 支 撑 系 统 的
- 索 牵 引 并 联 机 构 的 力 学 分
- []
-
-) [47] [48
+] [46
 
 
 ]
 \openout2 = `back/acknowledgements.aux'.
 
- (back/acknowledgements.tex) [49
+ (back/acknowledgements.tex) [47
 
 
 
@@ -2374,6 +2822,9 @@ Underfull \hbox (badness 1122) in paragraph at lines 363--369
 \tf@thm=\write7
 \openout7 = `thesis.thm'.
 
+
+
+Package natbib Warning: There were undefined citations.
 
 (d:\桌面\毕业设计\毕业论文latex\build\thesis.aux
 (d:\桌面\毕业设计\毕业论文latex\build\body/pre_introduction.aux)
@@ -2393,16 +2844,16 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.47188pt have occurred.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 220058CAA4AC456C5794A24B09C6F5D4;7446.
+(rerunfilecheck)             Checksum: D975789F4D8EDCBF6D4A08CB5B8D42B7;7540.
  ) 
 Here is how much of TeX's memory you used:
- 50265 strings out of 409617
- 1095785 string characters out of 5781321
- 1952191 words of memory out of 5000000
- 71575 multiletter control sequences out of 15000+600000
- 602376 words of font info for 200 fonts, out of 8000000 for 9000
+ 50270 strings out of 409617
+ 1097276 string characters out of 5781321
+ 1948191 words of memory out of 5000000
+ 71568 multiletter control sequences out of 15000+600000
+ 602384 words of font info for 201 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 107i,12n,111p,3288b,1348s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,12n,111p,3288b,995s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on d:\桌面\毕业设计\毕业论文latex\build\thesis.xdv (57 pages, 786124 bytes
+Output written on d:\桌面\毕业设计\毕业论文latex\build\thesis.xdv (54 pages, 658240 bytes
 ).
