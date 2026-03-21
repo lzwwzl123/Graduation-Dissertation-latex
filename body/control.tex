@@ -1,0 +1,846 @@
+% !Mode:: "TeX:UTF-8"
+
+\chapter{控制算法设计}
+
+本章在前述运动学建模
+与位置控制基础验证的
+基础上，进一步面向样
+机系统的实际实现需求，
+建立单电机闭环力矩控
+制与四电机协同控制算
+法。对于本文所研究的
+高动态连续旋转平面四
+绳绳驱并联机器人而言，
+单纯依赖位置指令驱动
+难以直接保证末端平台
+在运动过程中的受力品
+质与加速度连续性。因
+此，有必要从单执行单
+元的力矩控制出发，逐
+步构建末端位姿误差补
+偿、广义力修正以及张
+力映射的完整控制链路。
+
+本章的核心目标包括三
+个方面。其一，针对单
+电机执行单元建立闭环
+力矩控制方法，在 PID
+控制基础上引入摩擦补
+偿与扰动观测器，以提
+高力矩跟踪精度和抗扰
+能力。其二，基于正运
+动学反馈构建末端位姿
+闭环补偿方法，将末端
+轨迹误差转换为平台广
+义力修正量。其三，结
+合平面四绳冗余驱动机
+构的特点，建立广义力
+修正到各绳张力增量及
+电机目标力矩之间的映
+射关系，为后续张力分
+配分析和实验验证提供
+控制算法基础。
+
+\section{控制系统总体架构}
+
+结合本文样机结构与控
+制任务特点，系统控制
+架构采用“单电机内环
+力矩控制+末端外环位姿
+补偿”的双层形式。其
+中，内环面向单个执行
+单元，重点解决电机输
+出力矩的跟踪精度、摩
+擦扰动抑制以及动态响
+应速度问题；外环面向
+末端平台，利用正运动
+学重构得到的末端位姿
+信息构造误差补偿量，
+再通过广义力与张力映
+射关系分配至四个电机。
+
+对于第 $i$ 个电机，设
+其角位移、角速度和输
+入力矩分别为
+
+\begin{equation}
+  \phi_i,\qquad
+  \omega_i=\dot{\phi}_i,\qquad
+  \tau_{m,i}.
+\end{equation}
+
+设电机等效转动惯量为
+$J_i$，等效粘性阻尼为
+$B_i$，卷筒半径为 $r_m$，
+绳索张力为 $f_i$，则单
+电机执行单元的等效动
+力学可写为
+
+\begin{equation}
+  J_i\dot{\omega}_i
+  =
+  \tau_{m,i}
+  -
+  r_m f_i
+  -
+  B_i\omega_i
+  -
+  \tau_{f,i}
+  -
+  \tau_{d,i},
+  \label{eq:ch4-motor-dyn}
+\end{equation}
+
+其中，$\tau_{f,i}$ 表示摩
+擦力矩，$\tau_{d,i}$ 表示
+建模误差、负载扰动及
+其他未建模因素引起的
+等效扰动力矩。
+
+在系统总体层面，末端
+期望轨迹
+
+\begin{equation}
+  \bm q_d=
+  \begin{bmatrix}
+    x_d & y_d & \theta_d
+  \end{bmatrix}^{\mathrm T}
+\end{equation}
+
+经逆运动学和状态反馈
+后，可由正运动学得到
+当前末端位姿估计值
+
+\begin{equation}
+  \hat{\bm q}=
+  \begin{bmatrix}
+    \hat{x} & \hat{y} & \hat{\theta}
+  \end{bmatrix}^{\mathrm T}.
+\end{equation}
+
+进而构造末端位姿误差
+
+\begin{equation}
+  \bm e_q=\bm q_d-\hat{\bm q}.
+  \label{eq:ch4-eq}
+\end{equation}
+
+该误差经外环补偿器处
+理后形成末端广义力修
+正量，再由张力映射模
+块转换为四根绳的张力
+增量和相应电机目标力
+矩，最终由四个单电机
+内环分别完成跟踪。因
+此，系统控制信息流可
+概括为“轨迹规划—位
+姿反馈—误差补偿—张
+力映射—电机力矩闭环”。
+
+\begin{figure}[htbp]
+  \centering
+  \fbox{\begin{minipage}[c][5.0cm][c]{0.84\textwidth}
+    \centering
+    占位图：控制系统总体架构图。\\
+    建议包含末端期望轨迹、逆运动学、\\
+    正运动学反馈、末端位姿补偿模块、\\
+    张力映射模块以及四个单电机内环。
+  \end{minipage}}
+  \caption{控制系统总体架构图}
+  \label{fig:ch4-control-architecture}
+\end{figure}
+
+如\cref{fig:ch4-control-architecture}
+所示，本章控制算法并
+不直接替代后续张力分
+配优化，而是为其提供
+可执行的控制框架。其
+中，内环负责提高单电
+机力矩控制品质，外环
+负责将末端位姿误差转
+换为广义力修正需求，
+而最终张力分配与冗余
+调节将在下一章中结合
+动力学模型进一步展开。
+
+\section{单电机闭环力矩控制方法}
+
+\subsection{控制对象与问题描述}
+
+对于绳驱并联机器人而
+言，各电机通过卷筒收
+放绳索间接调节绳张力，
+进而影响末端平台所受
+广义力。由于四电机协
+同控制建立在各执行单
+元具备基本稳定性和良
+好跟踪性能的前提下，
+因此有必要先对单电机
+闭环力矩控制方法进行
+设计。
+
+定义第 $i$ 个执行单元
+的目标张力为 $f_i^\ast$，
+其对应的目标卷筒力矩
+为
+
+\begin{equation}
+  \tau_i^\ast=r_m f_i^\ast.
+  \label{eq:ch4-tau-ref-basic}
+\end{equation}
+
+设第 $i$ 个执行单元的
+实际输出等效力矩为
+$\tau_i$，则力矩跟踪误差
+定义为
+
+\begin{equation}
+  e_{\tau,i}=\tau_i^\ast-\tau_i.
+  \label{eq:ch4-etau}
+\end{equation}
+
+单电机力矩控制的主要
+目标是使 $e_{\tau,i}$ 尽可
+能趋近于零，并在存在
+摩擦、负载变化及模型
+不确定性的条件下保持
+较好的跟踪精度与动态
+响应。考虑到样机系统
+的工程实现难度与实时
+控制需求，本文采用
+PID 控制、摩擦补偿与
+扰动观测器相结合的方
+法构建单电机控制器。
+
+\begin{figure}[htbp]
+  \centering
+  \fbox{\begin{minipage}[c][4.8cm][c]{0.84\textwidth}
+    \centering
+    占位图：单电机闭环力矩控制对象示意图。\\
+    建议给出电机、卷筒、绳索、张力方向、\\
+    传感器位置及负载作用关系。
+  \end{minipage}}
+  \caption{单电机闭环力矩控制对象示意图}
+  \label{fig:ch4-single-motor-object}
+\end{figure}
+
+\subsection{基于PID的力矩闭环控制}
+
+PID 控制器具有结构简
+单、参数物理意义明确
+且工程应用成熟等优点，
+适合作为单电机力矩闭
+环控制的基础。对第
+$i$ 个电机，PID 控制输
+出写为
+
+\begin{equation}
+  \tau_{pid,i}
+  =
+  K_{p,i}e_{\tau,i}
+  +
+  K_{i,i}\int e_{\tau,i}\mathrm dt
+  +
+  K_{d,i}\dot e_{\tau,i},
+  \label{eq:ch4-pid}
+\end{equation}
+
+其中，$K_{p,i}$、$K_{i,i}$
+和 $K_{d,i}$ 分别为比例、
+积分和微分增益。
+
+比例项用于根据当前力
+矩误差迅速生成校正作
+用，积分项用于减小稳
+态误差，微分项则用于
+改善系统瞬态响应并抑
+制误差变化过快导致的
+振荡。考虑到实际力矩
+信号可能存在高频噪声，
+微分项在实现时通常采
+用一阶滤波形式，以避
+免噪声放大。
+
+仅采用 PID 控制时，
+若系统模型较准确、摩
+擦影响较小且外部扰动
+较弱，则能够在一定程
+度上完成力矩跟踪。但
+对于本文样机而言，绳
+索绕线摩擦、卷筒回差、
+负载变化以及机构耦合
+都会对力矩跟踪质量产
+生影响，因此还需进一
+步引入补偿环节。
+
+\begin{figure}[htbp]
+  \centering
+  \fbox{\begin{minipage}[c][4.8cm][c]{0.84\textwidth}
+    \centering
+    占位图：基于PID的单电机力矩闭环框图。\\
+    建议包含目标力矩、误差计算、PID 控制器、\\
+    电机执行对象及实际力矩反馈。
+  \end{minipage}}
+  \caption{基于PID的单电机力矩闭环框图}
+  \label{fig:ch4-pid-block}
+\end{figure}
+
+\subsection{摩擦补偿设计}
+
+在绳驱系统中，摩擦主
+要来源于电机轴承、减
+速机构、卷筒与绳索接
+触以及导向部件等环节。
+这些摩擦会导致低速段
+响应迟滞、换向时死区
+加重以及力矩输出不对
+称等问题，从而降低控
+制精度。为提高单电机
+力矩跟踪性能，本文在
+PID 控制基础上引入摩
+擦补偿项。
+
+考虑工程实现的简洁性，
+本文采用库仑摩擦与粘
+性摩擦组合的近似模型，
+将第 $i$ 个执行单元的
+摩擦补偿力矩写为
+
+\begin{equation}
+  \hat{\tau}_{f,i}
+  =
+  \tau_{c,i}\,
+  \operatorname{sat}\!\left(
+  \frac{\omega_i}{\omega_0}
+  \right)
+  +
+  b_i\omega_i,
+  \label{eq:ch4-friction}
+\end{equation}
+
+其中，$\tau_{c,i}$ 为等效
+库仑摩擦力矩，$b_i$ 为
+等效粘性摩擦系数，
+$\omega_0$ 为小正数，用
+于在低速区域平滑逼近
+符号函数，
+$\operatorname{sat}(\cdot)$
+为饱和函数。
+
+摩擦补偿的物理含义在
+于：当电机转速较高时，
+补偿项近似为库仑摩擦
+与粘性摩擦之和；当电
+机接近零速时，补偿项
+通过平滑函数避免突变，
+从而降低换向抖振。由
+于本文更关注工程可实
+现性，因此并未进一步
+引入更复杂的 LuGre 等
+动态摩擦模型，而是采
+用参数较少、便于整定
+的静态补偿形式。
+
+\begin{figure}[htbp]
+  \centering
+  \fbox{\begin{minipage}[c][4.6cm][c]{0.84\textwidth}
+    \centering
+    占位图：摩擦补偿特性曲线示意图。\\
+    建议给出速度与摩擦补偿力矩之间的关系，\\
+    并标明低速平滑区和高速区特性。
+  \end{minipage}}
+  \caption{摩擦补偿特性示意图}
+  \label{fig:ch4-friction-curve}
+\end{figure}
+
+\subsection{扰动观测器设计}
+
+除摩擦外，系统还受到
+负载波动、参数失配及
+未建模动态等因素影响。
+若仅靠固定参数的反馈
+控制器，难以在不同工
+况下始终获得稳定一致
+的控制效果。为此，本
+文在单电机力矩闭环中
+引入扰动观测器，对总
+扰动力矩进行在线估计
+与补偿。
+
+将\cref{eq:ch4-motor-dyn}
+改写为名义模型形式，
+
+\begin{equation}
+  J_{n,i}\dot{\omega}_i
+  =
+  \tau_{m,i}
+  -
+  \tau_{dis,i},
+  \label{eq:ch4-nominal}
+\end{equation}
+
+其中，$J_{n,i}$ 为第 $i$
+个电机的名义转动惯量，
+$\tau_{dis,i}$ 为总扰动力
+矩，综合包含真实惯量
+与名义惯量差异、负载
+变化、摩擦误差及其他
+未建模因素。
+
+基于名义模型，可构造
+扰动观测器估计量
+
+\begin{equation}
+  \hat{\tau}_{dis,i}
+  =
+  Q_i(s)
+  \left(
+  \tau_{m,i}
+  -
+  J_{n,i}s\omega_i
+  \right),
+  \label{eq:ch4-dob}
+\end{equation}
+
+其中，$Q_i(s)$ 为低通滤
+波器，其作用是在抑制
+测量噪声的同时估计低
+频主导扰动。典型情况
+下可取
+
+\begin{equation}
+  Q_i(s)=\frac{g_i}{s+g_i},
+  \label{eq:ch4-qfilter}
+\end{equation}
+
+式中，$g_i$ 为滤波器带
+宽。带宽越大，扰动估
+计响应越快，但对噪声
+也越敏感；带宽越小，
+则估计更平滑，但动态
+补偿能力下降。因此，
+$g_i$ 需要结合执行器响
+应速度和采样噪声水平
+进行折中选取。
+
+综合 PID、摩擦补偿与
+扰动观测器后，第 $i$
+个电机的最终控制输入
+可写为
+
+\begin{equation}
+  \tau_{m,i}^\ast
+  =
+  \tau_{pid,i}
+  +
+  \hat{\tau}_{f,i}
+  +
+  \hat{\tau}_{dis,i}.
+  \label{eq:ch4-final-inner}
+\end{equation}
+
+上述控制律的物理意义
+是：PID 环节负责构造
+基本闭环性能，摩擦补
+偿环节负责消除主要静
+态非线性影响，扰动观
+测器则进一步对剩余不
+确定项进行实时修正。
+这种组合方式兼顾了工
+程实现简洁性和控制效
+果，是本文单电机闭环
+力矩控制的基本形式。
+
+\begin{figure}[htbp]
+  \centering
+  \fbox{\begin{minipage}[c][5.0cm][c]{0.84\textwidth}
+    \centering
+    占位图：含摩擦补偿与扰动观测器的单电机\\
+    闭环力矩控制框图。建议包含 PID、摩擦补偿、\\
+    扰动观测器、被控对象及反馈信号通路。
+  \end{minipage}}
+  \caption{单电机闭环力矩控制完整框图}
+  \label{fig:ch4-inner-loop-full}
+\end{figure}
+
+\section{基于正运动学反馈的末端位姿闭环补偿方法}
+
+\subsection{末端位姿误差定义}
+
+在四电机协同控制中，
+单电机内环只负责保证
+各执行单元具备较好的
+力矩跟踪能力，而末端
+平台能否按照期望轨迹
+运行，还需要依赖任务
+空间层面的误差补偿。
+因此，本文基于正运动
+学反馈构建末端位姿闭
+环补偿方法。
+
+根据第 3 章建立的正运
+动学求解器，可由实时
+绳长测量值反求末端位
+姿估计值 $\hat{\bm q}$。在
+此基础上，定义末端位
+姿误差为
+
+\begin{equation}
+  \bm e_q
+  =
+  \bm q_d-\hat{\bm q}
+  =
+  \begin{bmatrix}
+    e_x & e_y & e_\theta
+  \end{bmatrix}^{\mathrm T}.
+  \label{eq:ch4-task-error}
+\end{equation}
+
+相应地，末端位姿误差
+变化率定义为
+
+\begin{equation}
+  \dot{\bm e}_q
+  =
+  \dot{\bm q}_d-\dot{\hat{\bm q}}.
+  \label{eq:ch4-task-edot}
+\end{equation}
+
+上述误差量分别反映了
+末端平台在平移与转动
+方向上的偏差，是外环
+补偿器的直接输入。与
+单纯通过电机编码器比
+较位置误差不同，该误
+差定义建立在正运动学
+重构基础上，更能反映
+末端平台真实运动状态，
+也便于将后续补偿量直
+接构造为末端平台广义
+力修正需求。
+
+\subsection{任务空间误差到广义力修正量的构造}
+
+对于平面四绳机器人，
+末端平台的广义力写为
+
+\begin{equation}
+  \bm W_p=
+  \begin{bmatrix}
+    F_x & F_y & M_z
+  \end{bmatrix}^{\mathrm T},
+\end{equation}
+
+其中，$F_x$ 和 $F_y$ 分
+别表示末端平台在 $x$
+和 $y$ 方向上的等效广
+义力，$M_z$ 表示绕平面
+法向的等效广义力矩。
+
+为了利用位姿误差实现
+末端闭环补偿，本文采
+用比例—微分—积分型
+任务空间补偿器构造广
+义力修正量
+
+\begin{equation}
+  \Delta \bm W_p
+  =
+  \bm K_p \bm e_q
+  +
+  \bm K_d \dot{\bm e}_q
+  +
+  \bm K_i \int \bm e_q\,\mathrm dt,
+  \label{eq:ch4-deltaW}
+\end{equation}
+
+其中，
+$\bm K_p$、$\bm K_d$、
+$\bm K_i$ 分别为任务空
+间比例、微分和积分增
+益矩阵，通常取为对角
+矩阵形式，即
+
+\begin{equation}
+  \bm K_p=
+  \operatorname{diag}(k_{px},k_{py},k_{p\theta}),
+\end{equation}
+
+\begin{equation}
+  \bm K_d=
+  \operatorname{diag}(k_{dx},k_{dy},k_{d\theta}),
+\end{equation}
+
+\begin{equation}
+  \bm K_i=
+  \operatorname{diag}(k_{ix},k_{iy},k_{i\theta}).
+\end{equation}
+
+由此，位姿误差被转化
+为对末端平台所需广义
+力的修正需求。若同时
+考虑轨迹规划或动力学
+前馈项，则末端期望广
+义力可进一步写为
+
+\begin{equation}
+  \bm W_p^\ast
+  =
+  \bm W_{ff}
+  +
+  \Delta \bm W_p,
+  \label{eq:ch4-totalW}
+\end{equation}
+
+其中，$\bm W_{ff}$ 为基
+于轨迹或动力学模型计
+算得到的前馈项。在本
+章中，重点放在闭环补
+偿结构本身，因此前馈
+项的具体构造将在后续
+动力学与张力分配章节
+中进一步讨论。
+
+\begin{figure}[htbp]
+  \centering
+  \fbox{\begin{minipage}[c][4.8cm][c]{0.84\textwidth}
+    \centering
+    占位图：末端位姿闭环补偿示意图。\\
+    建议给出末端期望位姿、正运动学反馈位姿、\\
+    误差计算与广义力修正模块之间的关系。
+  \end{minipage}}
+  \caption{末端位姿闭环补偿示意图}
+  \label{fig:ch4-task-space-loop}
+\end{figure}
+
+\subsection{广义力修正到各电机张力增量的映射}
+
+根据第 3 章推导的结构
+矩阵形式，四根绳张力
+与末端平台广义力满足
+
+\begin{equation}
+  \bm W_p=\bm W \bm f,
+  \label{eq:ch4-wf}
+\end{equation}
+
+其中，
+
+\begin{equation}
+  \bm f=
+  \begin{bmatrix}
+    f_1 & f_2 & f_3 & f_4
+  \end{bmatrix}^{\mathrm T}
+\end{equation}
+
+为四根绳张力向量，
+$\bm W\in\mathbb R^{3\times 4}$
+为结构矩阵。由于系统
+属于 4 绳驱动 3 自由度
+形式，因此张力解具有
+一维冗余。
+
+设预紧张力向量为
+
+\begin{equation}
+  \bm f_0=
+  \begin{bmatrix}
+    f_{01} & f_{02} & f_{03} & f_{04}
+  \end{bmatrix}^{\mathrm T},
+\end{equation}
+
+则在外环补偿作用下，
+目标张力可写为
+
+\begin{equation}
+  \bm f^\ast
+  =
+  \bm f_0+\Delta \bm f.
+  \label{eq:ch4-fstar}
+\end{equation}
+
+其中，张力增量 $\Delta \bm f$
+由末端广义力修正量映
+射得到。若暂不考虑零
+空间调节，则可用广义
+逆形式写为
+
+\begin{equation}
+  \Delta \bm f
+  =
+  \bm W^\dagger
+  \Delta \bm W_p.
+  \label{eq:ch4-deltaf-basic}
+\end{equation}
+
+进一步考虑冗余自由度
+带来的张力整形能力，
+则更一般的形式为
+
+\begin{equation}
+  \Delta \bm f
+  =
+  \bm W^\dagger
+  \Delta \bm W_p
+  +
+  \left(
+  \bm I-\bm W^\dagger\bm W
+  \right)\bm z,
+  \label{eq:ch4-deltaf-null}
+\end{equation}
+
+其中，$\bm z$ 为零空间调
+节向量，用于后续实现
+张力均衡、避免绳索松
+弛以及限制峰值张力等
+目标。由于本文下一章
+将专门讨论冗余驱动下
+的张力分配问题，因此
+本章仅从控制实现角度
+说明张力增量的基本映
+射关系，而不展开最优
+分配方法的细节。
+
+当得到各绳目标张力后，
+即可根据卷筒半径将其
+转换为电机目标力矩
+
+\begin{equation}
+  \bm \tau^\ast
+  =
+  r_m \bm f^\ast
+  =
+  r_m
+  \begin{bmatrix}
+    f_1^\ast & f_2^\ast & f_3^\ast & f_4^\ast
+  \end{bmatrix}^{\mathrm T}.
+  \label{eq:ch4-tau-star}
+\end{equation}
+
+于是，末端位姿误差经
+“广义力修正—张力增
+量映射—电机目标力矩”
+这一路径，最终转化为
+四个单电机内环可执行
+的控制参考量。
+
+\begin{figure}[htbp]
+  \centering
+  \fbox{\begin{minipage}[c][5.0cm][c]{0.84\textwidth}
+    \centering
+    占位图：广义力修正到张力增量映射示意图。\\
+    建议表示任务空间误差、广义力修正、\\
+    张力映射、目标张力与目标力矩之间的层级关系。
+  \end{minipage}}
+  \caption{广义力修正到张力增量映射关系示意图}
+  \label{fig:ch4-force-to-tension}
+\end{figure}
+
+\section{控制算法实现流程}
+
+综合上述分析，本文控
+制算法的整体实现过程
+可总结为如下步骤。
+
+第一步，根据任务要求
+生成末端参考轨迹，得
+到期望位姿、期望速度
+以及必要的前馈信息。
+
+第二步，通过逆运动学
+和正运动学模块建立任
+务空间与执行空间之间
+的信息通道，实时获得
+末端平台位姿估计值。
+
+第三步，根据期望位姿
+与反馈位姿计算末端误
+差，并利用任务空间补
+偿器构造广义力修正量。
+
+第四步，根据广义力与
+绳张力之间的映射关系，
+将末端广义力修正需求
+转换为四根绳的目标张
+力及目标力矩。
+
+第五步，对四个执行单
+元分别运行 PID、摩擦
+补偿和扰动观测器构成
+的单电机内环控制器，
+实现各电机目标力矩跟
+踪。
+
+第六步，在实时控制循
+环中不断重复上述过程，
+直至完成整个运动任务。
+
+\begin{figure}[htbp]
+  \centering
+  \fbox{\begin{minipage}[c][5.0cm][c]{0.84\textwidth}
+    \centering
+    占位图：控制算法实现流程图。\\
+    建议按“参考轨迹生成—位姿反馈—误差计算—\\
+    广义力修正—张力映射—单电机内环控制”顺序绘制。
+  \end{minipage}}
+  \caption{控制算法实现流程图}
+  \label{fig:ch4-algorithm-flow}
+\end{figure}
+
+为保证算法在样机系统
+中的可实现性，控制器
+设计中遵循以下原则：
+一是内环结构尽量简洁，
+便于参数整定和实时实
+现；二是外环误差补偿
+采用任务空间形式，便
+于与末端轨迹目标直接
+对应；三是张力映射保
+持与后续冗余张力分配
+分析一致，以便形成从
+控制器到实验平台的闭
+环实现链条。基于上述
+设计思想，本文后续实
+验将分别从单电机力矩
+跟踪、四电机协同张力
+控制以及末端加速度跟
+踪三个层面，对控制效
+果进行验证。
+
+\section{本章小结}
+
+本章围绕样机系统的控
+制实现需求，建立了单
+电机闭环力矩控制与末
+端位姿闭环补偿相结合
+的控制算法框架。首先，
+从控制系统总体架构出
+发，明确了“单电机内环
+力矩控制+末端外环位姿
+补偿”的双层控制思路；
+随后，针对单电机执行
+单元建立了基于 PID、
+摩擦补偿和扰动观测器
+的闭环力矩控制方法，
+提高了执行单元的跟踪
+精度与抗扰能力；进一
+步地，利用正运动学反
+馈构建末端位姿闭环补
+偿方法，将末端轨迹误
+差转化为平台广义力修
+正量，并建立了广义力
+修正到各绳张力增量及
+电机目标力矩之间的映
+射关系。
+
+本章所建立的控制算法
+为后续冗余驱动下的张
+力分配与四电机协同控
+制研究提供了实现基础。
+在此基础上，下一章将
+进一步结合动力学模型，
+围绕张力分配策略、可
+行张力区间及不同分配
+方法的效果展开分析，
+从而形成更完整的协同
+控制方案。

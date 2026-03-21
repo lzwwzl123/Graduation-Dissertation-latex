@@ -127,7 +127,7 @@
 % 当前未输出索引，关闭示例里的 split index 写入以减少无用告警
 \RenewDocumentCommand{\sindex}{O{}m}{}
 \graphicspath{{figures/}}
-\includeonly{body/pre_introduction}
+% \includeonly{body/modeling}
 \begin{document}
 \frontmatter
 \input{front/cover} % 封面
@@ -137,9 +137,11 @@
 \include{body/pre_introduction}
 \include{body/mech_design}
 \include{body/modeling}
-\include{body/regu}
-\include{body/introduction}
-\include{body/recruit}
+\include{body/control}
+\include{body/force_assign}
+% \include{body/regu}
+% \include{body/introduction}
+% \include{body/recruit}
 \backmatter
 \include{back/conclusion}   % 结论
 % \bibliographystyle{gbt7714-numerical}

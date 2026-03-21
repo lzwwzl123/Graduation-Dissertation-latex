@@ -367,24 +367,4 @@
   }\bibpages{431\textnormal{-}438}\nolinebreak\@.
   \url{https://robot.sia.cn/article/doi/10.13973/j.cnki.robot.220105?viewType=HTML}\nolinebreak\@.
 
-\bibitem{cnproceed}
-\bibauthor{{, 等}{王重阳}{, 黄药师}{, 欧阳峰}{, 洪七公}{,
-  段皇帝}}\nolinebreak\@.
-  \bibtitle{武林高手从入门到精通}\bibmark{[C]}
-  //\thinspace{}\bibbooktitle{第~$N$~次华山论剑}\nolinebreak\@.
-  \bibyear{2006}\nolinebreak\@.
-
-\bibitem{cnarticle}
-\bibauthor{{, 等}{贾宝玉}{, 林黛玉}{, 薛宝钗}{,
-  贾探春}}\nolinebreak\@.
-  \bibtitle{论刘姥姥食量大如牛之现实意义}\bibmark{[J]}\nolinebreak\@.
-  \bibjournal{红楼梦杂谈}, \bibyear{1800}, \bibvolume{224}\textnormal{:
-  }\bibpages{260\textnormal{-}266}\nolinebreak\@.
-
-\bibitem{hithesis2017}
-\bibauthor{{, et~al}{Chu Y}}\nolinebreak\@. \bibtitle{Hi!Thesis!,Harbin
-  Institue of Technology}\bibmark{[J]}\nolinebreak\@. \bibjournal{Github},
-  \bibyear{2017}, \bibvolume{001}\bibnumber{(0001)}\textnormal{:
-  }\bibpages{000\textnormal{-}999}\nolinebreak\@.
-
 \end{thebibliography}
