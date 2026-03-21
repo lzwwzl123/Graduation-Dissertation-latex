@@ -1,5 +1,5 @@
 % !Mode:: "TeX:UTF-8"
-\PassOptionsToPackage{pagebackref}{hyperref}
+% \PassOptionsToPackage{pagebackref}{hyperref}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %          ,
 %      /\^/`\
@@ -127,6 +127,7 @@
 % 当前未输出索引，关闭示例里的 split index 写入以减少无用告警
 \RenewDocumentCommand{\sindex}{O{}m}{}
 \graphicspath{{figures/}}
+\includeonly{body/pre_introduction}
 \begin{document}
 \frontmatter
 \input{front/cover} % 封面
