@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2026.3.15)  21 MAR 2026 21:12
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2026.3.15)  21 MAR 2026 19:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**d:/桌面/毕业设计/毕业论文latex/thesis.tex
-(d:/桌面/毕业设计/毕业论文latex/thesis.tex
+**./thesis_tmp.tex
+(thesis_tmp.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (hithesisbook.cls
@@ -1144,11 +1144,11 @@ Package: ccaption 2011/08/07 v3.2c Extended captioning and new floats
 Package: splitidx 2016/02/18 v1.2c multiple indices for LaTeX
 )
 \@indexfile=\write3
-\openout3 = `thesis.idx'.
+\openout3 = `thesis_tmp.idx'.
 
 
-Writing index file thesis.idx
-Using splitted index at thesis.idx
+Writing index file thesis_tmp.idx
+Using splitted index at thesis_tmp.idx
 (E:\ctex\MiKTeX\tex/latex/glossaries/base\glossaries.sty
 Package: glossaries 2025/11/09 v4.9 (NLCT)
 
@@ -1771,68 +1771,61 @@ Package cleveref Info: include cross-reference names in hyperlinks on input lin
 e 7852.
 )
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 132.
+h' as default language. on input line 134.
 
-(d:\桌面\毕业设计\毕业论文latex\build\thesis.aux
-(d:\桌面\毕业设计\毕业论文latex\build\body/pre_introduction.aux)
-(d:\桌面\毕业设计\毕业论文latex\build\body/mech_design.aux)
-(d:\桌面\毕业设计\毕业论文latex\build\body/modeling.aux)
-(d:\桌面\毕业设计\毕业论文latex\build\body/control.aux)
-(d:\桌面\毕业设计\毕业论文latex\build\body/force_assign.aux)
-(d:\桌面\毕业设计\毕业论文latex\build\back/conclusion.aux)
-(d:\桌面\毕业设计\毕业论文latex\build\back/acknowledgements.aux))
-\openout1 = `thesis.aux'.
+(D:\桌面\毕业设计\毕业论文latex\build\thesis_tmp.aux)
+\openout1 = `thesis_tmp.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 132.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 134.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line
- 132.
+ 134.
 
 (E:\ctex\MiKTeX\tex/latex/newtx\omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 134.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
-132.
+134.
 
 (E:\ctex\MiKTeX\tex/latex/newtx\untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 134.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
- 132.
+ 134.
 
 (E:\ctex\MiKTeX\tex/latex/newtx\lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 134.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
-e 132.
+e 134.
 
 (E:\ctex\MiKTeX\tex/latex/newtx\lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Info: Command `\dddot' is already robust on input line 132.
-LaTeX Info: Command `\ddddot' is already robust on input line 132.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 134.
+LaTeX Font Info:    ... okay on input line 134.
+LaTeX Info: Command `\dddot' is already robust on input line 134.
+LaTeX Info: Command `\ddddot' is already robust on input line 134.
 
 (E:\ctex\MiKTeX\tex/latex/pdflscape\pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
@@ -1847,11 +1840,13 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 
 ))
-Package hyperref Info: Link coloring OFF on input line 132.
-
-(d:\桌面\毕业设计\毕业论文latex\build\thesis.out) (d:\桌面\毕业设计\毕业论文latex\build\thesis.out)
+Package hyperref Info: Link coloring OFF on input line 134.
 \@outlinefile=\write5
-\openout5 = `thesis.out'.
+\openout5 = `thesis_tmp.out'.
+
+
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1896,7 +1891,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 132.
+or `english'. on input line 134.
 \c@lstlisting=\count498
  (front/cover.tex)
 
@@ -2037,145 +2032,145 @@ Package fontspec Info: Font family 'KaiTi(0)' created for font 'KaiTi' with
 
 ]
 LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input lin
-e 135.
+e 137.
  (E:\ctex\MiKTeX\tex/latex/newtx\ot1ntxtlf.fd
 File: ot1ntxtlf.fd 2021/05/24 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 137.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 137.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 7.52812pt on input line 135.
+(Font)              scaled to size 7.52812pt on input line 137.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 137.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 137.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 7.52812pt on input line 135.
+(Font)              scaled to size 7.52812pt on input line 137.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 137.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 137.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 7.52812pt on input line 135.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 135
+(Font)              scaled to size 7.52812pt on input line 137.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 137
 .
 
 (E:\latex\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 135
+LaTeX Font Info:    Trying to load font information for U+msb on input line 137
 .
  (E:\latex\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
-135.
+137.
 
 (E:\ctex\MiKTeX\tex/latex/newtx\untxmia.fd
 File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 137.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 137.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 7.52812pt on input line 135.
+(Font)              scaled to size 7.52812pt on input line 137.
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
-135.
+137.
 
 (E:\ctex\MiKTeX\tex/latex/newtx\untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 137.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 137.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 7.52812pt on input line 135.
+(Font)              scaled to size 7.52812pt on input line 137.
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
-135.
+137.
 
 (E:\ctex\MiKTeX\tex/latex/newtx\untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 137.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 137.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 7.52812pt on input line 135.
+(Font)              scaled to size 7.52812pt on input line 137.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 137.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 137.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 7.52812pt on input line 135.
+(Font)              scaled to size 7.52812pt on input line 137.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 137.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 137.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 7.52812pt on input line 135.
+(Font)              scaled to size 7.52812pt on input line 137.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 137.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 137.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 7.52812pt on input line 135.
+(Font)              scaled to size 7.52812pt on input line 137.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 137.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 137.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 7.52812pt on input line 135.
+(Font)              scaled to size 7.52812pt on input line 137.
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 13
-5.
+7.
 
 (E:\ctex\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 135.
+(Font)              size <10.95> substituted on input line 137.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <7.52812> not available
-(Font)              size <8> substituted on input line 135.
+(Font)              size <8> substituted on input line 137.
 
 
-Underfull \hbox (badness 10000) detected at line 135
+Underfull \hbox (badness 10000) detected at line 137
 \TU/SimHei(0)/m/n/14.05249 本 科 生
  []
 
 
-Underfull \hbox (badness 10000) detected at line 135
+Underfull \hbox (badness 10000) detected at line 137
 \TU/SimHei(0)/m/n/14.05249 学 号
  []
 
 
-Underfull \hbox (badness 10000) detected at line 135
+Underfull \hbox (badness 10000) detected at line 137
 \TU/SimHei(0)/m/n/14.05249 指 导 教 师
  []
 
 
-Underfull \hbox (badness 10000) detected at line 135
+Underfull \hbox (badness 10000) detected at line 137
 \TU/SimHei(0)/m/n/14.05249 专 业
  []
 
 
-Underfull \hbox (badness 10000) detected at line 135
+Underfull \hbox (badness 10000) detected at line 137
 \TU/SimHei(0)/m/n/14.05249 学 院
  []
 
 
-Underfull \hbox (badness 10000) detected at line 135
+Underfull \hbox (badness 10000) detected at line 137
 \TU/SimHei(0)/m/n/14.05249 答 辩 日 期
  []
 
 
-Underfull \hbox (badness 10000) detected at line 135
+Underfull \hbox (badness 10000) detected at line 137
 \TU/SimHei(0)/m/n/14.05249 学 校
  []
 
@@ -2188,7 +2183,7 @@ Underfull \hbox (badness 10000) detected at line 135
 
 
 ] [2]
-Underfull \hbox (badness 2418) in paragraph at lines 135--135
+Underfull \hbox (badness 2418) in paragraph at lines 137--137
 []\TU/TeXGyreTermesX(0)/m/n/12.045 To meet the demands of manned spaceflight tr
 aining and complex motion-
  []
@@ -2196,80 +2191,127 @@ aining and complex motion-
 [3
 
 
-] [4] (d:\桌面\毕业设计\毕业论文latex\build\thesis.toc
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 12.045pt on input line 1.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 8.0pt on input line 1.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 6.0pt on input line 1.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 12.045pt on input line 1.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 8.0pt on input line 1.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.0pt on input line 1.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 12.045pt on input line 1.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 8.0pt on input line 1.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.0pt on input line 1.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 12.045pt on input line 1.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 8.0pt on input line 1.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.0pt on input line 1.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 12.045pt on input line 1.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 8.0pt on input line 1.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.0pt on input line 1.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 12.045pt on input line 1.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 8.0pt on input line 1.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.0pt on input line 1.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 12.045pt on input line 1.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 8.0pt on input line 1.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.0pt on input line 1.
-LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 12.045pt on input line 1.
-LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 8.0pt on input line 1.
-LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 6.0pt on input line 1.
-LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 12.045pt on input line 1.
-LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 8.0pt on input line 1.
-LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 6.0pt on input line 1.
-LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 12.045pt on input line 1.
-LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 8.0pt on input line 1.
-LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 6.0pt on input line 1.
- [5
-
-
-])
+] [4]
+No file thesis_tmp.toc.
 \tf@toc=\write6
-\openout6 = `thesis.toc'.
+\openout6 = `thesis_tmp.toc'.
 
- [6]
+[5
+
+
+]
 \openout2 = `body/pre_introduction.aux'.
 
-
-(body/pre_introduction.tex
+ (body/pre_introduction.tex
 第1章
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 12.045pt on input line 16.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 8.0pt on input line 16.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 6.0pt on input line 16.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 12.045pt on input line 16.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 8.0pt on input line 16.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 6.0pt on input line 16.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 12.045pt on input line 16.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 8.0pt on input line 16.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 6.0pt on input line 16.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 12.045pt on input line 16.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 8.0pt on input line 16.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 6.0pt on input line 16.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 12.045pt on input line 16.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 8.0pt on input line 16.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 6.0pt on input line 16.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 12.045pt on input line 16.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 8.0pt on input line 16.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 6.0pt on input line 16.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 12.045pt on input line 16.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 8.0pt on input line 16.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 6.0pt on input line 16.
+LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
+(Font)              scaled to size 12.045pt on input line 16.
+LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
+(Font)              scaled to size 8.0pt on input line 16.
+LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
+(Font)              scaled to size 6.0pt on input line 16.
+LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
+(Font)              scaled to size 12.045pt on input line 16.
+LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
+(Font)              scaled to size 8.0pt on input line 16.
+LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
+(Font)              scaled to size 6.0pt on input line 16.
+LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
+(Font)              scaled to size 12.045pt on input line 16.
+LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
+(Font)              scaled to size 8.0pt on input line 16.
+LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
+(Font)              scaled to size 6.0pt on input line 16.
+
+Package natbib Warning: Citation `barker1961simulator' on page 1 undefined on i
+nput line 16.
+
+
+Package natbib Warning: Citation `mohajer2021centrifugedesign' on page 1 undefi
+ned on input line 20.
+
+
+Package natbib Warning: Citation `winter2023centrifugeopt' on page 1 undefined 
+on input line 20.
+
+
+Package natbib Warning: Citation `tu2020gtolerance' on page 1 undefined on inpu
+t line 20.
+
+
+Package natbib Warning: Citation `liu2024centrifuge' on page 1 undefined on inp
+ut line 20.
+
+
+LaTeX Warning: Reference `fig:intro-training-equipment' on page 1 undefined on 
+input line 21.
+
+
+LaTeX Warning: Reference `sub@fig:intro-atfs31' on page 1 undefined on input li
+ne 21.
+
+
+LaTeX Warning: Reference `fig:intro-training-equipment' on page 1 undefined on 
+input line 21.
+
+
+LaTeX Warning: Reference `sub@fig:intro-atfs25' on page 1 undefined on input li
+ne 21.
+
+
+Package natbib Warning: Citation `barker1961simulator' on page 1 undefined on i
+nput line 27.
+
+
+Package natbib Warning: Citation `mohajer2021centrifugedesign' on page 1 undefi
+ned on input line 27.
+
+
+Package natbib Warning: Citation `winter2023centrifugeopt' on page 1 undefined 
+on input line 27.
+
 File: figures/atfs400_31.jpg Graphic file (type bmp)
 <figures/atfs400_31.jpg>
 File: figures/atfs400_25.jpg Graphic file (type bmp)
@@ -2278,111 +2320,812 @@ File: figures/airfox_asd.png Graphic file (type bmp)
 <figures/airfox_asd.png>
 File: figures/desdemona.jpg Graphic file (type bmp)
 <figures/desdemona.jpg>
+
+LaTeX Warning: Reference `fig:intro-training-equipment' on page 1 undefined on 
+input line 51.
+
+
+LaTeX Warning: Reference `sub@fig:intro-airfox' on page 1 undefined on input li
+ne 51.
+
+
+LaTeX Warning: Reference `fig:intro-training-equipment' on page 1 undefined on 
+input line 51.
+
+
+LaTeX Warning: Reference `sub@fig:intro-desdemona' on page 1 undefined on input
+ line 51.
+
+
+Package natbib Warning: Citation `zhang2020groundsimulation' on page 1 undefine
+d on input line 56.
+
+
+Package natbib Warning: Citation `liu2024centrifuge' on page 1 undefined on inp
+ut line 56.
+
+
+Package natbib Warning: Citation `mohajer2021centrifugedesign' on page 1 undefi
+ned on input line 56.
+
+
+Package natbib Warning: Citation `winter2023centrifugeopt' on page 1 undefined 
+on input line 56.
+
+
+Package natbib Warning: Citation `zhang2022stateoftheart' on page 1 undefined o
+n input line 72.
+
+
+Package natbib Warning: Citation `wang2025review' on page 1 undefined on input 
+line 72.
+
+
+Package natbib Warning: Citation `chen2025cdprreview' on page 1 undefined on in
+put line 72.
+
+
+Package natbib Warning: Citation `tempel2015expo' on page 1 undefined on input 
+line 78.
+
+
+Package natbib Warning: Citation `lan2022sprayreview' on page 1 undefined on in
+put line 82.
+
+
+Package natbib Warning: Citation `zhang2009greenhouse' on page 1 undefined on i
+nput line 82.
+
+
+LaTeX Warning: Reference `tab:intro-solution-compare' on page 1 undefined on in
+put line 88.
+
 [1
 
 
 
 
 ]
-File: figures/加速度模拟器方案对比图.pdf Graphic file (type pdf)
-<use figures/加速度模拟器方案对比图.pdf>
- [2] [3] [4] [5]
-File: figures/旋转机构原理.pdf Graphic file (type pdf)
-<use figures/旋转机构原理.pdf>
- [6] [7] [8] [9] [10] [11] [12]) [13]
-\openout2 = `body/mech_design.aux'.
 
- (body/mech_design.tex
-第2章
-) [14
+body/pre_introduction.tex:96: LaTeX Error: Environment threeparttable undefined
+.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.96   \begin{threeparttable}
+                             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+body/pre_introduction.tex:110: Undefined control sequence.
+l.110     \goodcell
+                   {大} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:111: Undefined control sequence.
+l.111     \badcell
+                  {小} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:112: Undefined control sequence.
+l.112     \midcell
+                  {中} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:113: Undefined control sequence.
+l.113     \goodcell
+                   {大} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:116: Undefined control sequence.
+l.116     \badcell
+                  {大} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:117: Undefined control sequence.
+l.117     \badcell
+                  {大} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:118: Undefined control sequence.
+l.118     \midcell
+                  {中} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:119: Undefined control sequence.
+l.119     \goodcell
+                   {小} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:122: Undefined control sequence.
+l.122     \goodcell
+                   {强} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:123: Undefined control sequence.
+l.123     \badcell
+                  {弱} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:124: Undefined control sequence.
+l.124     \midcell
+                  {有限} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:125: Undefined control sequence.
+l.125     \goodcell
+                   {强} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:128: Undefined control sequence.
+l.128     \midcell
+                  {中} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:129: Undefined control sequence.
+l.129     \midcell
+                  {中} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:130: Undefined control sequence.
+l.130     \midcell
+                  {较强} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:131: Undefined control sequence.
+l.131     \goodcell
+                   {强} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:134: Undefined control sequence.
+l.134     \midcell
+                  {较好} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:135: Undefined control sequence.
+l.135     \midcell
+                  {中} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:136: Undefined control sequence.
+l.136     \midcell
+                  {中} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:137: Undefined control sequence.
+l.137     \goodcell
+                   {较好} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:140: Undefined control sequence.
+l.140     \badcell
+                  {高} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:141: Undefined control sequence.
+l.141     \badcell
+                  {高} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:142: Undefined control sequence.
+l.142     \midcell
+                  {中} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:143: Undefined control sequence.
+l.143     \goodcell
+                   {较低} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:146: Undefined control sequence.
+l.146     \badcell
+                  {弱} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:147: Undefined control sequence.
+l.147     \goodcell
+                   {强} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:148: Undefined control sequence.
+l.148     \midcell
+                  {中} &
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+body/pre_introduction.tex:149: Undefined control sequence.
+l.149     \goodcell
+                   {强} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 
+body/pre_introduction.tex:152: LaTeX Error: Environment tablenotes undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.152   \begin{tablenotes}
+                          
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
 
-
-]
-\openout2 = `body/modeling.aux'.
-
- (body/modeling.tex
-第3章
-File: figures/系统构型示意图.pdf Graphic file (type pdf)
-<use figures/系统构型示意图.pdf>
-Package hyperref Info: bookmark level for unknown equation defaults to 0 on inp
-ut line 87.
-[15
-
-
-
-
-
-] [16] [17] [18]
-File: figures/绕线示意图.pdf Graphic file (type pdf)
-<use figures/绕线示意图.pdf>
- [19] [20] [21] [22] [23] [24] [25] [26] [27] [28] [29])
-[30]
-\openout2 = `body/control.aux'.
-
- (body/control.tex
-第4章
-[31
-
-
-
-
-
-] [32] [33] [34] [35] [36] [37] [38] [39] [40]) [41]
-\openout2 = `body/force_assign.aux'.
-
- (body/force_assign.tex)
-\openout2 = `back/conclusion.aux'.
-
-(back/conclusion.tex) [42
-
-
-
-
-
-
-
-
-
-] (d:\桌面\毕业设计\毕业论文latex\build\thesis.bbl [43
-
-
-
-
-] [44]
-[45] [46]
-Underfull \hbox (badness 1122) in paragraph at lines 363--369
-[]\TU/SimSun(0)/m/n/12.045 赵 雅 聪\TU/TeXGyreTermesX(0)/m/n/12.045 , \TU/SimSun(0
-)/m/n/12.045 王 启 明\TU/TeXGyreTermesX(0)/m/n/12.045 . \TU/SimSun(0)/m/n/12.045 基
- 于 \TU/TeXGyreTermesX(0)/m/n/12.045 FAST \TU/SimSun(0)/m/n/12.045 馈 源 支 撑 系 统 的
- 索 牵 引 并 联 机 构 的 力 学 分
+Overfull \hbox (28.78537pt too wide) in paragraph at lines 97--154
+ [][] 
  []
 
-) [47] [48
+
+body/pre_introduction.tex:154: LaTeX Error: Lonely \item--perhaps a missing lis
+t environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.154     \item 注
+                 ：单元格底色表示各方案相对于本文研究目标的适配性，其中绿色表示较优，黄色表示中等，红色表示相对较弱；表中“大/中/小、...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
 
-]
-\openout2 = `back/acknowledgements.aux'.
+Underfull \hbox (badness 10000) detected at line 154
+[][]
+ []
 
- (back/acknowledgements.tex) [49
+
+body/pre_introduction.tex:155: LaTeX Error: \begin{table} on input line 90 ende
+d by \end{tablenotes}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.155   \end{tablenotes}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+body/pre_introduction.tex:156: LaTeX Error: \begin{table} on input line 90 ende
+d by \end{threeparttable}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.156   \end{threeparttable}
+                            
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Package natbib Warning: Citation `gouttefarde2007wrench' on page 2 undefined on
+ input line 165.
+
+
+Package natbib Warning: Citation `phan2021wrenchclosure' on page 2 undefined on
+ input line 165.
+
+
+Package natbib Warning: Citation `wang2022schonflies' on page 2 undefined on in
+put line 171.
+
+
+Package natbib Warning: Citation `gonzalez2023singleloop' on page 2 undefined o
+n input line 171.
+
+
+Package natbib Warning: Citation `juarez2022dynamiccontrol' on page 2 undefined
+ on input line 171.
+
+[2]
+
+Package natbib Warning: Citation `tang2015trajectory' on page 3 undefined on in
+put line 180.
+
+
+Package natbib Warning: Citation `feiler2023mechatronic' on page 3 undefined on
+ input line 180.
+
+
+Package natbib Warning: Citation `chen2025cdprreview' on page 3 undefined on in
+put line 188.
+
+
+Package natbib Warning: Citation `wang2024dynamictension' on page 3 undefined o
+n input line 188.
+
+
+Package natbib Warning: Citation `piao2019indirectforce' on page 3 undefined on
+ input line 192.
+
+
+Package natbib Warning: Citation `cao2023realtimetension' on page 3 undefined o
+n input line 192.
+
+
+Package natbib Warning: Citation `song2024realtimemethod' on page 3 undefined o
+n input line 192.
+
+
+Package natbib Warning: Citation `gonzalez2023singleloop' on page 3 undefined o
+n input line 203.
+
+
+Package natbib Warning: Citation `juarez2022dynamiccontrol' on page 3 undefined
+ on input line 203.
+
+
+Package natbib Warning: Citation `wang2024dynamictension' on page 3 undefined o
+n input line 203.
+
+[3]
+
+Package natbib Warning: Citation `zhang2022stateoftheart' on page 4 undefined o
+n input line 217.
+
+
+Package natbib Warning: Citation `wang2025review' on page 4 undefined on input 
+line 217.
+
+
+Package natbib Warning: Citation `su2016cablemass' on page 4 undefined on input
+ line 221.
+
+
+Package natbib Warning: Citation `cao2023realtimetension' on page 4 undefined o
+n input line 221.
+
+
+Package natbib Warning: Citation `wang2024dynamictension' on page 4 undefined o
+n input line 221.
+
+
+Package natbib Warning: Citation `tempel2015expo' on page 4 undefined on input 
+line 226.
+
+
+Package natbib Warning: Citation `lan2022sprayreview' on page 4 undefined on in
+put line 226.
+
+
+Package natbib Warning: Citation `zhang2009greenhouse' on page 4 undefined on i
+nput line 226.
+
+
+Package natbib Warning: Citation `barker1961simulator' on page 4 undefined on i
+nput line 236.
+
+
+Package natbib Warning: Citation `mohajer2021centrifugedesign' on page 4 undefi
+ned on input line 245.
+
+
+Package natbib Warning: Citation `winter2023centrifugeopt' on page 4 undefined 
+on input line 248.
+
+
+Package natbib Warning: Citation `tu2020gtolerance' on page 4 undefined on inpu
+t line 252.
+
+
+Package natbib Warning: Citation `zhang2020groundsimulation' on page 4 undefine
+d on input line 263.
+
+
+Package natbib Warning: Citation `liu2024centrifuge' on page 4 undefined on inp
+ut line 267.
+
+
+LaTeX Warning: Reference `fig:intro-acceleration-history' on page 1 undefined o
+n input line 273.
+
+[4]
+
+Package natbib Warning: Citation `zhang2022stateoftheart' on page 5 undefined o
+n input line 294.
+
+
+Package natbib Warning: Citation `wang2025review' on page 5 undefined on input 
+line 298.
+
+
+Package natbib Warning: Citation `chen2025cdprreview' on page 5 undefined on in
+put line 302.
+
+
+Package natbib Warning: Citation `tempel2015expo' on page 5 undefined on input 
+line 310.
+
+
+Package natbib Warning: Citation `lan2022sprayreview' on page 5 undefined on in
+put line 314.
+
+
+Package natbib Warning: Citation `zhang2009greenhouse' on page 5 undefined on i
+nput line 314.
+
+
+LaTeX Warning: Reference `fig:intro-cdpr-applications' on page 1 undefined on i
+nput line 318.
+
+[5]
+
+Package natbib Warning: Citation `feiler2023mechatronic' on page 6 undefined on
+ input line 338.
+
+
+LaTeX Warning: Reference `fig:intro-planar-four-cable' on page 1 undefined on i
+nput line 342.
+
+File: figures/旋转机构原理.pdf Graphic file (type pdf)
+<use figures/旋转机构原理.pdf>
+
+Package natbib Warning: Citation `qian2018review' on page 6 undefined on input 
+line 359.
+
+
+Package natbib Warning: Citation `tho2022overview' on page 6 undefined on input
+ line 359.
+
+
+Package natbib Warning: Citation `begey2019dynamiccontrol' on page 6 undefined 
+on input line 359.
+
+
+Package natbib Warning: Citation `you2019vision' on page 6 undefined on input l
+ine 359.
+
+[6]
+
+Package natbib Warning: Citation `gouttefarde2007wrench' on page 7 undefined on
+ input line 374.
+
+
+Package natbib Warning: Citation `phan2021wrenchclosure' on page 7 undefined on
+ input line 379.
+
+
+LaTeX Warning: Reference `fig:intro-workspace-wrench' on page 1 undefined on in
+put line 383.
+
+
+Package natbib Warning: Citation `wang2022schonflies' on page 7 undefined on in
+put line 403.
+
+
+Package natbib Warning: Citation `gonzalez2023singleloop' on page 7 undefined o
+n input line 407.
+
+
+Package natbib Warning: Citation `juarez2022dynamiccontrol' on page 7 undefined
+ on input line 410.
+
+[7]
+
+Package natbib Warning: Citation `tang2015trajectory' on page 8 undefined on in
+put line 419.
+
+
+Package natbib Warning: Citation `zhang2016highspeedtraj' on page 8 undefined o
+n input line 419.
+
+
+Package natbib Warning: Citation `zhang2018spatialtraj' on page 8 undefined on 
+input line 419.
+
+
+Package natbib Warning: Citation `gouttefarde2007wrench' on page 8 undefined on
+ input line 437.
+
+
+Package natbib Warning: Citation `phan2021wrenchclosure' on page 8 undefined on
+ input line 437.
+
+
+Package natbib Warning: Citation `cao2023realtimetension' on page 8 undefined o
+n input line 437.
+
+
+Package natbib Warning: Citation `song2024realtimemethod' on page 8 undefined o
+n input line 437.
+
+
+Package natbib Warning: Citation `su2016cablemass' on page 8 undefined on input
+ line 444.
+
+
+Package natbib Warning: Citation `chen2025cdprreview' on page 8 undefined on in
+put line 448.
+
+
+Package natbib Warning: Citation `chen2023hybrid' on page 8 undefined on input 
+line 456.
+
+
+Package natbib Warning: Citation `li2019spherical' on page 8 undefined on input
+ line 459.
+
+
+Package natbib Warning: Citation `piao2019indirectforce' on page 8 undefined on
+ input line 463.
+
+
+Package natbib Warning: Citation `cheah2024adaptive' on page 8 undefined on inp
+ut line 467.
+
+
+LaTeX Warning: Reference `fig:intro-tension-methods' on page 1 undefined on inp
+ut line 470.
+
+[8]
+
+Package natbib Warning: Citation `cao2023realtimetension' on page 9 undefined o
+n input line 488.
+
+
+Package natbib Warning: Citation `song2024realtimemethod' on page 9 undefined o
+n input line 491.
+
+
+Package natbib Warning: Citation `wang2024dynamictension' on page 9 undefined o
+n input line 494.
+
+
+Package natbib Warning: Citation `paty2021pulley' on page 9 undefined on input 
+line 504.
+
+
+Package natbib Warning: Citation `zhang2022calibration' on page 9 undefined on 
+input line 504.
+
+
+Package natbib Warning: Citation `santos2022nmpc' on page 9 undefined on input 
+line 504.
+
+
+Package natbib Warning: Citation `bettega2023pathtracking' on page 9 undefined 
+on input line 504.
+
+
+Package natbib Warning: Citation `jin2024controlreview' on page 9 undefined on 
+input line 504.
+
+
+Package natbib Warning: Citation `yu2024stability' on page 9 undefined on input
+ line 504.
+
+[9]
+
+LaTeX Warning: Reference `fig:intro-problem-path' on page 1 undefined on input 
+line 530.
+
+
+Package natbib Warning: Citation `liu2024centrifuge' on page 10 undefined on in
+put line 554.
+
+
+Package natbib Warning: Citation `zhang2020groundsimulation' on page 10 undefin
+ed on input line 554.
+
+
+Package natbib Warning: Citation `qian2018review' on page 10 undefined on input
+ line 554.
+
+
+Package natbib Warning: Citation `wang2025review' on page 10 undefined on input
+ line 554.
+
+
+Package natbib Warning: Citation `gonzalez2023singleloop' on page 10 undefined 
+on input line 567.
+
+
+Package natbib Warning: Citation `feiler2023mechatronic' on page 10 undefined o
+n input line 567.
+
+
+Package natbib Warning: Citation `paty2021pulley' on page 10 undefined on input
+ line 567.
+
+
+Package natbib Warning: Citation `zhang2022calibration' on page 10 undefined on
+ input line 567.
+
+
+Package natbib Warning: Citation `chen2023hybrid' on page 10 undefined on input
+ line 583.
+
+
+Package natbib Warning: Citation `piao2019indirectforce' on page 10 undefined o
+n input line 583.
+
+
+Package natbib Warning: Citation `cao2023realtimetension' on page 10 undefined 
+on input line 583.
+
+
+Package natbib Warning: Citation `song2024realtimemethod' on page 10 undefined 
+on input line 583.
+
+
+Package natbib Warning: Citation `santos2022nmpc' on page 10 undefined on input
+ line 583.
+
+
+Package natbib Warning: Citation `bettega2023pathtracking' on page 10 undefined
+ on input line 583.
+
+[10]
+
+Package natbib Warning: Citation `su2016cablemass' on page 11 undefined on inpu
+t line 593.
+
+
+Package natbib Warning: Citation `wang2024dynamictension' on page 11 undefined 
+on input line 593.
+
+
+Package natbib Warning: Citation `zhao2023fast' on page 11 undefined on input l
+ine 593.
+
+
+Package natbib Warning: Citation `jin2024controlreview' on page 11 undefined on
+ input line 593.
+
+[11]
+
+LaTeX Warning: Reference `fig:intro-technical-route' on page 1 undefined on inp
+ut line 648.
+
+[12]) [13]
+No file thesis_tmp.bbl.
+[14
+
+
+
+
+
+
+
 
 
 
 ]
 \tf@thm=\write7
-\openout7 = `thesis.thm'.
+\openout7 = `thesis_tmp.thm'.
 
 
-(d:\桌面\毕业设计\毕业论文latex\build\thesis.aux
-(d:\桌面\毕业设计\毕业论文latex\build\body/pre_introduction.aux)
-(d:\桌面\毕业设计\毕业论文latex\build\body/mech_design.aux)
-(d:\桌面\毕业设计\毕业论文latex\build\body/modeling.aux)
-(d:\桌面\毕业设计\毕业论文latex\build\body/control.aux)
-(d:\桌面\毕业设计\毕业论文latex\build\body/force_assign.aux)
-(d:\桌面\毕业设计\毕业论文latex\build\back/conclusion.aux)
-(d:\桌面\毕业设计\毕业论文latex\build\back/acknowledgements.aux))
+
+Package natbib Warning: There were undefined citations.
+
+(D:\桌面\毕业设计\毕业论文latex\build\thesis_tmp.aux
+(D:\桌面\毕业设计\毕业论文latex\build\body/pre_introduction.aux)
+(D:\桌面\毕业设计\毕业论文latex\build\body/mech_design.aux)
+(D:\桌面\毕业设计\毕业论文latex\build\body/modeling.aux)
+(D:\桌面\毕业设计\毕业论文latex\build\body/control.aux)
+(D:\桌面\毕业设计\毕业论文latex\build\body/force_assign.aux)
+(D:\桌面\毕业设计\毕业论文latex\build\back/conclusion.aux)
+(D:\桌面\毕业设计\毕业论文latex\build\back/acknowledgements.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -2392,17 +3135,29 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.47188pt have occurred.
 
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 220058CAA4AC456C5794A24B09C6F5D4;7446.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `thesis_tmp.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis_tmp.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  528632270780D479C74396FDE1519450;2481.
  ) 
 Here is how much of TeX's memory you used:
- 50265 strings out of 409617
- 1095785 string characters out of 5781321
- 1952191 words of memory out of 5000000
- 71575 multiletter control sequences out of 15000+600000
+ 49931 strings out of 409617
+ 1085734 string characters out of 5781321
+ 1948191 words of memory out of 5000000
+ 71281 multiletter control sequences out of 15000+600000
  602376 words of font info for 200 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 107i,12n,111p,3288b,1348s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,11n,111p,3273b,995s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on d:\桌面\毕业设计\毕业论文latex\build\thesis.xdv (57 pages, 786124 bytes
-).
+Output written on D:\桌面\毕业设计\毕业论文latex\build\thesis_tmp.xdv (21 pages, 284780 b
+ytes).

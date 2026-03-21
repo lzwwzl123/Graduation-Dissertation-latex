@@ -125,10 +125,12 @@
 \newcommand{\hitsongfakeit}[1]{{\CJKfontspec[FakeSlant=0.2]{SimSun}#1}}
 \newcommand{\hitheifakeit}[1]{{\CJKfontspec[FakeSlant=0.2]{SimHei}#1}}
 
+
+
 % 当前未输出索引，关闭示例里的 split index 写入以减少无用告警
 \RenewDocumentCommand{\sindex}{O{}m}{}
 \graphicspath{{figures/}}
-% \includeonly{body/pre_introduction} % 需要调试时取消注释，编译时只编译指定章节
+\includeonly{body/pre_introduction}
 \begin{document}
 \frontmatter
 \input{front/cover} % 封面
@@ -164,6 +166,7 @@
 % Local Variables:
 % TeX-engine: xetex
 % End:
+
 
 
 
