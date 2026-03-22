@@ -18,33 +18,33 @@
 \contentsline {section}{\numberline {3.2}系统构型与符号定义}{17}{section.3.2}%
 \contentsline {section}{\numberline {3.3}逆运动学建模}{19}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}几何切线关系}{19}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}绳长表达式}{21}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}正运动学建模}{23}{section.3.4}%
-\contentsline {section}{\numberline {3.5}绳长速度关系与运动学雅可比矩阵}{24}{section.3.5}%
-\contentsline {section}{\numberline {3.6}动力学建模}{26}{section.3.6}%
-\contentsline {section}{\numberline {3.7}从动力学模型到广义力/张力映射}{29}{section.3.7}%
-\contentsline {section}{\numberline {3.8}位置控制流程设计}{30}{section.3.8}%
-\contentsline {section}{\numberline {3.9}位置控制基础验证}{32}{section.3.9}%
-\contentsline {subsection}{\numberline {3.9.1}末端轨迹规划与指令生成}{32}{subsection.3.9.1}%
-\contentsline {subsection}{\numberline {3.9.2}位置控制实验流程}{33}{subsection.3.9.2}%
-\contentsline {subsection}{\numberline {3.9.3}位置跟踪结果与误差分析}{33}{subsection.3.9.3}%
-\contentsline {section}{\numberline {3.10}位置控制局限性分析}{34}{section.3.10}%
-\contentsline {section}{\numberline {3.11}本章小结}{37}{section.3.11}%
-\contentsline {chapter}{\numberline {第4章}控制算法设计}{38}{chapter.4}%
-\contentsline {section}{\numberline {4.1}引言}{38}{section.4.1}%
-\contentsline {section}{\numberline {4.2}控制系统总体架构}{38}{section.4.2}%
-\contentsline {section}{\numberline {4.3}单电机闭环力矩控制方法}{40}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}控制对象与问题描述}{40}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}基于PID的力矩闭环控制}{40}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}摩擦补偿设计}{41}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}扰动观测器设计}{42}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {3.3.2}绳长表达式}{20}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}正运动学建模}{22}{section.3.4}%
+\contentsline {section}{\numberline {3.5}绳长速度关系与运动学雅可比矩阵}{23}{section.3.5}%
+\contentsline {section}{\numberline {3.6}动力学建模}{25}{section.3.6}%
+\contentsline {section}{\numberline {3.7}从动力学模型到广义力/张力映射}{27}{section.3.7}%
+\contentsline {section}{\numberline {3.8}位置控制流程设计}{29}{section.3.8}%
+\contentsline {section}{\numberline {3.9}位置控制基础验证}{31}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}末端轨迹规划与指令生成}{31}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}位置控制实验流程}{31}{subsection.3.9.2}%
+\contentsline {subsection}{\numberline {3.9.3}位置跟踪结果与误差分析}{32}{subsection.3.9.3}%
+\contentsline {section}{\numberline {3.10}位置控制局限性分析}{32}{section.3.10}%
+\contentsline {section}{\numberline {3.11}本章小结}{35}{section.3.11}%
+\contentsline {chapter}{\numberline {第4章}控制算法设计}{37}{chapter.4}%
+\contentsline {section}{\numberline {4.1}引言}{37}{section.4.1}%
+\contentsline {section}{\numberline {4.2}控制系统总体架构}{37}{section.4.2}%
+\contentsline {section}{\numberline {4.3}单电机闭环力矩控制方法}{39}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}控制对象与问题描述}{39}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}基于PID的力矩闭环控制}{39}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}摩擦补偿设计}{40}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}扰动观测器设计}{41}{subsection.4.3.4}%
 \contentsline {section}{\numberline {4.4}基于正运动学反馈的末端位姿闭环补偿方法}{43}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}末端位姿误差定义}{43}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}任务空间误差到广义力修正量的构造}{44}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}广义力修正到各电机张力增量的映射}{45}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}控制算法实现流程}{46}{section.4.5}%
+\contentsline {subsection}{\numberline {4.4.2}任务空间误差到广义力修正量的构造}{43}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}广义力修正到各电机张力增量的映射}{44}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}控制算法实现流程}{45}{section.4.5}%
 \contentsline {section}{\numberline {4.6}本章小结}{47}{section.4.6}%
-\contentsline {chapter}{\heiti 结\hspace {\ccwd }论}{49}{section*.12}%
-\contentsline {chapter}{\heiti 参考文献}{50}{section*.15}%
-\contentsline {chapter}{哈尔滨工业大学本科毕业论文（设计）原创性声明和使用权限}{54}{chapter*.17}%
-\contentsline {chapter}{\heiti 致\hspace {\ccwd }谢}{55}{section*.18}%
+\contentsline {chapter}{\heiti 结\hspace {\ccwd }论}{48}{section*.12}%
+\contentsline {chapter}{\heiti 参考文献}{49}{section*.15}%
+\contentsline {chapter}{哈尔滨工业大学本科毕业论文（设计）原创性声明和使用权限}{53}{chapter*.17}%
+\contentsline {chapter}{\heiti 致\hspace {\ccwd }谢}{54}{section*.18}%

@@ -64,35 +64,18 @@
 对于第 $i$ 个电机，设
 其角位移、角速度和输
 入力矩分别为
-
 \begin{equation}
-  \phi_i,\qquad
-  \omega_i=\dot{\phi}_i,\qquad
-  \tau_{m,i}.
+  \phi_i,\qquad \omega_i=\dot{\phi}_i,\qquad \tau_{m,i}.
 \end{equation}
-
 设电机等效转动惯量为
 $J_i$，等效粘性阻尼为
 $B_i$，卷筒半径为 $r_m$，
 绳索张力为 $f_i$，则单
 电机执行单元的等效动
 力学可写为
-
 \begin{equation}
-  J_i\dot{\omega}_i
-  =
-  \tau_{m,i}
-  -
-  r_m f_i
-  -
-  B_i\omega_i
-  -
-  \tau_{f,i}
-  -
-  \tau_{d,i},
-  \label{eq:ch4-motor-dyn}
+  J_i\dot{\omega}_i = \tau_{m,i} - r_m f_i - B_i\omega_i - \tau_{f,i} - \tau_{d,i}, \label{eq:ch4-motor-dyn}
 \end{equation}
-
 其中，$\tau_{f,i}$ 表示摩
 擦力矩，$\tau_{d,i}$ 表示
 建模误差、负载扰动及
@@ -101,32 +84,24 @@ $B_i$，卷筒半径为 $r_m$，
 
 在系统总体层面，末端
 期望轨迹
-
 \begin{equation}
-  \bm q_d=
-  \begin{bmatrix}
-    x_d & y_d & \theta_d
-  \end{bmatrix}^{\mathrm T}
+  \bm q_d= \begin{bmatrix} x_d & y_d & \theta_d \end{bmatrix}^{\mathrm T}
 \end{equation}
-
 经逆运动学和状态反馈
 后，可由正运动学得到
 当前末端位姿估计值
-
 \begin{equation}
-  \hat{\bm q}=
-  \begin{bmatrix}
-    \hat{x} & \hat{y} & \hat{\theta}
-  \end{bmatrix}^{\mathrm T}.
+  \hat{\bm q}= \begin{bmatrix} \hat{x} & \hat{y} & \hat{\theta} \end{bmatrix}^{\mathrm T}.
 \end{equation}
-
 进而构造末端位姿误差
-
 \begin{equation}
-  \bm e_q=\bm q_d-\hat{\bm q}.
-  \label{eq:ch4-eq}
+  \bm e_q=\bm q_d-\hat{\bm q}. \label{eq:ch4-eq}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $\bm q_d$ & 末端平台期望位姿向量；\\
+       & $\hat{\bm q}$ & 由正运动学重构得到的末端位姿估计向量；\\
+       & $\bm e_q$ & 末端平台位姿误差向量。
+\end{tabularx}
 该误差经外环补偿器处
 理后形成末端广义力修
 正量，再由张力映射模
@@ -185,22 +160,22 @@ $B_i$，卷筒半径为 $r_m$，
 的目标张力为 $f_i^\ast$，
 其对应的目标卷筒力矩
 为
-
 \begin{equation}
-  \tau_i^\ast=r_m f_i^\ast.
-  \label{eq:ch4-tau-ref-basic}
+  \tau_i^\ast=r_m f_i^\ast. \label{eq:ch4-tau-ref-basic}
 \end{equation}
-
 设第 $i$ 个执行单元的
 实际输出等效力矩为
 $\tau_i$，则力矩跟踪误差
 定义为
-
 \begin{equation}
-  e_{\tau,i}=\tau_i^\ast-\tau_i.
-  \label{eq:ch4-etau}
+  e_{\tau,i}=\tau_i^\ast-\tau_i. \label{eq:ch4-etau}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $\tau_i^\ast$ & 第$i$个执行单元的目标卷筒力矩；\\
+       & $f_i^\ast$ & 第$i$根绳索的目标张力；\\
+       & $\tau_i$ & 第$i$个执行单元的实际输出等效力矩；\\
+       & $e_{\tau,i}$ & 第$i$个执行单元的力矩跟踪误差。
+\end{tabularx}
 单电机力矩控制的主要
 目标是使 $e_{\tau,i}$ 尽可
 能趋近于零，并在存在
@@ -235,18 +210,12 @@ PID 控制器具有结构简
 环控制的基础。对第
 $i$ 个电机，PID 控制输
 出写为
-
 \begin{equation}
-  \tau_{pid,i}
-  =
-  K_{p,i}e_{\tau,i}
-  +
-  K_{i,i}\int e_{\tau,i}\mathrm dt
-  +
-  K_{d,i}\dot e_{\tau,i},
-  \label{eq:ch4-pid}
+  \tau_{pid,i} = K_{p,i}e_{\tau,i} + K_{i,i}\int e_{\tau,i}\mathrm dt + K_{d,i}\dot e_{\tau,i}, \label{eq:ch4-pid}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $\tau_{pid,i}$ & 第$i$个执行单元由PID环节生成的控制力矩。
+\end{tabularx}
 其中，$K_{p,i}$、$K_{i,i}$
 和 $K_{d,i}$ 分别为比例、
 积分和微分增益。
@@ -307,19 +276,16 @@ PID 控制基础上引入摩
 性摩擦组合的近似模型，
 将第 $i$ 个执行单元的
 摩擦补偿力矩写为
-
 \begin{equation}
-  \hat{\tau}_{f,i}
-  =
-  \tau_{c,i}\,
-  \operatorname{sat}\!\left(
-  \frac{\omega_i}{\omega_0}
-  \right)
-  +
-  b_i\omega_i,
-  \label{eq:ch4-friction}
+  \hat{\tau}_{f,i} = \tau_{c,i}\, \operatorname{sat}\!\left( \frac{\omega_i}{\omega_0} \right) + b_i\omega_i, \label{eq:ch4-friction}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $\hat{\tau}_{f,i}$ & 第$i$个执行单元的摩擦补偿估计力矩；\\
+       & $\tau_{c,i}$ & 第$i$个执行单元的等效库仑摩擦力矩；\\
+       & $b_i$ & 第$i$个执行单元的等效粘性摩擦系数；\\
+       & $\omega_0$ & 低速平滑区间对应的小正数；\\
+       & $\operatorname{sat}(\cdot)$ & 饱和函数，用于在零速附近平滑逼近符号函数。
+\end{tabularx}
 其中，$\tau_{c,i}$ 为等效
 库仑摩擦力矩，$b_i$ 为
 等效粘性摩擦系数，
@@ -371,16 +337,9 @@ $\operatorname{sat}(\cdot)$
 
 将\cref{eq:ch4-motor-dyn}
 改写为名义模型形式，
-
 \begin{equation}
-  J_{n,i}\dot{\omega}_i
-  =
-  \tau_{m,i}
-  -
-  \tau_{dis,i},
-  \label{eq:ch4-nominal}
+  J_{n,i}\dot{\omega}_i = \tau_{m,i} - \tau_{dis,i}, \label{eq:ch4-nominal}
 \end{equation}
-
 其中，$J_{n,i}$ 为第 $i$
 个电机的名义转动惯量，
 $\tau_{dis,i}$ 为总扰动力
@@ -391,30 +350,25 @@ $\tau_{dis,i}$ 为总扰动力
 
 基于名义模型，可构造
 扰动观测器估计量
-
 \begin{equation}
-  \hat{\tau}_{dis,i}
-  =
-  Q_i(s)
-  \left(
-  \tau_{m,i}
-  -
-  J_{n,i}s\omega_i
-  \right),
-  \label{eq:ch4-dob}
+  \hat{\tau}_{dis,i} = Q_i(s) \left( \tau_{m,i} - J_{n,i}s\omega_i \right), \label{eq:ch4-dob}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $\hat{\tau}_{dis,i}$ & 第$i$个执行单元的总扰动力矩估计值；\\
+       & $Q_i(s)$ & 扰动观测器中的低通滤波器；\\
+       & $J_{n,i}$ & 第$i$个执行单元的名义转动惯量。
+\end{tabularx}
 其中，$Q_i(s)$ 为低通滤
 波器，其作用是在抑制
 测量噪声的同时估计低
 频主导扰动。典型情况
 下可取
-
 \begin{equation}
-  Q_i(s)=\frac{g_i}{s+g_i},
-  \label{eq:ch4-qfilter}
+  Q_i(s)=\frac{g_i}{s+g_i}, \label{eq:ch4-qfilter}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $g_i$ & 第$i$个执行单元扰动观测器低通滤波器的带宽参数。
+\end{tabularx}
 式中，$g_i$ 为滤波器带
 宽。带宽越大，扰动估
 计响应越快，但对噪声
@@ -429,18 +383,14 @@ $g_i$ 需要结合执行器响
 扰动观测器后，第 $i$
 个电机的最终控制输入
 可写为
-
 \begin{equation}
-  \tau_{m,i}^\ast
-  =
-  \tau_{pid,i}
-  +
-  \hat{\tau}_{f,i}
-  +
-  \hat{\tau}_{dis,i}.
-  \label{eq:ch4-final-inner}
+  \tau_{m,i}^\ast = \tau_{pid,i} + \hat{\tau}_{f,i} + \hat{\tau}_{dis,i}. \label{eq:ch4-final-inner}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $\tau_{m,i}^\ast$ & 第$i$个执行单元最终下发的目标输入力矩；\\
+       & $\hat{\tau}_{f,i}$ & 第$i$个执行单元的摩擦补偿估计力矩；\\
+       & $\hat{\tau}_{dis,i}$ & 第$i$个执行单元的扰动力矩估计值。
+\end{tabularx}
 上述控制律的物理意义
 是：PID 环节负责构造
 基本闭环性能，摩擦补
@@ -486,28 +436,18 @@ $g_i$ 需要结合执行器响
 姿估计值 $\hat{\bm q}$。在
 此基础上，定义末端位
 姿误差为
-
 \begin{equation}
-  \bm e_q
-  =
-  \bm q_d-\hat{\bm q}
-  =
-  \begin{bmatrix}
-    e_x & e_y & e_\theta
-  \end{bmatrix}^{\mathrm T}.
-  \label{eq:ch4-task-error}
+  \bm e_q = \bm q_d-\hat{\bm q} = \begin{bmatrix} e_x & e_y & e_\theta \end{bmatrix}^{\mathrm T}. \label{eq:ch4-task-error}
 \end{equation}
-
 相应地，末端位姿误差
 变化率定义为
-
 \begin{equation}
-  \dot{\bm e}_q
-  =
-  \dot{\bm q}_d-\dot{\hat{\bm q}}.
-  \label{eq:ch4-task-edot}
+  \dot{\bm e}_q = \dot{\bm q}_d-\dot{\hat{\bm q}}. \label{eq:ch4-task-edot}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $e_x$、$e_y$、$e_\theta$ & 分别表示末端平台在$x$、$y$和平面转角方向上的位姿误差分量；\\
+       & $\dot{\bm e}_q$ & 末端平台位姿误差变化率向量。
+\end{tabularx}
 上述误差量分别反映了
 末端平台在平移与转动
 方向上的偏差，是外环
@@ -525,14 +465,9 @@ $g_i$ 需要结合执行器响
 
 对于平面四绳机器人，
 末端平台的广义力写为
-
 \begin{equation}
-  \bm W_p=
-  \begin{bmatrix}
-    F_x & F_y & M_z
-  \end{bmatrix}^{\mathrm T},
+  \bm W_p= \begin{bmatrix} F_x & F_y & M_z \end{bmatrix}^{\mathrm T},
 \end{equation}
-
 其中，$F_x$ 和 $F_y$ 分
 别表示末端平台在 $x$
 和 $y$ 方向上的等效广
@@ -544,18 +479,9 @@ $g_i$ 需要结合执行器响
 用比例—微分—积分型
 任务空间补偿器构造广
 义力修正量
-
 \begin{equation}
-  \Delta \bm W_p
-  =
-  \bm K_p \bm e_q
-  +
-  \bm K_d \dot{\bm e}_q
-  +
-  \bm K_i \int \bm e_q\,\mathrm dt,
-  \label{eq:ch4-deltaW}
+  \Delta \bm W_p = \bm K_p \bm e_q + \bm K_d \dot{\bm e}_q + \bm K_i \int \bm e_q\,\mathrm dt, \label{eq:ch4-deltaW}
 \end{equation}
-
 其中，
 $\bm K_p$、$\bm K_d$、
 $\bm K_i$ 分别为任务空
@@ -564,36 +490,18 @@ $\bm K_i$ 分别为任务空
 矩阵形式，即
 
 \begin{equation}
-  \bm K_p=
-  \operatorname{diag}(k_{px},k_{py},k_{p\theta}),
+  \bm K_p= \operatorname{diag}(k_{px},k_{py},k_{p\theta}),\quad
+  \bm K_d= \operatorname{diag}(k_{dx},k_{dy},k_{d\theta}),\quad\bm K_i= \operatorname{diag}(k_{ix},k_{iy},k_{i\theta}).
 \end{equation}
-
-\begin{equation}
-  \bm K_d=
-  \operatorname{diag}(k_{dx},k_{dy},k_{d\theta}),
-\end{equation}
-
-\begin{equation}
-  \bm K_i=
-  \operatorname{diag}(k_{ix},k_{iy},k_{i\theta}).
-\end{equation}
-
 由此，位姿误差被转化
 为对末端平台所需广义
 力的修正需求。若同时
 考虑轨迹规划或动力学
 前馈项，则末端期望广
 义力可进一步写为
-
 \begin{equation}
-  \bm W_p^\ast
-  =
-  \bm W_{ff}
-  +
-  \Delta \bm W_p,
-  \label{eq:ch4-totalW}
+  \bm W_p^\ast = \bm W_{ff} + \Delta \bm W_p, \label{eq:ch4-totalW}
 \end{equation}
-
 其中，$\bm W_{ff}$ 为基
 于轨迹或动力学模型计
 算得到的前馈项。在本
@@ -620,21 +528,13 @@ $\bm K_i$ 分别为任务空
 根据第 3 章推导的结构
 矩阵形式，四根绳张力
 与末端平台广义力满足
-
 \begin{equation}
-  \bm W_p=\bm W \bm f,
-  \label{eq:ch4-wf}
+  \bm W_p=\bm W \bm f, \label{eq:ch4-wf}
 \end{equation}
-
 其中，
-
 \begin{equation}
-  \bm f=
-  \begin{bmatrix}
-    f_1 & f_2 & f_3 & f_4
-  \end{bmatrix}^{\mathrm T}
+  \bm f= \begin{bmatrix} f_1 & f_2 & f_3 & f_4 \end{bmatrix}^{\mathrm T}
 \end{equation}
-
 为四根绳张力向量，
 $\bm W\in\mathbb R^{3\times 4}$
 为结构矩阵。由于系统
@@ -643,54 +543,37 @@ $\bm W\in\mathbb R^{3\times 4}$
 一维冗余。
 
 设预紧张力向量为
-
 \begin{equation}
-  \bm f_0=
-  \begin{bmatrix}
-    f_{01} & f_{02} & f_{03} & f_{04}
-  \end{bmatrix}^{\mathrm T},
+  \bm f_0= \begin{bmatrix} f_{01} & f_{02} & f_{03} & f_{04} \end{bmatrix}^{\mathrm T},
 \end{equation}
-
 则在外环补偿作用下，
 目标张力可写为
-
 \begin{equation}
-  \bm f^\ast
-  =
-  \bm f_0+\Delta \bm f.
-  \label{eq:ch4-fstar}
+  \bm f^\ast = \bm f_0+\Delta \bm f. \label{eq:ch4-fstar}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $\bm f^\ast$ & 四根绳索的目标张力向量；\\
+       & $\bm f_0$ & 系统预紧张力向量；\\
+       & $\Delta \bm f$ & 外环补偿作用下得到的张力增量向量。
+\end{tabularx}
 其中，张力增量 $\Delta \bm f$
 由末端广义力修正量映
 射得到。若暂不考虑零
 空间调节，则可用广义
 逆形式写为
-
 \begin{equation}
-  \Delta \bm f
-  =
-  \bm W^\dagger
-  \Delta \bm W_p.
-  \label{eq:ch4-deltaf-basic}
+  \Delta \bm f = \bm W^\dagger \Delta \bm W_p. \label{eq:ch4-deltaf-basic}
 \end{equation}
-
 进一步考虑冗余自由度
 带来的张力整形能力，
 则更一般的形式为
-
 \begin{equation}
-  \Delta \bm f
-  =
-  \bm W^\dagger
-  \Delta \bm W_p
-  +
-  \left(
-  \bm I-\bm W^\dagger\bm W
-  \right)\bm z,
-  \label{eq:ch4-deltaf-null}
+  \Delta \bm f = \bm W^\dagger \Delta \bm W_p + \left( \bm I-\bm W^\dagger\bm W \right)\bm z, \label{eq:ch4-deltaf-null}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $\bm W^\dagger$ & 结构矩阵$\bm W$的广义逆；\\
+       & $\bm z$ & 零空间调节向量，用于在满足广义力需求的同时进一步整形张力分布。
+\end{tabularx}
 其中，$\bm z$ 为零空间调
 节向量，用于后续实现
 张力均衡、避免绳索松
@@ -706,19 +589,14 @@ $\bm W\in\mathbb R^{3\times 4}$
 当得到各绳目标张力后，
 即可根据卷筒半径将其
 转换为电机目标力矩
-
 \begin{equation}
-  \bm \tau^\ast
-  =
-  r_m \bm f^\ast
-  =
-  r_m
-  \begin{bmatrix}
-    f_1^\ast & f_2^\ast & f_3^\ast & f_4^\ast
-  \end{bmatrix}^{\mathrm T}.
-  \label{eq:ch4-tau-star}
+  \bm \tau^\ast = r_m \bm f^\ast = r_m \begin{bmatrix} f_1^\ast & f_2^\ast & f_3^\ast & f_4^\ast \end{bmatrix}^{\mathrm T}. \label{eq:ch4-tau-star}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $\bm \tau^\ast$ & 四个执行单元的目标力矩向量；\\
+       & $\bm f^\ast$ & 四根绳索的目标张力向量；\\
+       & $r_m$ & 电机侧绕线轮半径。
+\end{tabularx}
 于是，末端位姿误差经
 “广义力修正—张力增
 量映射—电机目标力矩”

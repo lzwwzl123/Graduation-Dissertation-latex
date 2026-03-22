@@ -20,18 +20,12 @@
 
 
 如\cref{fig:ch3-system-geometry}所示，末端动平台具有两个平移自由度和一个转动自由度，因此系统广义坐标定义为
-
 \begin{equation}
-  \bm q=\begin{bmatrix}
-    x & y & \theta
-  \end{bmatrix}^{\mathrm T},
-  \label{eq:ch3-q}
+  \bm q=\begin{bmatrix} x & y & \theta \end{bmatrix}^{\mathrm T}, \label{eq:ch3-q}
 \end{equation}
-
 其中，$x$、$y$ 分别为末端平台圆心在基坐标系中的位置坐标，$\theta$ 为动平台绕平面法向的转角，逆时针方向取正。
 
 在基坐标系$\Sigma_b$ 下，四个基座锚点坐标分别记为
-
 \begin{equation}
   \bm B_1=\begin{bmatrix}
     b_x \\ b_y
@@ -47,47 +41,32 @@
   \end{bmatrix}.
   \label{eq:ch3-base-anchor}
 \end{equation}
-
 根据本文样机与仿真参数设置，有
-
 \begin{equation}
   b_x=b_y=0.19\ \mathrm{m}.
 \end{equation}
-
 末端平台等效为半径为$r_e$ 的圆盘，电机侧绕线轮半径为$r_m$。平台质量为$m$，绕质心转动惯量为$I$。设末端平台圆心位置为
-
 \begin{equation}
   \bm p=\begin{bmatrix}
     x \\ y
   \end{bmatrix}.
 \end{equation}
-
 对第$i$ 根绳，定义电机侧切点为$\bm A_i$，平台侧切点为$\bm E_i$，则绳索直线段向量为
-
 \begin{equation}
-  \bm c_i=\bm A_i-\bm E_i.
-  \label{eq:ch3-ci}
+  \bm c_i=\bm A_i-\bm E_i. \label{eq:ch3-ci}
 \end{equation}
-
 其模长记为
-
 \begin{equation}
   l_i=\|\bm c_i\|,
 \end{equation}
-
 相应的单位方向向量为
-
 \begin{equation}
-  \bm u_i=\frac{\bm c_i}{\|\bm c_i\|}.
-  \label{eq:ch3-ui}
+  \bm u_i=\frac{\bm c_i}{\|\bm c_i\|}. \label{eq:ch3-ui}
 \end{equation}
-
 由于绳索只能承受拉力，故第$i$ 根绳张力记为$f_i$，满足
-
 \begin{equation}
   f_i\ge 0.
 \end{equation}
-
 
 
 \section{逆运动学建模}
@@ -97,89 +76,55 @@
 在给定平台位姿$\bm q$ 时，逆运动学的目标是求取四根绳的实际长度。由于本文机器人采用圆形末端平台与圆形绕线轮出绳方式，理论模型需对绕线轮和平台上的包络长度进行补偿，因此每根绳索均可视为连接两个圆的外公切线。对第$i$ 根绳而言，源圆为以$\bm B_i$ 为圆心、半径为$r_m$ 的绕线轮，目标圆为以$\bm p$ 为圆心、半径为$r_e$ 的末端平台。
 
 定义源圆指向目标圆的向量为
-
 \begin{equation}
-  \bm d_i=\bm p-\bm B_i,\qquad d_i=\|\bm d_i\|.
-  \label{eq:ch3-di}
+  \bm d_i=\bm p-\bm B_i,\qquad d_i=\|\bm d_i\|. \label{eq:ch3-di}
 \end{equation}
-
 同时定义两圆半径差
-
 \begin{equation}
-  \Delta r=r_m-r_e.
-  \label{eq:ch3-dr}
+  \Delta r=r_m-r_e. \label{eq:ch3-dr}
 \end{equation}
-
 当
-
 \begin{equation}
-  d_i\ge |\Delta r|
-  \label{eq:ch3-tangent-exist}
+  d_i\ge |\Delta r| \label{eq:ch3-tangent-exist}
 \end{equation}
-
 时，两圆存在外公切线。
 
 设外公切线对应的单位法向量为$\bm n_i$，则其必须同时满足
-
 \begin{equation}
-  \bm d_i^{\mathrm T}\bm n_i=\Delta r,
-  \label{eq:ch3-ni-cond1}
+  \bm d_i^{\mathrm T}\bm n_i=\Delta r, \label{eq:ch3-ni-cond1}
 \end{equation}
-
 \begin{equation}
-  \|\bm n_i\|=1.
-  \label{eq:ch3-ni-cond2}
+  \|\bm n_i\|=1. \label{eq:ch3-ni-cond2}
 \end{equation}
-
 记
-
 \begin{equation}
   \bm d_i^\perp=
   \begin{bmatrix}
     -d_{iy} \\ d_{ix}
   \end{bmatrix},
 \end{equation}
-
 则由平面几何关系可得两组候选法向量
-
 \begin{equation}
-  \bm n_i^{(\pm)}
-  =
-  \frac{\Delta r\,\bm d_i \pm \sqrt{d_i^2-\Delta r^2}\,\bm d_i^\perp}{d_i^2}.
-  \label{eq:ch3-ni-pm}
+  \bm n_i^{(\pm)} = \frac{\Delta r\,\bm d_i \pm \sqrt{d_i^2-\Delta r^2}\,\bm d_i^\perp}{d_i^2}. \label{eq:ch3-ni-pm}
 \end{equation}
-
 进而得到两组候选切点
-
 \begin{equation}
-  \bm A_i^{(\pm)}=\bm B_i+r_m\bm n_i^{(\pm)},
-  \label{eq:ch3-ai-pm}
+  \bm A_i^{(\pm)}=\bm B_i+r_m\bm n_i^{(\pm)}, \label{eq:ch3-ai-pm}
 \end{equation}
-
 \begin{equation}
-  \bm E_i^{(\pm)}=\bm p+r_e\bm n_i^{(\pm)}.
-  \label{eq:ch3-ei-pm}
+  \bm E_i^{(\pm)}=\bm p+r_e\bm n_i^{(\pm)}. \label{eq:ch3-ei-pm}
 \end{equation}
-
 由于每个绕线轮存在预定缠绕方向，因此两组候选切线中仅有一组满足实际物理缠绕约束。设源圆半径向量和缆绳方向向量分别为
-
 \begin{equation}
   \bm r_{a,i}^{(\pm)}=\bm A_i^{(\pm)}-\bm B_i,
 \end{equation}
-
 \begin{equation}
   \bm l_i^{(\pm)}=\bm E_i^{(\pm)}-\bm A_i^{(\pm)}.
 \end{equation}
-
 则其二维叉乘
-
 \begin{equation}
-  \chi_i^{(\pm)}=
-  r_{a,ix}^{(\pm)} l_{iy}^{(\pm)}-
-  r_{a,iy}^{(\pm)} l_{ix}^{(\pm)}
-  \label{eq:ch3-winding-cross}
+  \chi_i^{(\pm)}= r_{a,ix}^{(\pm)} l_{iy}^{(\pm)}- r_{a,iy}^{(\pm)} l_{ix}^{(\pm)} \label{eq:ch3-winding-cross}
 \end{equation}
-
 可用于判定该切线对应的缠绕方向。当$\chi_i^{(\pm)}>0$ 时，表示逆时针缠绕；当$\chi_i^{(\pm)}<0$ 时，表示顺时针缠绕。根据四个电机预设的缠绕方向，即可从两组候选切线中选出唯一有效切线，从而得到实际切点$\bm A_i$ 和$\bm E_i$。
 
 \subsection{绳长表达式}
@@ -194,160 +139,97 @@
 如\cref{fig:ch3-tangent-geometry}所示,本文逆运动学并非简单将绳长视为锚点与平台连接点之间的直线距离，而是综合考虑了绕线轮半径、平台半径、实际切点位置及缠绕方向约束。该建模方式能够更准确地反映连续旋转条件下绳长与平台位姿之间的真实关系，为后续正运动学求解与控制实现提供一致的几何基础。
 
 在选定有效切线后，第$i$ 根绳的直线段长度为
-
 \begin{equation}
-  L_{i,\mathrm{line}}=\|\bm A_i-\bm E_i\|=\sqrt{d_i^2-(r_m-r_e)^2}.
-  \label{eq:ch3-line-length}
+  L_{i,\mathrm{line}}=\|\bm A_i-\bm E_i\|=\sqrt{d_i^2-(r_m-r_e)^2}. \label{eq:ch3-line-length}
 \end{equation}
-
 需要指出的是，本文机器人绳长并不仅包含两切点之间的直线距离，还包括平台侧和绕线轮侧的包络圆弧长度以及平台转角引起的附加缠绕长度。故总绳长写为
-
 \begin{equation}
-  L_i=\Delta L_{i,\theta}+L_{i,\mathrm{arc}}+L_{i,\mathrm{line}}+\Delta L_{i,m}.
-  \label{eq:ch3-total-length}
+  L_i=\Delta L_{i,\theta}+L_{i,\mathrm{arc}}+L_{i,\mathrm{line}}+\Delta L_{i,m}. \label{eq:ch3-total-length}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $L_i$ & 第$i$根绳的总长度；\\
+       & $\Delta L_{i,\theta}$ & 平台转角引起的平台侧附加缠绕长度；\\
+       & $L_{i,\mathrm{arc}}$ & 平台侧包络圆弧长度；\\
+       & $L_{i,\mathrm{line}}$ & 绳索两切点之间的直线段长度；\\
+       & $\Delta L_{i,m}$ & 绕线轮侧包络圆弧对应的附加长度。
+\end{tabularx}
 其中，平台转角造成的平台侧附加长度记为
-
 \begin{equation}
-  \Delta L_{i,\theta}=s_i r_e\theta,
-  \label{eq:ch3-delta-theta}
+  \Delta L_{i,\theta}=s_i r_e\theta, \label{eq:ch3-delta-theta}
 \end{equation}
-
 式中，方向符号
-
 \begin{equation}
-  \bm s=
-  \begin{bmatrix}
-    1 & -1 & 1 & -1
-  \end{bmatrix}^{\mathrm T}
-  \label{eq:ch3-s-sign}
+  \bm s= \begin{bmatrix} 1 & -1 & 1 & -1 \end{bmatrix}^{\mathrm T} \label{eq:ch3-s-sign}
 \end{equation}
-
 由本文四个电机的缠绕拓扑共同决定。
 
 设第$i$ 根绳在平台侧的包角为$\varphi_i$，则平台侧圆弧长度为
-
 \begin{equation}
-  L_{i,\mathrm{arc}}=r_e\varphi_i.
-  \label{eq:ch3-arc-length}
+  L_{i,\mathrm{arc}}=r_e\varphi_i. \label{eq:ch3-arc-length}
 \end{equation}
-
 同时，绕线轮侧包角取为平台侧包角的余角，则有
-
 \begin{equation}
-  \Delta L_{i,m}=r_m\left(\frac{\pi}{2}-\varphi_i\right).
-  \label{eq:ch3-delta-motor}
+  \Delta L_{i,m}=r_m\left(\frac{\pi}{2}-\varphi_i\right). \label{eq:ch3-delta-motor}
 \end{equation}
-
 于是第$i$ 根绳总长度最终表示为
-
 \begin{equation}
-  L_i=s_i r_e\theta+r_e\varphi_i+\|\bm A_i-\bm E_i\|+r_m\left(\frac{\pi}{2}-\varphi_i\right).
-  \label{eq:ch3-li-final}
+  L_i=s_i r_e\theta+r_e\varphi_i+\|\bm A_i-\bm E_i\|+r_m\left(\frac{\pi}{2}-\varphi_i\right). \label{eq:ch3-li-final}
 \end{equation}
-
 在程序实现中，平台包角$\varphi_i$ 通过切线方向角计算获得。设
-
 \begin{equation}
   \alpha_i=\operatorname{atan2}(c_{iy},c_{ix}),
 \end{equation}
-
 则四根绳分别采用
-
 \begin{equation}
-  \varphi_1=\frac{\pi}{2}-\alpha_1,\qquad
-  \varphi_2=-\frac{\pi}{2}+\alpha_2,
-  \label{eq:ch3-angle12}
+  \varphi_1=\frac{\pi}{2}-\alpha_1,\qquad \varphi_2=-\frac{\pi}{2}+\alpha_2, \label{eq:ch3-angle12}
 \end{equation}
-
 \begin{equation}
-  \varphi_3=-\alpha_3-\frac{\pi}{2},\qquad
-  \varphi_4=\alpha_4+\frac{\pi}{2}.
-  \label{eq:ch3-angle34}
+  \varphi_3=-\alpha_3-\frac{\pi}{2},\qquad \varphi_4=\alpha_4+\frac{\pi}{2}. \label{eq:ch3-angle34}
 \end{equation}
-
 由此即可在给定平台位姿$\bm q$ 时求得四根绳长
-
 \begin{equation}
-  \bm L(\bm q)=
-  \begin{bmatrix}
-    L_1(\bm q) & L_2(\bm q) & L_3(\bm q) & L_4(\bm q)
-  \end{bmatrix}^{\mathrm T}.
+  \bm L(\bm q)= \begin{bmatrix} L_1(\bm q) & L_2(\bm q) & L_3(\bm q) & L_4(\bm q) \end{bmatrix}^{\mathrm T}.
 \end{equation}
-
 上述逆运动学模型完整考虑了切线选择、包角变化及平台转角附加缠绕等因素，因此比简化的点到点绳长模型更适合连续旋转任务。对于后续位置控制而言，逆运动学的作用在于将期望末端位姿转换为电机侧可执行的绳长参考，从而建立“末端轨迹—绳长指令—电机执行”的基本控制链路。
 
 \section{正运动学建模}
 
 对于并联机器人而言，与逆运动学相比，正运动学通常计算较为复杂，但对于机器人而言，这是查看末端位置并评估加速度最简便的途径。已知
-
 \begin{equation}
-  \bm L^{d}=
-  \begin{bmatrix}
-    L_1^{d} & L_2^{d} & L_3^{d} & L_4^{d}
-  \end{bmatrix}^{\mathrm T},
+  \bm L^{d}= \begin{bmatrix} L_1^{d} & L_2^{d} & L_3^{d} & L_4^{d} \end{bmatrix}^{\mathrm T},
 \end{equation}
-
 求解满足
-
 \begin{equation}
-  \bm L(\bm q)=\bm L^{d}
-  \label{eq:ch3-forward-basic}
+  \bm L(\bm q)=\bm L^{d} \label{eq:ch3-forward-basic}
 \end{equation}
-
 的位姿$\bm q$。由于绳长表达式中包含外公切线选择、平台包角和绕线轮包角等非线性几何因素，难以得到解析形式的显式逆映射，因此本文采用数值优化方式求解正运动学。
 
 定义残差函数
-
 \begin{equation}
-  \bm e(\bm q)=\bm L(\bm q)-\bm L^{d},
-  \label{eq:ch3-e-q}
+  \bm e(\bm q)=\bm L(\bm q)-\bm L^{d}, \label{eq:ch3-e-q}
 \end{equation}
-
 相应地构造目标函数
-
 \begin{equation}
-  \Phi(\bm q)=\frac{1}{2}\bm e^{\mathrm T}(\bm q)\bm e(\bm q)
-  =\frac{1}{2}\sum_{i=1}^{4}\left(L_i(\bm q)-L_i^{d}\right)^2.
-  \label{eq:ch3-forward-objective}
+  \Phi(\bm q)=\frac{1}{2}\bm e^{\mathrm T}(\bm q)\bm e(\bm q) =\frac{1}{2}\sum_{i=1}^{4}\left(L_i(\bm q)-L_i^{d}\right)^2. \label{eq:ch3-forward-objective}
 \end{equation}
-
 于是正运动学问题可转化为
-
 \begin{equation}
-  \bm q^\star=\arg\min_{\bm q}\Phi(\bm q).
-  \label{eq:ch3-forward-opt}
+  \bm q^\star=\arg\min_{\bm q}\Phi(\bm q). \label{eq:ch3-forward-opt}
 \end{equation}
-
 当求得最优位姿时，应满足一阶必要条件
-
 \begin{equation}
-  \nabla\Phi(\bm q)=\bm J_L^{\mathrm T}(\bm q)\bm e(\bm q)=\bm 0,
-  \label{eq:ch3-forward-stationary}
+  \nabla\Phi(\bm q)=\bm J_L^{\mathrm T}(\bm q)\bm e(\bm q)=\bm 0, \label{eq:ch3-forward-stationary}
 \end{equation}
-
 其中
-
 \begin{equation}
-  \bm J_L(\bm q)=\frac{\partial \bm L(\bm q)}{\partial \bm q}
-  \label{eq:ch3-jl}
+  \bm J_L(\bm q)=\frac{\partial \bm L(\bm q)}{\partial \bm q} \label{eq:ch3-jl}
 \end{equation}
-
 为绳长雅可比矩阵。
 
 若采用Gauss--Newton迭代思想，则位姿更新形式可写为
-
 \begin{equation}
-  \bm q_{k+1}
-  =
-  \bm q_k-
-  \left(\bm J_L^{\mathrm T}\bm J_L\right)^{-1}
-  \bm J_L^{\mathrm T}
-  \bm e(\bm q_k).
-  \label{eq:ch3-gauss-newton}
+  \bm q_{k+1} = \bm q_k- \left(\bm J_L^{\mathrm T}\bm J_L\right)^{-1} \bm J_L^{\mathrm T} \bm e(\bm q_k). \label{eq:ch3-gauss-newton}
 \end{equation}
-
 本文程序实现中通过非线性优化求解器直接对\cref{eq:ch3-forward-opt}进行求解，并以前一时刻位姿作为迭代初值，以提高收敛速度并保持轨迹重构的连续性。
 
 \begin{figure}[htbp]
@@ -388,79 +270,50 @@
 \section{绳长速度关系与运动学雅可比矩阵}
 
 设第$i$ 根绳在平台侧切点相对于平台圆心的位置向量为
-
 \begin{equation}
-  \bm r_i=\bm E_i-\bm p.
-  \label{eq:ch3-ri}
+  \bm r_i=\bm E_i-\bm p. \label{eq:ch3-ri}
 \end{equation}
-
 则切点速度可表示为平台平动速度与转动速度叠加：
-
 \begin{equation}
-  \dot{\bm E}_i=\dot{\bm p}+\dot{\theta}\bm r_i^\perp,
-  \label{eq:ch3-eidot}
+  \dot{\bm E}_i=\dot{\bm p}+\dot{\theta}\bm r_i^\perp, \label{eq:ch3-eidot}
 \end{equation}
-
 其中
-
 \begin{equation}
   \bm r_i^\perp=
   \begin{bmatrix}
     -r_{iy} \\ r_{ix}
   \end{bmatrix}.
 \end{equation}
-
 绳长变化率等于切点速度在绳索方向上的负投影，因此有
-
 \begin{equation}
-  \dot{L}_i=-\bm u_i^{\mathrm T}\dot{\bm E}_i.
-  \label{eq:ch3-lidot1}
+  \dot{L}_i=-\bm u_i^{\mathrm T}\dot{\bm E}_i. \label{eq:ch3-lidot1}
 \end{equation}
-
 代入\cref{eq:ch3-eidot}可得
-
 \begin{equation}
-  \dot{L}_i=
-  -\bm u_i^{\mathrm T}\dot{\bm p}
-  -\dot{\theta}\bm u_i^{\mathrm T}\bm r_i^\perp.
-  \label{eq:ch3-lidot2}
+  \dot{L}_i= -\bm u_i^{\mathrm T}\dot{\bm p} -\dot{\theta}\bm u_i^{\mathrm T}\bm r_i^\perp. \label{eq:ch3-lidot2}
 \end{equation}
-
 根据二维叉乘关系
-
 \begin{equation}
-  \bm r_i\times \bm u_i=r_{ix}u_{iy}-r_{iy}u_{ix},
-  \label{eq:ch3-cross2d}
+  \bm r_i\times \bm u_i=r_{ix}u_{iy}-r_{iy}u_{ix}, \label{eq:ch3-cross2d}
 \end{equation}
-
 并利用
-
 \begin{equation}
-  \bm u_i^{\mathrm T}\bm r_i^\perp=-(\bm r_i\times \bm u_i),
-  \label{eq:ch3-perp-cross}
+  \bm u_i^{\mathrm T}\bm r_i^\perp=-(\bm r_i\times \bm u_i), \label{eq:ch3-perp-cross}
 \end{equation}
-
 可将\cref{eq:ch3-lidot2}化为
-
 \begin{equation}
-  \dot{L}_i=
-  -
-  \begin{bmatrix}
-    u_{ix} & u_{iy} & \bm r_i\times \bm u_i
-  \end{bmatrix}
-  \dot{\bm q}.
-  \label{eq:ch3-lidot-final}
+  \dot{L}_i= - \begin{bmatrix} u_{ix} & u_{iy} & \bm r_i\times \bm u_i \end{bmatrix} \dot{\bm q}. \label{eq:ch3-lidot-final}
 \end{equation}
-
 将四根绳的关系叠加，有
-
 \begin{equation}
-  \dot{\bm L}=-\bm W^{\mathrm T}\dot{\bm q},
-  \label{eq:ch3-length-rate}
+  \dot{\bm L}=-\bm W^{\mathrm T}\dot{\bm q}, \label{eq:ch3-length-rate}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $\dot{\bm L}$ & 四根绳索长度变化率组成的向量；\\
+       & $\dot{\bm q}$ & 末端平台的广义速度向量；\\
+       & $\bm W^{\mathrm T}$ & 末端位姿速度到绳长速度的运动学雅可比矩阵。
+\end{tabularx}
 其中
-
 \begin{equation}
   \bm W=
   \begin{bmatrix}
@@ -473,24 +326,17 @@
   \end{bmatrix}.
   \label{eq:ch3-wrench-matrix}
 \end{equation}
-
-式\eqref{eq:ch3-length-rate}给出了末端位姿速度与绳长速度之间的线性映射关系，其中矩阵$\bm W$ 的转置可视为运动学雅可比矩阵。对于位置控制而言，该关系一方面可以用于末端速度与电机速度之间的换算，另一方面也为后续从末端广义力到绳索张力的力学映射奠定了形式基础。虽然本章重点放在位置控制基础验证，但该雅可比关系将在后续控制算法设计和张力分配研究中继续发挥关键作用。
+式\eqref{eq:ch3-length-rate}给出了末端位姿速度与绳长速度之间的线性映射关系。对于位置控制而言，该关系一方面可以用于末端速度与电机速度之间的换算，另一方面也为后续从末端广义力到绳索张力的力学映射奠定了形式基础。虽然本章重点放在位置控制基础验证，但该雅可比关系将在后续控制算法设计和张力分配研究中继续发挥关键作用。
 
 \section{动力学建模}
 
 在完成几何关系与运动学雅可比推导后，还需进一步建立末端平台的动力学模型，以便将期望加速度转化为广义力需求，并为后续张力分配与力控制算法设计提供理论依据。结合本文仿真模型和实验验证目的，末端平台被视为平面刚体，其动力学建模重点放在惯性项与绳索张力所形成的合力、合力矩关系上。
 
 设末端平台质量为$m$，绕质心的转动惯量为$I$，则其广义坐标仍写为
-
 \begin{equation}
-  \bm q=
-  \begin{bmatrix}
-    x & y & \theta
-  \end{bmatrix}^{\mathrm T},
+  \bm q= \begin{bmatrix} x & y & \theta \end{bmatrix}^{\mathrm T},
 \end{equation}
-
 相应的广义速度和广义加速度分别为
-
 \begin{equation}
   \dot{\bm q}=
   \begin{bmatrix}
@@ -501,47 +347,27 @@
     \ddot{x} & \ddot{y} & \ddot{\theta}
   \end{bmatrix}^{\mathrm T}.
 \end{equation}
-
 对于第$i$ 根绳，其对末端平台施加的拉力可表示为
-
 \begin{equation}
-  \bm F_i=f_i\bm u_i,
-  \label{eq:ch3-force-i}
+  \bm F_i=f_i\bm u_i, \label{eq:ch3-force-i}
 \end{equation}
-
 其中，$f_i$ 为第$i$ 根绳张力，$\bm u_i$ 为由平台侧切点指向电机侧切点的单位方向向量，定义见\cref{eq:ch3-ui}。由于$\bm u_i$ 已与绳索受力方向一致，因此平台所受合力可写为
-
 \begin{equation}
-  \bm F=\sum_{i=1}^{4} \bm F_i
-  =\sum_{i=1}^{4} f_i\bm u_i.
-  \label{eq:ch3-total-force}
+  \bm F=\sum_{i=1}^{4} \bm F_i =\sum_{i=1}^{4} f_i\bm u_i. \label{eq:ch3-total-force}
 \end{equation}
-
 同时，第$i$ 根绳对平台圆心产生的力矩为
-
 \begin{equation}
-  M_i=\bm r_i\times\bm F_i
-  =f_i(\bm r_i\times\bm u_i),
-  \label{eq:ch3-moment-i}
+  M_i=\bm r_i\times\bm F_i =f_i(\bm r_i\times\bm u_i), \label{eq:ch3-moment-i}
 \end{equation}
-
 其中，$\bm r_i$ 为平台圆心指向第$i$ 个平台侧切点的位置向量，定义见\cref{eq:ch3-ri}。于是总力矩为
-
 \begin{equation}
-  M_z=\sum_{i=1}^{4} M_i
-  =\sum_{i=1}^{4} f_i(\bm r_i\times\bm u_i).
-  \label{eq:ch3-total-moment}
+  M_z=\sum_{i=1}^{4} M_i =\sum_{i=1}^{4} f_i(\bm r_i\times\bm u_i). \label{eq:ch3-total-moment}
 \end{equation}
-
 将末端平台视为平面刚体，并忽略绳索质量、绳索阻尼及重力补偿项对本阶段推导的影响，则可将动力学方程写为
-
 \begin{equation}
-  \bm M\ddot{\bm q}=\bm \tau,
-  \label{eq:ch3-dynamics-basic}
+  \bm M\ddot{\bm q}=\bm \tau, \label{eq:ch3-dynamics-basic}
 \end{equation}
-
 其中，广义惯性矩阵为
-
 \begin{equation}
   \bm M=
   \begin{bmatrix}
@@ -551,19 +377,11 @@
   \end{bmatrix},
   \label{eq:ch3-mass-matrix}
 \end{equation}
-
 广义力向量为
-
 \begin{equation}
-  \bm \tau=
-  \begin{bmatrix}
-    F_x & F_y & M_z
-  \end{bmatrix}^{\mathrm T}.
-  \label{eq:ch3-generalized-wrench}
+  \bm \tau= \begin{bmatrix} F_x & F_y & M_z \end{bmatrix}^{\mathrm T}. \label{eq:ch3-generalized-wrench}
 \end{equation}
-
 结合\cref{eq:ch3-total-force,eq:ch3-total-moment}，可得
-
 \begin{equation}
   \bm \tau=
   \begin{bmatrix}
@@ -573,46 +391,33 @@
   \end{bmatrix}.
   \label{eq:ch3-wrench-expand}
 \end{equation}
-
 将四根绳张力写成向量形式
-
 \begin{equation}
-  \bm f=
-  \begin{bmatrix}
-    f_1 & f_2 & f_3 & f_4
-  \end{bmatrix}^{\mathrm T},
-  \label{eq:ch3-force-vector}
+  \bm f= \begin{bmatrix} f_1 & f_2 & f_3 & f_4 \end{bmatrix}^{\mathrm T}, \label{eq:ch3-force-vector}
 \end{equation}
-
 并利用\cref{eq:ch3-wrench-matrix}中定义的结构矩阵$\bm W$，即可得到更加紧凑的表达式
-
 \begin{equation}
-  \bm \tau=\bm W\bm f.
-  \label{eq:ch3-wrench-map}
+  \bm \tau=\bm W\bm f. \label{eq:ch3-wrench-map}
 \end{equation}
-
 于是本文平面四绳绳驱并联机器人的动力学模型可进一步写为
-
 \begin{equation}
-  \bm M\ddot{\bm q}=\bm W\bm f.
-  \label{eq:ch3-dynamics-final}
+  \bm M\ddot{\bm q}=\bm W\bm f. \label{eq:ch3-dynamics-final}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $\bm M$ & 末端平台的广义惯性矩阵；\\
+       & $\ddot{\bm q}$ & 末端平台的广义加速度向量；\\
+       & $\bm W$ & 绳索张力到末端广义力的结构矩阵；\\
+       & $\bm f$ & 四根绳索张力组成的向量。
+\end{tabularx}
 式\eqref{eq:ch3-dynamics-final}表明：末端平台的期望加速度并不是直接由某一根绳索单独决定，而是由四根绳索张力通过结构矩阵$\bm W$ 共同作用形成的广义力结果。对于本文的高动态加速度模拟任务而言，这一关系正是后续由位置控制过渡到力控制的理论起点。
 
 \section{从动力学模型到广义力/张力映射}
 
 在已建立\cref{eq:ch3-dynamics-final}的基础上，若给定末端期望加速度$\ddot{\bm q}_d$，则首先可以计算获得为实现该加速度所需的期望广义力。记
-
 \begin{equation}
-  \ddot{\bm q}_d=
-  \begin{bmatrix}
-    \ddot{x}_d & \ddot{y}_d & \ddot{\theta}_d
-  \end{bmatrix}^{\mathrm T},
+  \ddot{\bm q}_d= \begin{bmatrix} \ddot{x}_d & \ddot{y}_d & \ddot{\theta}_d \end{bmatrix}^{\mathrm T},
 \end{equation}
-
 则对应的期望广义力为
-
 \begin{equation}
   \bm \tau_d=\bm M\ddot{\bm q}_d
   =
@@ -623,55 +428,55 @@
   \end{bmatrix}.
   \label{eq:ch3-target-wrench}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $\bm \tau_d$ & 末端平台期望广义力向量；\\
+       & $\ddot{\bm q}_d$ & 末端平台期望广义加速度向量。
+\end{tabularx}
 这一定义与本文仿真程序中的目标广义力构造方式保持一致，即先由期望线加速度和角加速度生成末端所需的广义力，再根据结构矩阵求解可行张力分布。
 
 由\cref{eq:ch3-wrench-map}可知，张力向量必须满足如下平衡关系：
-
 \begin{equation}
-  \bm W\bm f=\bm \tau_d.
-  \label{eq:ch3-force-balance}
+  \bm W\bm f=\bm \tau_d. \label{eq:ch3-force-balance}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $\bm f$ & 待求的绳索张力向量；\\
+       & $\bm \tau_d$ & 已知的末端期望广义力向量。
+\end{tabularx}
 由于本文系统为$4$ 根绳驱动$3$ 个自由度，因此属于一冗余驱动系统。这意味着在一般情况下，满足\cref{eq:ch3-force-balance}的张力向量并不唯一。同时，绳索只能受拉，还必须满足正张力及执行器能力约束：
-
 \begin{equation}
-  f_{i,\min}\le f_i\le f_{i,\max},\qquad i=1,2,3,4.
-  \label{eq:ch3-force-bound}
+  f_{i,\min}\le f_i\le f_{i,\max},\qquad i=1,2,3,4. \label{eq:ch3-force-bound}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $f_i$ & 第$i$根绳索的实际张力；\\
+       & $f_{i,\min}$ & 第$i$根绳索允许的最小张力；\\
+       & $f_{i,\max}$ & 第$i$根绳索允许的最大张力。
+\end{tabularx}
 因此，由期望加速度到绳索张力的求解过程，实质上可以表述为如下约束求解问题：
-
 \begin{equation}
-  \text{求 } \bm f,
-  \quad
-  \text{s.t. } \bm W\bm f=\bm \tau_d,
-  \quad
-  \bm f_{\min}\le \bm f\le \bm f_{\max}.
-  \label{eq:ch3-force-distribution-problem}
+  \text{求 } \bm f, \quad \text{s.t. } \bm W\bm f=\bm \tau_d, \quad \bm f_{\min}\le \bm f\le \bm f_{\max}. \label{eq:ch3-force-distribution-problem}
 \end{equation}
-
 对于本文的平面四绳机构，结构矩阵$\bm W$ 为$3\times4$ 矩阵，其零空间维数通常为$1$。参照仿真程序中的求解形式，可先由广义逆得到一个满足平衡方程的特解
-
 \begin{equation}
-  \bm f_p=\bm W^{+}\bm \tau_d,
-  \label{eq:ch3-force-particular}
+  \bm f_p=\bm W^{+}\bm \tau_d, \label{eq:ch3-force-particular}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $\bm f_p$ & 满足平衡方程的一个张力特解；\\
+       & $\bm W^{+}$ & 结构矩阵$\bm W$的Moore-Penrose广义逆。
+\end{tabularx}
 再求取满足
-
 \begin{equation}
-  \bm W\bm n_s=\bm 0
+  \bm W\bm n_s=\bm 0.
 \end{equation}
-
 的零空间基向量$\bm n_s$。于是张力通解可写为
-
 \begin{equation}
-  \bm f=\bm f_p+\lambda\bm n_s,
-  \label{eq:ch3-force-general-solution}
+  \bm f=\bm f_p+\lambda\bm n_s, \label{eq:ch3-force-general-solution}
 \end{equation}
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $\bm n_s$ & 结构矩阵$\bm W$零空间中的基向量；\\
+       & $\lambda$ & 冗余驱动系统中的标量自由变量。
+\end{tabularx}
 
-其中，$\lambda$ 为标量自由变量。进一步结合张力上下界约束，便可获得$\lambda$ 的可行区间，进而通过重心法、解析中心法或其他优化策略选取最终张力解。本文仿真代码中所采用的张力分配方法，正是基于上述思路实现的。
+进一步结合张力上下界约束，可获得$\lambda$ 的可行区间，进而通过重心法、解析中心法或其他优化策略选取最终张力解。本文仿真代码中所采用的张力分配方法，正是基于上述思路实现的。
 
 需要强调的是，本章的任务是建立从末端位姿、速度和加速度到张力求解问题的建模链路，目的是说明后续张力分配与力控制章节的理论出发点。因此，关于可行区间推导、解析中心法和重心法的详细数学推导，将在后续张力分配章节中进一步展开。本章只需明确：位置控制主要对应“几何轨迹是否可实现”的问题，而力控制与张力分配则对应 “期望广义力如何由多根绳索协同实现”的问题，两者共同构成本文控制系统设计的基础。
 
@@ -680,57 +485,41 @@
 尽管本文最终目标是实现基于张力调节的高动态加速度输出，但在实验平台搭建与控制算法设计之前，必须首先验证基础位置控制链路是否能够正常工作。为此，本文采用基于逆运动学的离散位置控制流程，将期望末端轨迹转化为四个电机的绳长参考或位移参考，并结合编码器反馈和正运动学解算，对末端位姿进行重构与闭环校验。
 
 具体而言，首先对期望末端轨迹按照固定采样周期 $T_s$ 进行离散化，得到一系列期望位姿节点 $\bm q_d(k)$。随后将各离散位姿逐点代入逆运动学模型，求得对应的目标绳长序列 $\bm L_d(k)$。在控制实现中，并不是直接将末端位姿误差送入 PID 控制器，而是先根据相邻采样时刻的绳长变化量构造电机速度参考，再由各电机底层速度环进行闭环跟踪。若将卷筒半径记为 $r_m$，则第 $i$ 个执行单元的速度参考可写为
-
 \begin{equation}
-  \omega_{d,i}(k)=\frac{L_{d,i}(k)-L_{d,i}(k-1)}{T_s\,r_m}.
-  \label{eq:ch3-speed-command}
+  \omega_{d,i}(k)=\frac{L_{d,i}(k)-L_{d,i}(k-1)}{T_s\,r_m}. \label{eq:ch3-speed-command}
 \end{equation}
-
+\begin{tabularx}{\textwidth}{@{}l@{\quad}r@{———}X@{}}
+  式中 & $\omega_{d,i}(k)$ & 第$i$个执行单元在第$k$个采样时刻的目标角速度；\\
+       & $L_{d,i}(k)$ & 第$i$根绳在第$k$个采样时刻的目标绳长；\\
+       & $T_s$ & 位置控制离散采样周期；\\
+       & $r_m$ & 电机侧绕线轮半径。
+\end{tabularx}
 各电机在接收到速度指令后，通过编码器反馈构成速度闭环 PID 控制，以保证卷筒转速能够稳定跟踪参考值。与此同时，系统根据编码器测得的实际位移或实际绳长，利用正运动学模型实时重构末端位姿，并将重构结果用于轨迹跟踪效果分析。需要强调的是，本章的位置控制闭环主要是电机层速度闭环与系统层位姿重构评估的结合，其作用是验证“轨迹离散—逆运动学求解—电机执行—状态反馈”这条基础链路是否贯通，而不是建立最终面向高动态加速度输出的末端力控制器。
 
 位置控制流程可概括为以下几个步骤。
 
 首先，根据任务需求生成末端期望轨迹$\bm q_d(t)$，其形式可以是直线轨迹、圆轨迹、小角度旋转轨迹或连续旋转轨迹。轨迹离散后，可得到一系列期望位姿节点
-
 \begin{equation}
-  \bm q_d(k)=
-  \begin{bmatrix}
-    x_d(k) & y_d(k) & \theta_d(k)
-  \end{bmatrix}^{\mathrm T}.
+  \bm q_d(k)= \begin{bmatrix} x_d(k) & y_d(k) & \theta_d(k) \end{bmatrix}^{\mathrm T}.
 \end{equation}
-
 其次，将期望位姿代入逆运动学模型，计算每一时刻的目标绳长
-
 \begin{equation}
   \bm L_d(k)=\bm L\bigl(\bm q_d(k)\bigr).
 \end{equation}
-
 再由绳长变化量进一步换算为电机卷筒转角或位移指令，从而驱动四个电机协同运动。
 
 再次，在系统运行过程中，通过电机编码器获得各执行单元的实际位移信息，并将其还原为实际绳长测量值
-
 \begin{equation}
-  \bm L_m(k)=
-  \begin{bmatrix}
-    L_{1,m}(k) & L_{2,m}(k) & L_{3,m}(k) & L_{4,m}(k)
-  \end{bmatrix}^{\mathrm T}.
+  \bm L_m(k)= \begin{bmatrix} L_{1,m}(k) & L_{2,m}(k) & L_{3,m}(k) & L_{4,m}(k) \end{bmatrix}^{\mathrm T}.
 \end{equation}
-
 将其输入正运动学求解器，即可得到当前末端位姿估计值
-
 \begin{equation}
-  \hat{\bm q}(k)=
-  \begin{bmatrix}
-    \hat{x}(k) & \hat{y}(k) & \hat{\theta}(k)
-  \end{bmatrix}^{\mathrm T}.
+  \hat{\bm q}(k)= \begin{bmatrix} \hat{x}(k) & \hat{y}(k) & \hat{\theta}(k) \end{bmatrix}^{\mathrm T}.
 \end{equation}
-
 最后，通过比较期望位姿与重构位姿，可以得到末端位置误差
-
 \begin{equation}
   \bm e_q(k)=\bm q_d(k)-\hat{\bm q}(k),
 \end{equation}
-
 从而完成对位置控制效果的基础评估。
 
 \begin{figure}[htbp]

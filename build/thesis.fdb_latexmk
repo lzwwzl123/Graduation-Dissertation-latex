@@ -1,31 +1,31 @@
 # Fdb version 4
-["bibtex build/thesis"] 1774215493.63584 "build/thesis.aux" "build/thesis.bbl" "build/thesis" 1774215535.17319 0
+["bibtex build/thesis"] 1774218244.08739 "build/thesis.aux" "build/thesis.bbl" "build/thesis" 1774218282.68046 0
   "./hithesis.bst" 1774215419 139269 5104c511d9266c19c4ce89130b489477 ""
-  "./reference.bib" 1774180288 21854 6f9dcf81615c0ce81001ded3d9910ecd ""
-  "build/back/acknowledgements.aux" 1774215504 2792 cedf62245fafea650a050a13bc0215b1 "xelatex"
-  "build/back/conclusion.aux" 1774215504 2780 ad28cee86c7e21ab96778e72d9e7da6f "xelatex"
-  "build/body/control.aux" 1774215504 13220 0f4692c3e5f5f6d1b817820f77067d0a "xelatex"
-  "build/body/force_assign.aux" 1774215504 2560 eb77a3a7f7a107ee71c7d1f737b7a6d8 "xelatex"
-  "build/body/mech_design.aux" 1774215502 2990 c3080d8a6b2cd867ffb1e4c2a8264aa4 "xelatex"
-  "build/body/modeling.aux" 1774215504 24946 688cb902e1e9cc5500121403d3ee758b "xelatex"
-  "build/body/pre_introduction.aux" 1774215502 16184 9139e6019adb4df25121421d43e742f6 "xelatex"
-  "build/thesis.aux" 1774215504 3418 60516ac91c79c5fd16192e6c6af1bbec "xelatex"
+  "./reference.bib" 1774215587 20119 0b3a6d53e65d0a30ccf8f1b2a12a924c ""
+  "build/back/acknowledgements.aux" 1774218254 2792 50d358b9c3c754954b41af47ec135c7c "xelatex"
+  "build/back/conclusion.aux" 1774218254 2780 4098e0736038ea7e4f5eb62cab259589 "xelatex"
+  "build/body/control.aux" 1774218254 13004 f814d79146e21b763dc8d6e05157bb35 "xelatex"
+  "build/body/force_assign.aux" 1774218254 2560 20cc1361881bb9b4657a39abd7b60014 "xelatex"
+  "build/body/mech_design.aux" 1774218252 2990 c3080d8a6b2cd867ffb1e4c2a8264aa4 "xelatex"
+  "build/body/modeling.aux" 1774218254 24946 fa2c9e1809676a0a5c8a2eb037f2efcd "xelatex"
+  "build/body/pre_introduction.aux" 1774218252 16184 9139e6019adb4df25121421d43e742f6 "xelatex"
+  "build/thesis.aux" 1774218254 3418 d583ac93a1bc039d3a6dcb431dd306e3 "xelatex"
   (generated)
   "build/thesis.bbl"
   "build/thesis.blg"
   (rewritten before read)
-["makeindex build/thesis.idx"] 1774215207.61576 "build/thesis.idx" "build/thesis.ind" "build/thesis" 1774215535.17254 0
-  "build/thesis.idx" 1774215497 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
+["makeindex build/thesis.idx"] 1774215207.61576 "build/thesis.idx" "build/thesis.ind" "build/thesis" 1774218282.67984 0
+  "build/thesis.idx" 1774218247 0 d41d8cd98f00b204e9800998ecf8427e "xelatex"
   (generated)
   "build/thesis.ilg"
   "build/thesis.ind"
   (rewritten before read)
-["xdvipdfmx"] 1774215506.63377 "build/thesis.xdv" "thesis.pdf" "thesis" 1774215535.22979 0
-  "build/thesis.xdv" 1774215504 829668 393dddf9e6fb372ef10449e3b63f793f "xelatex"
+["xdvipdfmx"] 1774218256.46978 "build/thesis.xdv" "thesis.pdf" "thesis" 1774218282.73358 0
+  "build/thesis.xdv" 1774218254 850796 3d7ab5cf402a1f5799634e640ff233d9 "xelatex"
   (generated)
   "thesis.pdf"
   (rewritten before read)
-["xelatex"] 1774215494.23184 "d:/桌面/毕业设计/毕业论文latex/thesis.tex" "build/thesis.xdv" "thesis" 1774215535.17564 0
+["xelatex"] 1774218244.56933 "d:/桌面/毕业设计/毕业论文latex/thesis.tex" "build/thesis.xdv" "thesis" 1774218282.68248 0
   "C:/WINDOWS/Fonts/msyh.ttc" 1758047743 19704352 1e10e74402e59d54499af795caf0b135 ""
   "E:/ctex/CTeX/tex/latex/CJK/CJKfntef.sty" 1253079804 12883 8c0d0d59d56d5a885938dad548e70a41 ""
   "E:/ctex/CTeX/tex/latex/ctex/cfg/ctexopts.cfg" 1243308170 96 95a6cd3149475f583f57eb9a3d41be64 ""
@@ -289,23 +289,23 @@
   "E:/latex/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
   "back/acknowledgements.tex" 1773520230 236 247f6317c0cd121f837538b2cd76a796 ""
   "back/conclusion.tex" 1773520230 839 a63a01ba86ae0d832296d6bf1d94b176 ""
-  "body/control.tex" 1774099363 21078 da3bedea2b24cff1e17fee19fcbc383d ""
+  "body/control.tex" 1774218230 23703 e08f9c09d9bc412e008192ecaf32890c ""
   "body/force_assign.tex" 1774069469 21 a6692b1325855bd1d725ab54205f4e50 ""
   "body/mech_design.tex" 1774069461 130 52ce885aaceef3ce0cfab34c540549d9 ""
-  "body/modeling.tex" 1774214587 36714 9ab529985579e11aca47828597d48f51 ""
+  "body/modeling.tex" 1774217593 38519 5f468393b3e943b8d974f67fdecd23a6 ""
   "body/pre_introduction.tex" 1774215100 37074 d980aa1e0195e18d8521cec9a4a88150 ""
-  "build/back/acknowledgements.aux" 1774215504 2792 cedf62245fafea650a050a13bc0215b1 "xelatex"
-  "build/back/conclusion.aux" 1774215504 2780 ad28cee86c7e21ab96778e72d9e7da6f "xelatex"
-  "build/body/control.aux" 1774215504 13220 0f4692c3e5f5f6d1b817820f77067d0a "xelatex"
-  "build/body/force_assign.aux" 1774215504 2560 eb77a3a7f7a107ee71c7d1f737b7a6d8 "xelatex"
-  "build/body/mech_design.aux" 1774215502 2990 c3080d8a6b2cd867ffb1e4c2a8264aa4 "xelatex"
-  "build/body/modeling.aux" 1774215504 24946 688cb902e1e9cc5500121403d3ee758b "xelatex"
-  "build/body/pre_introduction.aux" 1774215502 16184 9139e6019adb4df25121421d43e742f6 "xelatex"
-  "build/thesis.aux" 1774215504 3418 60516ac91c79c5fd16192e6c6af1bbec "xelatex"
-  "build/thesis.bbl" 1774215494 18364 51389b72dc273641c8199f4b036f504d "bibtex build/thesis"
+  "build/back/acknowledgements.aux" 1774218254 2792 50d358b9c3c754954b41af47ec135c7c "xelatex"
+  "build/back/conclusion.aux" 1774218254 2780 4098e0736038ea7e4f5eb62cab259589 "xelatex"
+  "build/body/control.aux" 1774218254 13004 f814d79146e21b763dc8d6e05157bb35 "xelatex"
+  "build/body/force_assign.aux" 1774218254 2560 20cc1361881bb9b4657a39abd7b60014 "xelatex"
+  "build/body/mech_design.aux" 1774218252 2990 c3080d8a6b2cd867ffb1e4c2a8264aa4 "xelatex"
+  "build/body/modeling.aux" 1774218254 24946 fa2c9e1809676a0a5c8a2eb037f2efcd "xelatex"
+  "build/body/pre_introduction.aux" 1774218252 16184 9139e6019adb4df25121421d43e742f6 "xelatex"
+  "build/thesis.aux" 1774218254 3418 d583ac93a1bc039d3a6dcb431dd306e3 "xelatex"
+  "build/thesis.bbl" 1774218244 18364 51389b72dc273641c8199f4b036f504d "bibtex build/thesis"
   "build/thesis.ind" 1774215207 0 d41d8cd98f00b204e9800998ecf8427e "makeindex build/thesis.idx"
-  "build/thesis.out" 1774215504 7897 7ff2aa060dfcc3e46863a310135d7d0b "xelatex"
-  "build/thesis.toc" 1774215504 4546 35817ef8c1b7fd3142af1b1414a19d70 "xelatex"
+  "build/thesis.out" 1774218254 7897 7ff2aa060dfcc3e46863a310135d7d0b "xelatex"
+  "build/thesis.toc" 1774218254 4546 3709c73a23878a35a4011bbc77bce8c5 "xelatex"
   "d:/桌面/毕业设计/毕业论文latex/thesis.tex" 1774215188 9969 aafb3b9f0fdf91fb62156ea61c99eb98 ""
   "figures/actuators-12-00200-g002.png" 1774111524 30711 845664c7eade8271269d1bcaa51bdf5d ""
   "figures/actuators-12-00200-g005.png" 1774111557 41877 a8f3c100078dc4f3c6ae2a1a7c207c27 ""
