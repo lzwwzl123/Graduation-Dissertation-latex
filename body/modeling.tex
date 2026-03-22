@@ -1,83 +1,25 @@
 % !Mode:: "TeX:UTF-8"
 
-\chapter{运动学建模与位置控制基础验证}
+\chapter{运动学与动力学建模及位置控制基础验证}
 
 \section{引言}
-本章围绕高动态连续旋
-转平面四绳绳驱并联机
-器人的运动学建模与位
-置控制基础验证展开。
-结合本文机构形式与控
-制实现方式，首先建立
-系统构型与符号定义，
-推导末端平台位姿与四
-根绳长之间的逆运动学
-关系，并进一步给出基
-于非线性优化的正运动
-学求解方法。在此基础
-上，推导绳长速度关系
-及运动学雅可比矩阵，
-为后续位置控制与状态
-反馈奠定理论基础。
+本章围绕高动态连续旋转平面四绳绳驱并联机器人的运动学、动力学建模与位置控制基础验证展开。结合本文机构形式与控制实现方式，首先建立系统构型与符号定义，推导末端平台位姿与四根绳长之间的逆运动学关系，并进一步给出基于非线性优化的正运动学求解方法。在此基础上，推导绳长速度关系及运动学雅可比矩阵，为后续位置控制与状态反馈奠定理论基础。
 
-需要说明的是，本文最
-终研究目标并非传统意
-义下的高精度位置伺服，
-而是面向高动态加速度
-输出的力控制与张力协
-同控制。尽管如此，位
-置控制链路仍是后续控
-制研究成立的重要前提。
-只有在“轨迹规划—逆运
-动学—电机执行—正运动
-学反馈”这一基础链路能
-够正常闭合的条件下，
-才有可能进一步讨论广
-义力调节、张力分配以
-及末端加速度连续性等
-问题。因此，本章除运
-动学建模外，还将结合
-样机系统给出位置控制
-基础验证过程，并分析
-单纯位置控制在高动态
-加速度模拟任务中的局
-限性，从而为后续控制
-算法设计与力控制研究
-提供依据。
+需要说明的是，本文最终研究目标并非传统意义下的高精度位置伺服，而是面向高动态加速度输出的力控制与张力协同控制。尽管如此，位置控制链路仍是后续控制研究成立的重要前提。只有在“轨迹规划—逆运动学—电机执行—正运动学反馈”这一基础链路能够正常闭合的条件下，才有可能进一步讨论广义力调节、张力分配以及末端加速度连续性等问题。因此，本章除运动学建模外，还将补充动力学模型及广义力到张力的映射关系，并结合样机系统给出位置控制基础验证过程，并分析单纯位置控制在高动态加速度模拟任务中的局限性，从而为后续控制算法设计与力控制研究提供依据。
 
 \section{系统构型与符号定义}
 
-系统采用四根绳
-索对平面刚性动平台进
-行冗余驱动。与刚性连
-杆并联机构相比，绳驱
-系统具有结构轻量、工
-作空间较大和末端部件
-惯量较低等优点，但也
-引入了绳索只能受拉、
-缠绕关系复杂以及张力
-重构等问题。对于本文
-所研究的连续旋转任务
-而言，绳索与绕线轮、
-末端平台之间的几何缠
-绕关系将直接影响逆运
-动学建模精度，因此需
-要首先对绳长表达式进
-行完整推导。
+系统采用四根绳索对平面刚性动平台进行冗余驱动。与刚性连杆并联机构相比，绳驱系统具有结构轻量、工作空间较大和末端部件惯量较低等优点，但也引入了绳索只能受拉、缠绕关系复杂以及张力重构等问题。对于本文所研究的连续旋转任务而言，绳索与绕线轮、末端平台之间的几何缠绕关系将直接影响逆运动学建模精度，因此需要首先对绳长表达式进行完整推导。
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.86\textwidth]{figures/系统构型示意图.pdf}
+  \includegraphics[width=0.8\textwidth]{figures/系统构型示意图.pdf}
   \caption{平面四绳绳驱并联机器人系统构型与符号定义示意图}
   \label{fig:ch3-system-geometry}
 \end{figure}
 
 
-如\cref{fig:ch3-system-geometry}
-所示，末端动平台具
-有两个平移自由度和一
-个转动自由度，因此系
-统广义坐标定义为
+如\cref{fig:ch3-system-geometry}所示，末端动平台具有两个平移自由度和一个转动自由度，因此系统广义坐标定义为
 
 \begin{equation}
   \bm q=\begin{bmatrix}
@@ -86,15 +28,9 @@
   \label{eq:ch3-q}
 \end{equation}
 
-其中，$x$、$y$ 分别为末
-端平台圆心在基坐标系
-中的位置坐标，$\theta$
-为动平台绕平面法向的
-转角，逆时针方向取正。
+其中，$x$、$y$ 分别为末端平台圆心在基坐标系中的位置坐标，$\theta$ 为动平台绕平面法向的转角，逆时针方向取正。
 
-在基坐标系 $\Sigma_b$ 下，
-四个基座锚点坐标分别
-记为
+在基坐标系$\Sigma_b$ 下，四个基座锚点坐标分别记为
 
 \begin{equation}
   \bm B_1=\begin{bmatrix}
@@ -112,19 +48,13 @@
   \label{eq:ch3-base-anchor}
 \end{equation}
 
-根据本文样机与仿真参
-数设置，有
+根据本文样机与仿真参数设置，有
 
 \begin{equation}
   b_x=b_y=0.19\ \mathrm{m}.
 \end{equation}
 
-末端平台等效为半径为
-$r_e$ 的圆盘，电机侧绕
-线轮半径为 $r_m$。平台
-质量为 $m$，绕质心转动
-惯量为 $I$。设末端平台
-圆心位置为
+末端平台等效为半径为$r_e$ 的圆盘，电机侧绕线轮半径为$r_m$。平台质量为$m$，绕质心转动惯量为$I$。设末端平台圆心位置为
 
 \begin{equation}
   \bm p=\begin{bmatrix}
@@ -132,10 +62,7 @@ $r_e$ 的圆盘，电机侧绕
   \end{bmatrix}.
 \end{equation}
 
-对第 $i$ 根绳，定义电机
-侧切点为 $\bm A_i$，平台
-侧切点为 $\bm E_i$，则绳
-索直线段向量为
+对第$i$ 根绳，定义电机侧切点为$\bm A_i$，平台侧切点为$\bm E_i$，则绳索直线段向量为
 
 \begin{equation}
   \bm c_i=\bm A_i-\bm E_i.
@@ -155,9 +82,7 @@ $r_e$ 的圆盘，电机侧绕
   \label{eq:ch3-ui}
 \end{equation}
 
-由于绳索只能承受拉力，
-故第 $i$ 根绳张力记为
-$f_i$，满足
+由于绳索只能承受拉力，故第$i$ 根绳张力记为$f_i$，满足
 
 \begin{equation}
   f_i\ge 0.
@@ -169,25 +94,9 @@ $f_i$，满足
 
 \subsection{几何切线关系}
 
-在给定平台位姿 $\bm q$
-时，逆运动学的目标是
-求取四根绳的实际长度。
-由于本文机器人采用圆
-形末端平台与圆形绕线
-轮出绳方式，理论模型
-需对绕线轮和平台上的
-包络长度进行补偿，因
-此每根绳索均可视为连
-接两个圆的外公切线。
-对第 $i$ 根绳而言，源圆
-为以 $\bm B_i$ 为圆心、
-半径为 $r_m$ 的绕线轮，
-目标圆为以 $\bm p$ 为圆
-心、半径为 $r_e$ 的末端
-平台。
+在给定平台位姿$\bm q$ 时，逆运动学的目标是求取四根绳的实际长度。由于本文机器人采用圆形末端平台与圆形绕线轮出绳方式，理论模型需对绕线轮和平台上的包络长度进行补偿，因此每根绳索均可视为连接两个圆的外公切线。对第$i$ 根绳而言，源圆为以$\bm B_i$ 为圆心、半径为$r_m$ 的绕线轮，目标圆为以$\bm p$ 为圆心、半径为$r_e$ 的末端平台。
 
-定义源圆指向目标圆的
-向量为
+定义源圆指向目标圆的向量为
 
 \begin{equation}
   \bm d_i=\bm p-\bm B_i,\qquad d_i=\|\bm d_i\|.
@@ -210,9 +119,7 @@ $f_i$，满足
 
 时，两圆存在外公切线。
 
-设外公切线对应的单位
-法向量为 $\bm n_i$，则其
-必须同时满足
+设外公切线对应的单位法向量为$\bm n_i$，则其必须同时满足
 
 \begin{equation}
   \bm d_i^{\mathrm T}\bm n_i=\Delta r,
@@ -233,8 +140,7 @@ $f_i$，满足
   \end{bmatrix},
 \end{equation}
 
-则由平面几何关系可得
-两组候选法向量
+则由平面几何关系可得两组候选法向量
 
 \begin{equation}
   \bm n_i^{(\pm)}
@@ -255,12 +161,7 @@ $f_i$，满足
   \label{eq:ch3-ei-pm}
 \end{equation}
 
-由于每个绕线轮存在预
-定缠绕方向，因此两组
-候选切线中仅有一组满
-足实际物理缠绕约束。
-设源圆半径向量和缆绳
-方向向量分别为
+由于每个绕线轮存在预定缠绕方向，因此两组候选切线中仅有一组满足实际物理缠绕约束。设源圆半径向量和缆绳方向向量分别为
 
 \begin{equation}
   \bm r_{a,i}^{(\pm)}=\bm A_i^{(\pm)}-\bm B_i,
@@ -279,67 +180,34 @@ $f_i$，满足
   \label{eq:ch3-winding-cross}
 \end{equation}
 
-可用于判定该切线对应
-的缠绕方向。当
-$\chi_i^{(\pm)}>0$ 时，表示
-逆时针缠绕；当
-$\chi_i^{(\pm)}<0$ 时，表示
-顺时针缠绕。根据四个
-电机预设的缠绕方向，
-即可从两组候选切线中
-选出唯一有效切线，从
-而得到实际切点
-$\bm A_i$ 和 $\bm E_i$。
+可用于判定该切线对应的缠绕方向。当$\chi_i^{(\pm)}>0$ 时，表示逆时针缠绕；当$\chi_i^{(\pm)}<0$ 时，表示顺时针缠绕。根据四个电机预设的缠绕方向，即可从两组候选切线中选出唯一有效切线，从而得到实际切点$\bm A_i$ 和$\bm E_i$。
 
 \subsection{绳长表达式}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.9\textwidth]{figures/绕线示意图.pdf}
-  \caption{单根绳索外公切线几何关系示意图}
+  \includegraphics[width=0.7\textwidth]{figures/线长度示意图.pdf}
+  \caption{单根绳索长度几何关系示意图}
   \label{fig:ch3-tangent-geometry}
 \end{figure}
 
-如\cref{fig:ch3-tangent-geometry}
-所示的末端绕线方式，
-使得末端具有连续旋转
-能力。本文逆运动学并
-非简单将绳长视为锚点
-与平台连接点之间的直
-线距离，而是综合考虑
-了绕线轮半径、平台半
-径、实际切点位置及缠
-绕方向约束。该建模方
-式能够更准确地反映连
-续旋转条件下绳长与平
-台位姿之间的真实关系，
-为后续正运动学求解与
-控制实现提供一致的几
-何基础。
+如\cref{fig:ch3-tangent-geometry}所示,本文逆运动学并非简单将绳长视为锚点与平台连接点之间的直线距离，而是综合考虑了绕线轮半径、平台半径、实际切点位置及缠绕方向约束。该建模方式能够更准确地反映连续旋转条件下绳长与平台位姿之间的真实关系，为后续正运动学求解与控制实现提供一致的几何基础。
 
-在选定有效切线后，第
-$i$ 根绳的直线段长度为
+在选定有效切线后，第$i$ 根绳的直线段长度为
 
 \begin{equation}
   L_{i,\mathrm{line}}=\|\bm A_i-\bm E_i\|=\sqrt{d_i^2-(r_m-r_e)^2}.
   \label{eq:ch3-line-length}
 \end{equation}
 
-需要指出的是，本文机
-器人绳长并不仅包含两
-切点之间的直线距离，
-还包括平台侧和绕线轮
-侧的包络圆弧长度以及
-平台转角引起的附加缠
-绕长度。故总绳长写为
+需要指出的是，本文机器人绳长并不仅包含两切点之间的直线距离，还包括平台侧和绕线轮侧的包络圆弧长度以及平台转角引起的附加缠绕长度。故总绳长写为
 
 \begin{equation}
   L_i=\Delta L_{i,\theta}+L_{i,\mathrm{arc}}+L_{i,\mathrm{line}}+\Delta L_{i,m}.
   \label{eq:ch3-total-length}
 \end{equation}
 
-其中，平台转角造成的
-平台侧附加长度记为
+其中，平台转角造成的平台侧附加长度记为
 
 \begin{equation}
   \Delta L_{i,\theta}=s_i r_e\theta,
@@ -356,38 +224,30 @@ $i$ 根绳的直线段长度为
   \label{eq:ch3-s-sign}
 \end{equation}
 
-由本文四个电机的缠绕
-拓扑共同决定。
+由本文四个电机的缠绕拓扑共同决定。
 
-设第 $i$ 根绳在平台侧的
-包角为 $\varphi_i$，则平
-台侧圆弧长度为
+设第$i$ 根绳在平台侧的包角为$\varphi_i$，则平台侧圆弧长度为
 
 \begin{equation}
   L_{i,\mathrm{arc}}=r_e\varphi_i.
   \label{eq:ch3-arc-length}
 \end{equation}
 
-同时，绕线轮侧包角取
-为平台侧包角的余角，
-则有
+同时，绕线轮侧包角取为平台侧包角的余角，则有
 
 \begin{equation}
   \Delta L_{i,m}=r_m\left(\frac{\pi}{2}-\varphi_i\right).
   \label{eq:ch3-delta-motor}
 \end{equation}
 
-于是第 $i$ 根绳总长度最
-终表示为
+于是第$i$ 根绳总长度最终表示为
 
 \begin{equation}
   L_i=s_i r_e\theta+r_e\varphi_i+\|\bm A_i-\bm E_i\|+r_m\left(\frac{\pi}{2}-\varphi_i\right).
   \label{eq:ch3-li-final}
 \end{equation}
 
-在程序实现中，平台包
-角 $\varphi_i$ 通过切线方
-向角计算获得。设
+在程序实现中，平台包角$\varphi_i$ 通过切线方向角计算获得。设
 
 \begin{equation}
   \alpha_i=\operatorname{atan2}(c_{iy},c_{ix}),
@@ -407,8 +267,7 @@ $i$ 根绳的直线段长度为
   \label{eq:ch3-angle34}
 \end{equation}
 
-由此即可在给定平台位
-姿 $\bm q$ 时求得四根绳长
+由此即可在给定平台位姿$\bm q$ 时求得四根绳长
 
 \begin{equation}
   \bm L(\bm q)=
@@ -417,25 +276,11 @@ $i$ 根绳的直线段长度为
   \end{bmatrix}^{\mathrm T}.
 \end{equation}
 
-上述逆运动学模型完整
-考虑了切线选择、包角
-变化及平台转角附加缠
-绕等因素，因此比简化
-的点到点绳长模型更适
-合连续旋转任务。对于
-后续位置控制而言，逆
-运动学的作用在于将期
-望末端位姿转换为电机
-侧可执行的绳长参考，
-从而建立“末端轨迹—绳
-长指令—电机执行”的基
-本控制链路。
+上述逆运动学模型完整考虑了切线选择、包角变化及平台转角附加缠绕等因素，因此比简化的点到点绳长模型更适合连续旋转任务。对于后续位置控制而言，逆运动学的作用在于将期望末端位姿转换为电机侧可执行的绳长参考，从而建立“末端轨迹—绳长指令—电机执行”的基本控制链路。
 
 \section{正运动学建模}
 
-与逆运动学相比，正运
-动学需要根据四根绳长
-反求平台位姿，即已知
+对于并联机器人而言，与逆运动学相比，正运动学通常计算较为复杂，但对于机器人而言，这是查看末端位置并评估加速度最简便的途径。已知
 
 \begin{equation}
   \bm L^{d}=
@@ -451,14 +296,7 @@ $i$ 根绳的直线段长度为
   \label{eq:ch3-forward-basic}
 \end{equation}
 
-的位姿 $\bm q$。由于绳长
-表达式中包含外公切线
-选择、平台包角和绕线
-轮包角等非线性几何因
-素，难以得到解析形式
-的显式逆映射，因此本
-文采用数值优化方式求
-解正运动学。
+的位姿$\bm q$。由于绳长表达式中包含外公切线选择、平台包角和绕线轮包角等非线性几何因素，难以得到解析形式的显式逆映射，因此本文采用数值优化方式求解正运动学。
 
 定义残差函数
 
@@ -475,16 +313,14 @@ $i$ 根绳的直线段长度为
   \label{eq:ch3-forward-objective}
 \end{equation}
 
-于是正运动学问题可转
-化为
+于是正运动学问题可转化为
 
 \begin{equation}
   \bm q^\star=\arg\min_{\bm q}\Phi(\bm q).
   \label{eq:ch3-forward-opt}
 \end{equation}
 
-当求得最优位姿时，应
-满足一阶必要条件
+当求得最优位姿时，应满足一阶必要条件
 
 \begin{equation}
   \nabla\Phi(\bm q)=\bm J_L^{\mathrm T}(\bm q)\bm e(\bm q)=\bm 0,
@@ -500,9 +336,7 @@ $i$ 根绳的直线段长度为
 
 为绳长雅可比矩阵。
 
-若采用 Gauss--Newton 迭
-代思想，则位姿更新形
-式可写为
+若采用Gauss--Newton迭代思想，则位姿更新形式可写为
 
 \begin{equation}
   \bm q_{k+1}
@@ -514,55 +348,53 @@ $i$ 根绳的直线段长度为
   \label{eq:ch3-gauss-newton}
 \end{equation}
 
-本文程序实现中通过非
-线性优化求解器直接对
-\cref{eq:ch3-forward-opt}
-进行求解，并以前一时
-刻位姿作为迭代初值，
-以提高收敛速度并保持
-轨迹重构的连续性。
+本文程序实现中通过非线性优化求解器直接对\cref{eq:ch3-forward-opt}进行求解，并以前一时刻位姿作为迭代初值，以提高收敛速度并保持轨迹重构的连续性。
 
 \begin{figure}[htbp]
   \centering
-  \fbox{\begin{minipage}[c][4.6cm][c]{0.84\textwidth}
-    \centering
-    占位图：正运动学求解流程图。\\
-    建议包含绳长输入、初值设定、残差计算、优化迭代、\\
-    收敛判定和位姿输出等环节。
-  \end{minipage}}
-  \caption{基于非线性优化的正运动学求解流程}
-  \label{fig:ch3-forward-flow}
+  \begin{tikzpicture}[
+    >=Latex,
+    font=\small,
+    node distance=6mm and 10mm,
+    io/.style={draw, line width=1pt, rounded corners=2pt, align=center, minimum width=30mm, minimum height=8mm},
+    proc/.style={draw, line width=1pt, rounded corners=2pt, align=center, minimum width=42mm, minimum height=9mm},
+    decision/.style={draw, line width=1pt, diamond, aspect=2.0, align=center, inner sep=1pt, minimum width=28mm, minimum height=10mm},
+    result/.style={draw, line width=1pt, rounded corners=2pt, align=center, minimum width=34mm, minimum height=8mm},
+    line/.style={-Latex, line width=1pt}
+  ]
+    \node[io] (input) {绳长输入$\bm L^{d}$};
+    \node[proc, below=of input] (init) {初值设定$\bm q_{0}$};
+    \node[proc, below=of init] (length) {计算理论绳长$\bm L(\bm q_k)$};
+    \node[proc, below=of length] (residual) {残差与目标函数\\$\bm e(\bm q_k)=\bm L(\bm q_k)-\bm L^{d}$\\$\Phi=\frac{1}{2}\bm e^{\mathrm T}\bm e$};
+    \node[proc, below=of residual] (update) {雅可比与位姿更新\\$\bm J_L(\bm q_k)$\\$\bm q_{k+1}=\bm q_k-(\bm J_L^{\mathrm T}\bm J_L)^{-1}\bm J_L^{\mathrm T}\bm e$};
+    \node[decision, below=8mm of update] (judge) {是否收敛};
+    \node[result, below=8mm of judge] (output) {位姿输出\\$\bm q^{\ast}=[x,\ y,\ \theta]^{\mathrm T}$};
+
+    \draw[line] (input) -- (init);
+    \draw[line] (init) -- (length);
+    \draw[line] (length) -- (residual);
+    \draw[line] (residual) -- (update);
+    \draw[line] (update) -- (judge);
+    \draw[line] (judge) -- node[right]{是} (output);
+    \draw[line] (judge.east) -- ++(18mm,0) node[above,pos=0.55]{否} |- (length.east);
+
+  \end{tikzpicture}
+  \caption{基于残差最小化的正运动学迭代求解流程}
+  \label{fig:ch3-forward-flow-tikz}
 \end{figure}
 
-正运动学在本文中的主
-要作用并不只是理论建
-模，更重要的是为末端
-位姿反馈提供计算基础。
-在实验系统中，电机编
-码器或绳长信息可以直
-接获得，而末端平台位
-姿通常难以直接高频测
-量，因此需要通过正运
-动学将绳长测量量转换
-为末端位姿估计值。换
-言之，正运动学模型是
-后续位置闭环验证与末
-端误差补偿的重要基础。
+正运动学在本文中的主要作用并不只是理论建模，更重要的是为末端位姿反馈提供计算基础。在实验系统中，电机编码器或绳长信息可以直接获得，而末端平台位姿通常难以直接高频测量，因此需要通过正运动学将绳长测量量转换为末端位姿估计值。换言之，正运动学模型是后续位置闭环验证与末端误差补偿的重要基础。
 
 \section{绳长速度关系与运动学雅可比矩阵}
 
-设第 $i$ 根绳在平台侧切
-点相对于平台圆心的位
-置向量为
+设第$i$ 根绳在平台侧切点相对于平台圆心的位置向量为
 
 \begin{equation}
   \bm r_i=\bm E_i-\bm p.
   \label{eq:ch3-ri}
 \end{equation}
 
-则切点速度可表示为平
-台平动速度与转动速度
-叠加：
+则切点速度可表示为平台平动速度与转动速度叠加：
 
 \begin{equation}
   \dot{\bm E}_i=\dot{\bm p}+\dot{\theta}\bm r_i^\perp,
@@ -578,17 +410,14 @@ $i$ 根绳的直线段长度为
   \end{bmatrix}.
 \end{equation}
 
-绳长变化率等于切点速
-度在绳索方向上的负投
-影，因此有
+绳长变化率等于切点速度在绳索方向上的负投影，因此有
 
 \begin{equation}
   \dot{L}_i=-\bm u_i^{\mathrm T}\dot{\bm E}_i.
   \label{eq:ch3-lidot1}
 \end{equation}
 
-代入\cref{eq:ch3-eidot}
-可得
+代入\cref{eq:ch3-eidot}可得
 
 \begin{equation}
   \dot{L}_i=
@@ -611,8 +440,7 @@ $i$ 根绳的直线段长度为
   \label{eq:ch3-perp-cross}
 \end{equation}
 
-可将\cref{eq:ch3-lidot2}
-化为
+可将\cref{eq:ch3-lidot2}化为
 
 \begin{equation}
   \dot{L}_i=
@@ -624,8 +452,7 @@ $i$ 根绳的直线段长度为
   \label{eq:ch3-lidot-final}
 \end{equation}
 
-将四根绳的关系叠加，
-有
+将四根绳的关系叠加，有
 
 \begin{equation}
   \dot{\bm L}=-\bm W^{\mathrm T}\dot{\bm q},
@@ -647,66 +474,223 @@ $i$ 根绳的直线段长度为
   \label{eq:ch3-wrench-matrix}
 \end{equation}
 
-式\eqref{eq:ch3-length-rate}
-给出了末端位姿速度与
-绳长速度之间的线性映
-射关系，其中矩阵
-$\bm W$ 的转置可视为运
-动学雅可比矩阵。对于
-位置控制而言，该关系
-一方面可以用于末端速
-度与电机速度之间的换
-算，另一方面也为后续
-从末端广义力到绳索张
-力的力学映射奠定了形
-式基础。虽然本章重点
-放在位置控制基础验证，
-但该雅可比关系将在后
-续控制算法设计和张力
-分配研究中继续发挥关
-键作用。
+式\eqref{eq:ch3-length-rate}给出了末端位姿速度与绳长速度之间的线性映射关系，其中矩阵$\bm W$ 的转置可视为运动学雅可比矩阵。对于位置控制而言，该关系一方面可以用于末端速度与电机速度之间的换算，另一方面也为后续从末端广义力到绳索张力的力学映射奠定了形式基础。虽然本章重点放在位置控制基础验证，但该雅可比关系将在后续控制算法设计和张力分配研究中继续发挥关键作用。
 
-\begin{figure}[htbp]
-  \centering
-  \fbox{\begin{minipage}[c][4.6cm][c]{0.84\textwidth}
-    \centering
-    占位图：末端速度与绳长速度映射示意图。\\
-    建议画出末端平移、转动与四根绳速度变化之间的对应关系，\\
-    用于说明运动学雅可比矩阵的物理意义。
-  \end{minipage}}
-  \caption{末端速度与绳长速度映射关系示意图}
-  \label{fig:ch3-jacobian-meaning}
-\end{figure}
+\section{动力学建模}
+
+在完成几何关系与运动学雅可比推导后，还需进一步建立末端平台的动力学模型，以便将期望加速度转化为广义力需求，并为后续张力分配与力控制算法设计提供理论依据。结合本文仿真模型和实验验证目的，末端平台被视为平面刚体，其动力学建模重点放在惯性项与绳索张力所形成的合力、合力矩关系上。
+
+设末端平台质量为$m$，绕质心的转动惯量为$I$，则其广义坐标仍写为
+
+\begin{equation}
+  \bm q=
+  \begin{bmatrix}
+    x & y & \theta
+  \end{bmatrix}^{\mathrm T},
+\end{equation}
+
+相应的广义速度和广义加速度分别为
+
+\begin{equation}
+  \dot{\bm q}=
+  \begin{bmatrix}
+    \dot{x} & \dot{y} & \dot{\theta}
+  \end{bmatrix}^{\mathrm T},\qquad
+  \ddot{\bm q}=
+  \begin{bmatrix}
+    \ddot{x} & \ddot{y} & \ddot{\theta}
+  \end{bmatrix}^{\mathrm T}.
+\end{equation}
+
+对于第$i$ 根绳，其对末端平台施加的拉力可表示为
+
+\begin{equation}
+  \bm F_i=f_i\bm u_i,
+  \label{eq:ch3-force-i}
+\end{equation}
+
+其中，$f_i$ 为第$i$ 根绳张力，$\bm u_i$ 为由平台侧切点指向电机侧切点的单位方向向量，定义见\cref{eq:ch3-ui}。由于$\bm u_i$ 已与绳索受力方向一致，因此平台所受合力可写为
+
+\begin{equation}
+  \bm F=\sum_{i=1}^{4} \bm F_i
+  =\sum_{i=1}^{4} f_i\bm u_i.
+  \label{eq:ch3-total-force}
+\end{equation}
+
+同时，第$i$ 根绳对平台圆心产生的力矩为
+
+\begin{equation}
+  M_i=\bm r_i\times\bm F_i
+  =f_i(\bm r_i\times\bm u_i),
+  \label{eq:ch3-moment-i}
+\end{equation}
+
+其中，$\bm r_i$ 为平台圆心指向第$i$ 个平台侧切点的位置向量，定义见\cref{eq:ch3-ri}。于是总力矩为
+
+\begin{equation}
+  M_z=\sum_{i=1}^{4} M_i
+  =\sum_{i=1}^{4} f_i(\bm r_i\times\bm u_i).
+  \label{eq:ch3-total-moment}
+\end{equation}
+
+将末端平台视为平面刚体，并忽略绳索质量、绳索阻尼及重力补偿项对本阶段推导的影响，则可将动力学方程写为
+
+\begin{equation}
+  \bm M\ddot{\bm q}=\bm \tau,
+  \label{eq:ch3-dynamics-basic}
+\end{equation}
+
+其中，广义惯性矩阵为
+
+\begin{equation}
+  \bm M=
+  \begin{bmatrix}
+    m & 0 & 0 \\
+    0 & m & 0 \\
+    0 & 0 & I
+  \end{bmatrix},
+  \label{eq:ch3-mass-matrix}
+\end{equation}
+
+广义力向量为
+
+\begin{equation}
+  \bm \tau=
+  \begin{bmatrix}
+    F_x & F_y & M_z
+  \end{bmatrix}^{\mathrm T}.
+  \label{eq:ch3-generalized-wrench}
+\end{equation}
+
+结合\cref{eq:ch3-total-force,eq:ch3-total-moment}，可得
+
+\begin{equation}
+  \bm \tau=
+  \begin{bmatrix}
+    \sum_{i=1}^{4} f_i u_{ix} \\
+    \sum_{i=1}^{4} f_i u_{iy} \\
+    \sum_{i=1}^{4} f_i(\bm r_i\times\bm u_i)
+  \end{bmatrix}.
+  \label{eq:ch3-wrench-expand}
+\end{equation}
+
+将四根绳张力写成向量形式
+
+\begin{equation}
+  \bm f=
+  \begin{bmatrix}
+    f_1 & f_2 & f_3 & f_4
+  \end{bmatrix}^{\mathrm T},
+  \label{eq:ch3-force-vector}
+\end{equation}
+
+并利用\cref{eq:ch3-wrench-matrix}中定义的结构矩阵$\bm W$，即可得到更加紧凑的表达式
+
+\begin{equation}
+  \bm \tau=\bm W\bm f.
+  \label{eq:ch3-wrench-map}
+\end{equation}
+
+于是本文平面四绳绳驱并联机器人的动力学模型可进一步写为
+
+\begin{equation}
+  \bm M\ddot{\bm q}=\bm W\bm f.
+  \label{eq:ch3-dynamics-final}
+\end{equation}
+
+式\eqref{eq:ch3-dynamics-final}表明：末端平台的期望加速度并不是直接由某一根绳索单独决定，而是由四根绳索张力通过结构矩阵$\bm W$ 共同作用形成的广义力结果。对于本文的高动态加速度模拟任务而言，这一关系正是后续由位置控制过渡到力控制的理论起点。
+
+\section{从动力学模型到广义力/张力映射}
+
+在已建立\cref{eq:ch3-dynamics-final}的基础上，若给定末端期望加速度$\ddot{\bm q}_d$，则首先可以计算获得为实现该加速度所需的期望广义力。记
+
+\begin{equation}
+  \ddot{\bm q}_d=
+  \begin{bmatrix}
+    \ddot{x}_d & \ddot{y}_d & \ddot{\theta}_d
+  \end{bmatrix}^{\mathrm T},
+\end{equation}
+
+则对应的期望广义力为
+
+\begin{equation}
+  \bm \tau_d=\bm M\ddot{\bm q}_d
+  =
+  \begin{bmatrix}
+    m\ddot{x}_d \\
+    m\ddot{y}_d \\
+    I\ddot{\theta}_d
+  \end{bmatrix}.
+  \label{eq:ch3-target-wrench}
+\end{equation}
+
+这一定义与本文仿真程序中的目标广义力构造方式保持一致，即先由期望线加速度和角加速度生成末端所需的广义力，再根据结构矩阵求解可行张力分布。
+
+由\cref{eq:ch3-wrench-map}可知，张力向量必须满足如下平衡关系：
+
+\begin{equation}
+  \bm W\bm f=\bm \tau_d.
+  \label{eq:ch3-force-balance}
+\end{equation}
+
+由于本文系统为$4$ 根绳驱动$3$ 个自由度，因此属于一冗余驱动系统。这意味着在一般情况下，满足\cref{eq:ch3-force-balance}的张力向量并不唯一。同时，绳索只能受拉，还必须满足正张力及执行器能力约束：
+
+\begin{equation}
+  f_{i,\min}\le f_i\le f_{i,\max},\qquad i=1,2,3,4.
+  \label{eq:ch3-force-bound}
+\end{equation}
+
+因此，由期望加速度到绳索张力的求解过程，实质上可以表述为如下约束求解问题：
+
+\begin{equation}
+  \text{求 } \bm f,
+  \quad
+  \text{s.t. } \bm W\bm f=\bm \tau_d,
+  \quad
+  \bm f_{\min}\le \bm f\le \bm f_{\max}.
+  \label{eq:ch3-force-distribution-problem}
+\end{equation}
+
+对于本文的平面四绳机构，结构矩阵$\bm W$ 为$3\times4$ 矩阵，其零空间维数通常为$1$。参照仿真程序中的求解形式，可先由广义逆得到一个满足平衡方程的特解
+
+\begin{equation}
+  \bm f_p=\bm W^{+}\bm \tau_d,
+  \label{eq:ch3-force-particular}
+\end{equation}
+
+再求取满足
+
+\begin{equation}
+  \bm W\bm n_s=\bm 0
+\end{equation}
+
+的零空间基向量$\bm n_s$。于是张力通解可写为
+
+\begin{equation}
+  \bm f=\bm f_p+\lambda\bm n_s,
+  \label{eq:ch3-force-general-solution}
+\end{equation}
+
+其中，$\lambda$ 为标量自由变量。进一步结合张力上下界约束，便可获得$\lambda$ 的可行区间，进而通过重心法、解析中心法或其他优化策略选取最终张力解。本文仿真代码中所采用的张力分配方法，正是基于上述思路实现的。
+
+需要强调的是，本章的任务是建立从末端位姿、速度和加速度到张力求解问题的建模链路，目的是说明后续张力分配与力控制章节的理论出发点。因此，关于可行区间推导、解析中心法和重心法的详细数学推导，将在后续张力分配章节中进一步展开。本章只需明确：位置控制主要对应“几何轨迹是否可实现”的问题，而力控制与张力分配则对应 “期望广义力如何由多根绳索协同实现”的问题，两者共同构成本文控制系统设计的基础。
 
 \section{位置控制流程设计}
 
-尽管本文最终目标是实
-现基于张力调节的高动
-态加速度输出，但在实
-验平台搭建与控制算法
-设计之前，必须首先验
-证基础位置控制链路是
-否能够正常工作。为此，
-本文采用基于逆运动学
-的离散位置控制流程，
-将期望末端轨迹转化为
-四个电机的绳长参考或
-位移参考，并结合编码
-器反馈和正运动学解算，
-对末端位姿进行重构与
-闭环校验。
+尽管本文最终目标是实现基于张力调节的高动态加速度输出，但在实验平台搭建与控制算法设计之前，必须首先验证基础位置控制链路是否能够正常工作。为此，本文采用基于逆运动学的离散位置控制流程，将期望末端轨迹转化为四个电机的绳长参考或位移参考，并结合编码器反馈和正运动学解算，对末端位姿进行重构与闭环校验。
 
-位置控制流程可概括为
-以下几个步骤。
+具体而言，首先对期望末端轨迹按照固定采样周期 $T_s$ 进行离散化，得到一系列期望位姿节点 $\bm q_d(k)$。随后将各离散位姿逐点代入逆运动学模型，求得对应的目标绳长序列 $\bm L_d(k)$。在控制实现中，并不是直接将末端位姿误差送入 PID 控制器，而是先根据相邻采样时刻的绳长变化量构造电机速度参考，再由各电机底层速度环进行闭环跟踪。若将卷筒半径记为 $r_m$，则第 $i$ 个执行单元的速度参考可写为
 
-首先，根据任务需求生
-成末端期望轨迹
-$\bm q_d(t)$，其形式可以
-是直线轨迹、圆轨迹、
-小角度旋转轨迹或连续
-旋转轨迹。轨迹离散后，
-可得到一系列期望位姿
-节点
+\begin{equation}
+  \omega_{d,i}(k)=\frac{L_{d,i}(k)-L_{d,i}(k-1)}{T_s\,r_m}.
+  \label{eq:ch3-speed-command}
+\end{equation}
+
+各电机在接收到速度指令后，通过编码器反馈构成速度闭环 PID 控制，以保证卷筒转速能够稳定跟踪参考值。与此同时，系统根据编码器测得的实际位移或实际绳长，利用正运动学模型实时重构末端位姿，并将重构结果用于轨迹跟踪效果分析。需要强调的是，本章的位置控制闭环主要是电机层速度闭环与系统层位姿重构评估的结合，其作用是验证“轨迹离散—逆运动学求解—电机执行—状态反馈”这条基础链路是否贯通，而不是建立最终面向高动态加速度输出的末端力控制器。
+
+位置控制流程可概括为以下几个步骤。
+
+首先，根据任务需求生成末端期望轨迹$\bm q_d(t)$，其形式可以是直线轨迹、圆轨迹、小角度旋转轨迹或连续旋转轨迹。轨迹离散后，可得到一系列期望位姿节点
 
 \begin{equation}
   \bm q_d(k)=
@@ -715,24 +699,15 @@ $\bm q_d(t)$，其形式可以
   \end{bmatrix}^{\mathrm T}.
 \end{equation}
 
-其次，将期望位姿代入
-逆运动学模型，计算每
-一时刻的目标绳长
+其次，将期望位姿代入逆运动学模型，计算每一时刻的目标绳长
 
 \begin{equation}
   \bm L_d(k)=\bm L\bigl(\bm q_d(k)\bigr).
 \end{equation}
 
-再由绳长变化量进一步
-换算为电机卷筒转角或
-位移指令，从而驱动四
-个电机协同运动。
+再由绳长变化量进一步换算为电机卷筒转角或位移指令，从而驱动四个电机协同运动。
 
-再次，在系统运行过程
-中，通过电机编码器获
-得各执行单元的实际位
-移信息，并将其还原为
-实际绳长测量值
+再次，在系统运行过程中，通过电机编码器获得各执行单元的实际位移信息，并将其还原为实际绳长测量值
 
 \begin{equation}
   \bm L_m(k)=
@@ -741,9 +716,7 @@ $\bm q_d(t)$，其形式可以
   \end{bmatrix}^{\mathrm T}.
 \end{equation}
 
-将其输入正运动学求解
-器，即可得到当前末端
-位姿估计值
+将其输入正运动学求解器，即可得到当前末端位姿估计值
 
 \begin{equation}
   \hat{\bm q}(k)=
@@ -752,341 +725,126 @@ $\bm q_d(t)$，其形式可以
   \end{bmatrix}^{\mathrm T}.
 \end{equation}
 
-最后，通过比较期望位
-姿与重构位姿，可以得
-到末端位置误差
+最后，通过比较期望位姿与重构位姿，可以得到末端位置误差
 
 \begin{equation}
   \bm e_q(k)=\bm q_d(k)-\hat{\bm q}(k),
 \end{equation}
 
-从而完成对位置控制效
-果的基础评估。
+从而完成对位置控制效果的基础评估。
 
 \begin{figure}[htbp]
   \centering
-  \fbox{\begin{minipage}[c][4.8cm][c]{0.84\textwidth}
-    \centering
-    占位图：位置控制基础流程框图。\\
-    建议包含“期望轨迹—逆运动学—电机执行—编码器反馈—\\
-    正运动学—末端位姿重构—误差分析”等模块。
-  \end{minipage}}
+  \begin{tikzpicture}[
+    >=Latex,
+    font=\small,
+    node distance=7mm and 9mm,
+    block/.style={draw, line width=1pt, rounded corners=2pt, align=center, minimum height=8.5mm, text width=25mm},
+    wideblock/.style={draw, line width=1pt, rounded corners=2pt, align=center, minimum height=8.5mm, text width=31mm},
+    line/.style={-Latex, line width=1pt}
+  ]
+    \node[block] (traj) {期望轨迹\\$\bm q_d(t)$};
+    \node[block, right=of traj] (sample) {离散采样\\$\bm q_d(k)$};
+    \node[block, right=of sample] (ik) {逆运动学\\$\bm L_d(k)$};
+    \node[wideblock, right=of ik] (cmd) {速度指令生成\\$\omega_{d,i}(k)$};
+
+    \node[block, below=11mm of cmd] (pid) {速度 PID\\闭环控制};
+    \node[block, below=of pid] (motor) {电机执行};
+    \node[block, left=of motor] (encoder) {编码器反馈};
+    \node[wideblock, left=of encoder] (fk) {正运动学\\末端位姿重构};
+    \node[block, left=of fk] (error) {误差分析\\$\bm e_q(k),\ \hat{\bm q}(k)$};
+
+    \draw[line] (traj) -- (sample);
+    \draw[line] (sample) -- (ik);
+    \draw[line] (ik) -- (cmd);
+    \draw[line] (cmd) -- (pid);
+    \draw[line] (pid) -- (motor);
+    \draw[line] (motor) -- (encoder);
+    \draw[line] (encoder) -- (fk);
+    \draw[line] (fk) -- (error);
+    \draw[line] (encoder.north) |- (pid.west);
+  \end{tikzpicture}
   \caption{位置控制基础流程框图}
   \label{fig:ch3-position-control-flow}
 \end{figure}
 
-如\cref{fig:ch3-position-control-flow}
-所示，本文位置控制的
-主要目的并不是建立高
-性能位置伺服器，而是
-验证运动学模型、执行
-链路和反馈链路的一致
-性，确保样机系统能够
-按照几何模型完成基本
-轨迹运动，并为后续末
-端位姿闭环补偿和力控
-制算法设计提供基础。
+如\cref{fig:ch3-position-control-flow}所示，本文位置控制采用“期望轨迹离散化—逐点逆运动学求解—速度指令下发—电机速度 PID 闭环—编码器反馈—正运动学位姿重构—误差分析”的实现链路。其主要目的并不是建立高性能末端位置伺服器，而是验证运动学模型、执行链路和反馈链路的一致性，确保样机系统能够按照几何模型完成基本轨迹运动，并为后续末端位姿闭环补偿和力控制算法设计提供基础。
 
 \section{位置控制基础验证}
 
 \subsection{末端轨迹规划与指令生成}
 
-为验证所建运动学模型
-与位置控制流程的正确
-性，本文对末端平台设
-计了若干典型验证轨迹，
-包括直线轨迹、圆轨迹
-和旋转轨迹。不同轨迹
-对应不同的运动特征：
-直线轨迹可用于验证平
-移运动下绳长变化的合
-理性，圆轨迹可用于验
-证多绳协同驱动条件下
-的连续性，旋转轨迹则
-有助于检验连续转角条
-件下平台缠绕模型与符
-号定义的一致性。
+为验证所建运动学模型与位置控制流程的正确性，本文对末端平台设计了若干典型验证轨迹，包括直线轨迹、圆轨迹和旋转轨迹。不同轨迹对应不同的运动特征：直线轨迹可用于验证平移运动下绳长变化的合理性，圆轨迹可用于验证多绳协同驱动条件下的连续性，旋转轨迹则有助于检验连续转角条件下平台缠绕模型与符号定义的一致性。
 
-在实际实现中，为避免
-指令突变对电机和绳索
-造成冲击，末端参考轨
-迹通常需进行离散采样
-和时间标定处理，使轨
-迹在起始与终止阶段具
-有较平滑的速度变化。
-经处理后的末端参考轨
-迹输入逆运动学模块后，
-即可生成四个电机的目
-标位移或绳长参考序列。
+在实际实现中，为避免指令突变对电机和绳索造成冲击，末端参考轨迹通常需进行离散采样、平滑插值处理和时间标定处理，使轨迹在起始与终止阶段具有较平滑的速度变化。经处理后的末端参考轨迹输入逆运动学模块后，即可生成四个电机的目标位移或绳长参考序列, 最后通过控制单元下发给四个电机执行，这样实现了在末端笛卡尔空间和关节空间的同步轨迹平滑轨迹。
 
 \begin{figure}[htbp]
   \centering
-  \fbox{\begin{minipage}[c][4.8cm][c]{0.84\textwidth}
-    \centering
-    占位图：典型末端参考轨迹示意图。\\
-    建议给出直线轨迹、圆轨迹和旋转轨迹中的一种或多种，\\
-    并标明起点、终点和运动方向。
-  \end{minipage}}
+  \includegraphics[width=\textwidth]{典型末端参考轨迹示意图.png}
   \caption{典型末端参考轨迹示意图}
   \label{fig:ch3-reference-trajectory}
 \end{figure}
 
 \subsection{位置控制实验流程}
 
-位置控制基础验证实验
-的主要流程如下：首先
-设定末端期望轨迹并通
-过逆运动学计算获得目
-标绳长序列；随后由四
-个电机按照目标序列进
-行同步驱动；在运动过
-程中实时采集电机编码
-器数据，并将其换算为
-实际绳长；最后利用正
-运动学模型求解末端平
-台的实时位姿，对比期
-望轨迹与估计轨迹之间
-的偏差，从而评价控制
-流程的基本有效性。
+位置控制基础验证实验的主要流程如下：首先设定末端期望轨迹并通过逆运动学计算获得目标绳长序列；随后由四个电机按照目标序列进行同步驱动；在运动过程中实时采集电机编码器数据，并将其换算为实际绳长；最后利用正运动学模型求解末端平台的实时位姿，对比期望轨迹与估计轨迹之间的偏差，从而评价控制流程的基本有效性。
 
-由于本章重点在于基础
-链路验证，实验关注的
-指标主要包括：末端轨
-迹能否按预定方向运行、
-位姿重构结果是否与指
-令变化趋势一致、绳长
-变化是否连续，以及在
-不同运动阶段是否出现
-明显的模型不一致现象。
-对于这些基础指标的验
-证，将直接决定后续是
-否具备进一步开展力控
-制和张力闭环实验的条
-件。
-
-\begin{figure}[htbp]
-  \centering
-  \fbox{\begin{minipage}[c][4.8cm][c]{0.84\textwidth}
-    \centering
-    占位图：位置控制基础验证实验平台照片或实验流程图。\\
-    建议展示电机、绳索、末端平台、传感器及控制系统组成。
-  \end{minipage}}
-  \caption{位置控制基础验证实验平台示意}
-  \label{fig:ch3-position-test-platform}
-\end{figure}
+由于本章重点在于基础链路验证，实验关注的指标主要包括：末端轨迹能否按预定方向运行、位姿重构结果是否与指令变化趋势一致、绳长变化是否连续，以及在不同运动阶段是否出现明显的模型不一致现象。对于这些基础指标的验证，将直接决定后续是否具备进一步开展力控制和张力闭环实验的条件。
 
 \subsection{位置跟踪结果与误差分析}
 
-通过基础位置控制实验，
-可以对逆运动学、正运
-动学和执行链路的一致
-性进行验证。一般而言，
-当模型建立正确、绳索
-布置合理且电机执行稳
-定时，末端平台应能够
-完成预定轨迹的基本跟
-随，正运动学重构得到
-的位姿曲线也应与给定
-轨迹在整体趋势上保持
-一致。
+通过基础位置控制实验，可以对逆运动学、正运动学和执行链路的一致性进行验证。一般而言，当模型建立正确、绳索布置合理且电机执行稳定时，末端平台应能够完成预定轨迹的基本跟随，正运动学重构得到的位姿曲线也应与给定轨迹在整体趋势上保持一致。
 
-在论文写作时，本节建
-议至少给出以下三类结
-果图：一是末端位置或
-姿态的期望曲线与实际
-重构曲线对比；二是位
-置误差或姿态误差随时
-间变化曲线；三是四根
-绳长或四个电机位移的
-响应曲线。若条件允许，
-也可加入二维平面轨迹
-图，用于直观展示末端
-平台的实际运动路径。
+在论文写作时，本节建议至少给出以下三类结果图：一是末端位置或姿态的期望曲线与实际重构曲线对比；二是位置误差或姿态误差随时间变化曲线；三是四根绳长或四个电机位移的响应曲线。若条件允许，也可加入二维平面轨迹图，用于直观展示末端平台的实际运动路径。
 
 \begin{figure}[htbp]
   \centering
-  \fbox{\begin{minipage}[c][4.6cm][c]{0.84\textwidth}
-    \centering
-    占位图：末端位姿跟踪曲线。\\
-    建议包含 $x$、$y$ 和 $\theta$ 的期望与实际对比结果。
-  \end{minipage}}
+  \includegraphics[width=\textwidth]{末端位姿跟踪结果对比.png}
   \caption{末端位姿跟踪结果对比}
   \label{fig:ch3-pose-tracking}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  \fbox{\begin{minipage}[c][4.6cm][c]{0.84\textwidth}
-    \centering
-    占位图：末端位姿误差曲线。\\
-    建议展示 $x$、$y$ 和 $\theta$ 的误差随时间变化情况。
-  \end{minipage}}
+  \includegraphics[width=\textwidth]{末端位姿误差曲线.png}
   \caption{末端位姿误差曲线}
   \label{fig:ch3-pose-error}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  \fbox{\begin{minipage}[c][4.6cm][c]{0.84\textwidth}
-    \centering
-    占位图：四根绳长或四个电机位移响应曲线。\\
-    用于说明冗余驱动条件下各执行单元的协同运动情况。
-  \end{minipage}}
-  \caption{四电机位置响应或绳长变化曲线}
+  \includegraphics[width=0.8\textwidth]{四电机位置响应曲线.png}
+  \caption{四电机位置响应曲线}
   \label{fig:ch3-motor-response}
 \end{figure}
 
-从基础验证的角度看，
-只要末端平台能够按照
-预期轨迹完成基本跟随，
-且位姿重构结果与目标
-轨迹在趋势上保持一致，
-即可认为本文所建立的
-运动学模型和位置控制
-基础流程是有效的。需
-要指出的是，本章不刻
-意追求高精度位置跟踪
-指标，而更关注“模型是
-否正确”“执行链路是否
-贯通”“反馈位姿是否可
-重构”这三项基本问题。
+从基础验证的角度看，只要末端平台能够按照预期轨迹完成基本跟随，且位姿重构结果与目标轨迹在趋势上保持一致，即可认为本文所建立的运动学模型和位置控制基础流程是有效的。需要指出的是，本章不刻意追求高精度位置跟踪指标，而更关注“模型是否正确”“执行链路是否贯通”“反馈位姿是否可重构”这三项基本问题。
 
 \section{位置控制局限性分析}
 
-尽管基础位置控制验证
-能够证明系统的运动学
-建模和执行链路是可行
-的，但对于本文所面向
-的高动态连续旋转加速
-度模拟任务而言，单纯
-位置控制仍存在明显局
-限。
+尽管基础位置控制验证能够证明系统的运动学建模和执行链路是可行的，但对于本文所面向的高动态连续旋转加速度模拟任务而言，单纯位置控制仍存在明显局限。
 
-首先，位置控制通常以
-末端位姿误差最小化为
-主要目标，其控制量本
-质上仍然围绕绳长或电
-机位置展开。这意味着
-控制器更关注“平台是否
-到达目标位置”，而非“平
-台在运动过程中输出了
-怎样的广义力和加速度”。
-对于一般轨迹跟踪任务，
-这种设计思路是可接受
-的；但对于加速度模拟
-任务，末端平台的受力
-品质和加速度连续性往
-往比静态位置误差更为
-重要。
+首先，位置控制通常以末端位姿误差最小化为主要目标，其控制量本质上仍然围绕绳长或电机位置展开。这意味着控制器更关注“平台是否到达目标位置”，而非“平台在运动过程中输出了怎样的广义力和加速度”。对于一般轨迹跟踪任务，这种设计思路是可接受的；但对于加速度模拟任务，末端平台的受力品质和加速度连续性往往比静态位置误差更为重要。
 
-其次，在绳驱系统中，
-绳索柔性、绕线摩擦、
-离散轨迹插补和冗余驱
-动耦合效应会共同影响
-末端动态响应。即便位
-置曲线能够较好跟踪，
-末端速度和加速度也可
-能出现抖动、尖峰或局
-部不连续现象。特别是
-在连续旋转或高加减速
-阶段，这种不连续性会
-更加明显，不利于真实、
-平滑地再现目标加速度
-环境。
+其次，在绳驱系统中，绳索柔性、绕线摩擦、离散轨迹插补和冗余驱动耦合效应会共同影响末端动态响应。即便位置曲线能够较好跟踪，末端速度和加速度也可能出现抖动、尖峰或局部不连续现象。特别是在连续旋转或高加减速阶段，这种不连续性会更加明显，不利于真实、平滑地再现目标加速度环境。
 
-再次，单纯位置控制并
-不能显式约束绳索张力
-分布。在冗余驱动系统
-中，同一末端位姿通常
-对应多组可行张力状态。
-若不对张力进行主动分
-配，则某些绳索可能出
-现张力过低甚至松弛，
-另一些绳索则可能承受
-过大负载。这不仅会降
-低系统动态性能，也可
-能给后续实验带来不稳
-定因素。
+再次，单纯位置控制并不能显式约束绳索张力分布。在冗余驱动系统中，同一末端位姿通常对应多组可行张力状态。若不对张力进行主动分配，则某些绳索可能出现张力过低甚至松弛，另一些绳索则可能承受过大负载。这不仅会降低系统动态性能，也可能给后续实验带来不稳定因素。
 
-最后，从工程实现角度
-看，本文后续实验平台
-重点开展的是单电机力
-矩控制、四电机协同张
-力控制以及末端加速度
-跟踪验证。这些内容都
-要求控制系统能够从“位
-置控制”进一步过渡到“广
-义力调节”和“张力重构”
-层面。因此，位置控制
-在本文中更适合作为系
-统基础验证手段，而非
-最终控制目标。
+最后，从工程实现角度看，本文后续实验平台重点开展的是单电机力矩控制、四电机协同张力控制以及末端加速度跟踪验证。这些内容都要求控制系统能够从“位置控制”进一步过渡到“广义力调节”和“张力重构” 层面。因此，位置控制在本文中更适合作为系统基础验证手段，而非最终控制目标。
 
-\begin{figure}[htbp]
+
+
+\begin{figure}[H]
   \centering
-  \fbox{\begin{minipage}[c][4.6cm][c]{0.84\textwidth}
-    \centering
-    占位图：位置控制下末端加速度响应曲线或抖振示意图。\\
-    用于说明位置跟踪基本成立，但加速度输出存在不连续或波动。
-  \end{minipage}}
-  \caption{位置控制条件下末端动态响应局限性示意}
+  \includegraphics[width=0.8\textwidth]{末端加速度响应与抖振示意图.png}
+  \caption{末端加速度响应与抖振示意图}
   \label{fig:ch3-position-limitation}
 \end{figure}
 
-因此，从位置控制向力
-控制与张力控制过渡，
-是本文后续控制算法设
-计的必然选择。位置控
-制基础验证的意义，在
-于证明系统的几何模型、
-执行链路和状态反馈链
-路能够正常工作；而真
-正面向高动态加速度输
-出品质提升的问题，则
-需要在后续章节中进一
-步从单电机闭环力矩控
-制、末端位姿闭环补偿
-和冗余张力分配等角度
-展开研究。
+因此，从位置控制向力控制与张力控制过渡，是本文后续控制算法设计的必然选择。位置控制基础验证的意义，在于证明系统的几何模型、执行链路和状态反馈链路能够正常工作；而真正面向高动态加速度输出品质提升的问题，则需要在后续章节中进一步从单电机闭环力矩控制、末端位姿闭环补偿和冗余张力分配等角度展开研究。
 
 \section{本章小结}
 
-本章围绕平面四绳连续
-旋转绳驱并联机器人的
-运动学建模与位置控制
-基础验证展开研究。首
-先，建立了系统构型与
-符号定义，推导了考虑
-外公切线、包角变化及
-平台转角附加缠绕的逆
-运动学模型；随后，将
-正运动学转化为非线性
-最小二乘优化问题，构
-建了基于绳长信息反求
-末端位姿的数值求解方
-法；进一步推导了绳长
-速度关系与运动学雅可
-比矩阵，明确了末端位
-姿速度与绳长变化率之
-间的映射关系。
+本章围绕平面四绳连续旋转绳驱并联机器人的运动学、动力学建模与位置控制基础验证展开研究。首先，建立了系统构型与符号定义，推导了考虑外公切线、包角变化及平台转角附加缠绕的逆运动学模型；随后，将正运动学转化为非线性最小二乘优化问题，构建了基于绳长信息反求末端位姿的数值求解方法；进一步推导了绳长速度关系与运动学雅可比矩阵，明确了末端位姿速度与绳长变化率之间的映射关系；随后建立了末端平台的动力学模型，并给出了由期望加速度到广义力、再到绳索张力的映射框架。
 
-在此基础上，设计了基
-于逆运动学和正运动学
-反馈的位置控制基础流
-程，并给出了位置控制
-验证的实验思路与结果
-组织方式。分析表明，
-位置控制能够用于验证
-机构设计、运动学模型
-和执行链路的正确性，
-但对于面向高动态连续
-旋转的加速度模拟任务
-而言，单纯位置控制仍
-难以直接保证末端加速
-度输出的连续性与受力
-品质。因而，在完成基
-础位置控制验证后，有
-必要进一步从力矩控制、
-位姿闭环补偿和张力分
-配等角度开展控制算法
-研究。
+在此基础上，设计了基于逆运动学和正运动学反馈的位置控制基础流程，并给出了位置控制验证的实验思路与结果组织方式。分析表明，位置控制能够用于验证机构设计、运动学模型和执行链路的正确性，但对于面向高动态连续旋转的加速度模拟任务而言，单纯位置控制仍难以直接保证末端加速度输出的连续性与受力品质。因而，在完成基础位置控制验证后，有必要进一步从力矩控制、位姿闭环补偿和张力分配等角度开展控制算法研究。由此，也为后续张力分配章节中的可行区间分析与力控制实验章节中的张力闭环实现提供了统一的模型基础。

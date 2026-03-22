@@ -18,50 +18,92 @@ The style file: hithesis.bst
 Reallocating 'name_of_file' (item size: 1) to 10 items.
 Reallocating 'name_of_file' (item size: 1) to 26 items.
 A level-1 auxiliary file: back/acknowledgements.aux
-I found no \citation commands---while reading file thesis.aux
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
 Database file #1: reference.bib
-You've used 0 entries,
-            3100 wiz_defined-function locations,
-            712 strings with 6055 characters,
-and the built_in function-call counts, 64 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 2
-:= -- 3
+Warning--Require citedate: barker1961simulator
+Warning--Require citedate: mohajer2021centrifugedesign
+Warning--Require citedate: winter2023centrifugeopt
+Warning--Require citedate: tu2020gtolerance
+Warning--Require citedate: liu2024centrifuge
+Warning--Require citedate: zhang2020groundsimulation
+Warning--Require citedate: zhang2022stateoftheart
+Warning--Require citedate: wang2025review
+Warning--Require citedate: chen2025cdprreview
+Warning--Require citedate: tempel2015expo
+Warning--Require citedate: lan2022sprayreview
+Warning--Require citedate: zhang2009greenhouse
+Warning--Require citedate: gouttefarde2007wrench
+Warning--Require citedate: phan2021wrenchclosure
+Warning--Require citedate: wang2022schonflies
+Warning--Require citedate: gonzalez2023singleloop
+Warning--Require citedate: juarez2022dynamiccontrol
+Warning--Require citedate: tang2015trajectory
+Warning--Require citedate: feiler2023mechatronic
+Warning--Require citedate: wang2024dynamictension
+Warning--Require citedate: piao2019indirectforce
+Warning--Require citedate: cao2023realtimetension
+Warning--Require citedate: song2024realtimemethod
+Warning--Require citedate: su2016cablemass
+Warning--Require citedate: albus1993nistrobocrane
+Warning--Require citedate: chen2019waistrehab
+Warning--Require citedate: qian2018review
+Warning--Require citedate: tho2022overview
+Warning--Require citedate: begey2019dynamiccontrol
+Warning--Require citedate: you2019vision
+Warning--Require citedate: zhang2016highspeedtraj
+Warning--Require citedate: zhang2018spatialtraj
+Warning--Require citedate: tao2021tensiondistribution
+Warning--Require citedate: chen2023hybrid
+Warning--Require citedate: li2019spherical
+Warning--Require citedate: cheah2024adaptive
+Warning--Require citedate: paty2021pulley
+Warning--Require citedate: zhang2022calibration
+Warning--Require citedate: santos2022nmpc
+Warning--Require citedate: bettega2023pathtracking
+Warning--Require citedate: jin2024controlreview
+Warning--Require citedate: yu2024stability
+Warning--Require citedate: zhao2023fast
+You've used 44 entries,
+            3027 wiz_defined-function locations,
+            1047 strings with 18362 characters,
+and the built_in function-call counts, 203174 in all, are:
+= -- 26044
+> -- 229
+< -- 229
++ -- 23761
+- -- 812
+* -- 3220
+:= -- 26361
 add.period$ -- 0
-call.type$ -- 0
+call.type$ -- 44
 change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 2
+cite$ -- 87
+duplicate$ -- 29081
+empty$ -- 3388
+format.name$ -- 740
+if$ -- 55663
 int.to.chr$ -- 0
-int.to.str$ -- 0
+int.to.str$ -- 44
 missing$ -- 0
-newline$ -- 27
-num.names$ -- 0
-pop$ -- 0
+newline$ -- 159
+num.names$ -- 44
+pop$ -- 1471
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1
+skip$ -- 512
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
+substring$ -- 26644
+swap$ -- 2438
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 0
-width$ -- 0
-write$ -- 27
-(There was 1 error message)
+warning$ -- 43
+while$ -- 1438
+width$ -- 46
+write$ -- 675
+(There were 43 warnings)

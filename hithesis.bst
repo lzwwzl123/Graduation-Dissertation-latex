@@ -1349,34 +1349,13 @@ FUNCTION {output.end.number} {                    % void Entry::output_end_numbe
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                   %
 FUNCTION {output.url.or.doi} {                    % void Entry::output_url_or_doi(int required) {
-  'required :=                                    %   this.required = required;
-  url empty$ not {                                %   if (! empty(this.url)) {
-    cap.period write$                             %     write(cap_period);
-    url format.url write$                         %     write(format_url(this.url));
-  } {                                             %   } else {
-    doi empty$ not {                              %     if (! empty(this.doi)) {
-      cap.period write$                           %       write(cap_period);
-      cap.doi.url doi * format.url write$         %       write(format_url(cap_doi_url + this.doi));
-    } {                                           %     } else {
-      required {                                  %       if (required == 1) {
-        "Require URL or DOI: " cite$ * warning$   %         warning("Require URL or DOI: " + this.cite);
-      } 'skip$ if$                                %       }
-    } if$                                         %     }
-  } if$                                           %   }
+  pop$                                            %   suppress URL/DOI output but keep fields in .bib
 }                                                 % }
                                                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                                                   %
 FUNCTION {output.url} {                           % void Entry::output_url(int required) {
-  'required :=                                    %   this.required = required;
-  url empty$ not {                                %   if (! empty(this.url)) {
-    cap.period write$                             %     write(cap_period);
-    url format.url write$                         %     write(format_url(this.url));
-  } {                                             %   } else {
-    required {                                    %     if (required == 1) {
-      "Require URL: " cite$ * warning$            %        warning("Require URL: " + this.cite);
-    } 'skip$ if$                                  %     }
-  } if$                                           %   }
+  pop$                                            %   suppress URL output but keep field in .bib
 }                                                 % }
                                                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

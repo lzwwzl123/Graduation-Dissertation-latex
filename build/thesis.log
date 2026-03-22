@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2026.3.15)  22 MAR 2026 02:46
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2026.3.15)  23 MAR 2026 05:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1744,7 +1744,35 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (E:\latex\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.
 tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-)))) (E:\ctex\MiKTeX\tex/latex/cleveref\cleveref.sty
+)))) (E:\ctex\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count498
+\float@exts=\toks79
+\float@box=\box154
+\@float@everytoks=\toks80
+\@floatcapt=\box155
+)
+(E:\latex\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen397
+\pgfarrowlength=\dimen398
+\pgfarrowwidth=\dimen399
+\pgfarrowlinewidth=\dimen400
+)
+(E:\latex\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(E:\latex\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypositioning.c
+ode.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(E:\latex\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryshapes.geomet
+ric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(E:\latex\tex/generic/pgf/libraries/shapes\pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)) (E:\ctex\MiKTeX\tex/latex/cleveref\cleveref.sty
 Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
 Package cleveref Info: `hyperref' support loaded on input line 2370.
 LaTeX Info: Redefining \cref on input line 2370.
@@ -1771,7 +1799,7 @@ Package cleveref Info: include cross-reference names in hyperlinks on input lin
 e 7852.
 )
 Package translations Info: No language package found. I am going to use `englis
-h' as default language. on input line 132.
+h' as default language. on input line 135.
 
 (d:\桌面\毕业设计\毕业论文latex\build\thesis.aux
 (d:\桌面\毕业设计\毕业论文latex\build\body/pre_introduction.aux)
@@ -1783,56 +1811,56 @@ h' as default language. on input line 132.
 (d:\桌面\毕业设计\毕业论文latex\build\back/acknowledgements.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 132.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 135.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line
- 132.
+ 135.
 
 (E:\ctex\MiKTeX\tex/latex/newtx\omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 135.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
-132.
+135.
 
 (E:\ctex\MiKTeX\tex/latex/newtx\untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 135.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
- 132.
+ 135.
 
 (E:\ctex\MiKTeX\tex/latex/newtx\lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 132.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 135.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
-e 132.
+e 135.
 
 (E:\ctex\MiKTeX\tex/latex/newtx\lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 132.
-LaTeX Font Info:    ... okay on input line 132.
-LaTeX Info: Command `\dddot' is already robust on input line 132.
-LaTeX Info: Command `\ddddot' is already robust on input line 132.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 135.
+LaTeX Font Info:    ... okay on input line 135.
+LaTeX Info: Command `\dddot' is already robust on input line 135.
+LaTeX Info: Command `\ddddot' is already robust on input line 135.
 
 (E:\ctex\MiKTeX\tex/latex/pdflscape\pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
@@ -1847,7 +1875,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 
 ))
-Package hyperref Info: Link coloring OFF on input line 132.
+Package hyperref Info: Link coloring OFF on input line 135.
 
 (d:\桌面\毕业设计\毕业论文latex\build\thesis.out) (d:\桌面\毕业设计\毕业论文latex\build\thesis.out)
 \@outlinefile=\write5
@@ -1896,8 +1924,8 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 132.
-\c@lstlisting=\count498
+or `english'. on input line 135.
+\c@lstlisting=\count499
  (front/cover.tex)
 
 Package fontspec Info: Could not resolve font "SimSun/I" (it probably doesn't
@@ -2037,145 +2065,145 @@ Package fontspec Info: Font family 'KaiTi(0)' created for font 'KaiTi' with
 
 ]
 LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input lin
-e 135.
+e 138.
  (E:\ctex\MiKTeX\tex/latex/newtx\ot1ntxtlf.fd
 File: ot1ntxtlf.fd 2021/05/24 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 138.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 138.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 7.52812pt on input line 135.
+(Font)              scaled to size 7.52812pt on input line 138.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 138.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 138.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 7.52812pt on input line 135.
+(Font)              scaled to size 7.52812pt on input line 138.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 138.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 138.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 7.52812pt on input line 135.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 135
+(Font)              scaled to size 7.52812pt on input line 138.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 138
 .
 
 (E:\latex\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 135
+LaTeX Font Info:    Trying to load font information for U+msb on input line 138
 .
  (E:\latex\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
-135.
+138.
 
 (E:\ctex\MiKTeX\tex/latex/newtx\untxmia.fd
 File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 138.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 138.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 7.52812pt on input line 135.
+(Font)              scaled to size 7.52812pt on input line 138.
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
-135.
+138.
 
 (E:\ctex\MiKTeX\tex/latex/newtx\untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 138.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 138.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 7.52812pt on input line 135.
+(Font)              scaled to size 7.52812pt on input line 138.
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
-135.
+138.
 
 (E:\ctex\MiKTeX\tex/latex/newtx\untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 138.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 138.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 7.52812pt on input line 135.
+(Font)              scaled to size 7.52812pt on input line 138.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 138.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 138.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 7.52812pt on input line 135.
+(Font)              scaled to size 7.52812pt on input line 138.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 138.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 138.
 LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
-(Font)              scaled to size 7.52812pt on input line 135.
+(Font)              scaled to size 7.52812pt on input line 138.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 138.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 138.
 LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
-(Font)              scaled to size 7.52812pt on input line 135.
+(Font)              scaled to size 7.52812pt on input line 138.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 14.05249pt on input line 135.
+(Font)              scaled to size 14.05249pt on input line 138.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 10.53937pt on input line 135.
+(Font)              scaled to size 10.53937pt on input line 138.
 LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
-(Font)              scaled to size 7.52812pt on input line 135.
+(Font)              scaled to size 7.52812pt on input line 138.
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 13
-5.
+8.
 
 (E:\ctex\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <10.53937> not available
-(Font)              size <10.95> substituted on input line 135.
+(Font)              size <10.95> substituted on input line 138.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <7.52812> not available
-(Font)              size <8> substituted on input line 135.
+(Font)              size <8> substituted on input line 138.
 
 
-Underfull \hbox (badness 10000) detected at line 135
+Underfull \hbox (badness 10000) detected at line 138
 \TU/SimHei(0)/m/n/14.05249 本 科 生
  []
 
 
-Underfull \hbox (badness 10000) detected at line 135
+Underfull \hbox (badness 10000) detected at line 138
 \TU/SimHei(0)/m/n/14.05249 学 号
  []
 
 
-Underfull \hbox (badness 10000) detected at line 135
+Underfull \hbox (badness 10000) detected at line 138
 \TU/SimHei(0)/m/n/14.05249 指 导 教 师
  []
 
 
-Underfull \hbox (badness 10000) detected at line 135
+Underfull \hbox (badness 10000) detected at line 138
 \TU/SimHei(0)/m/n/14.05249 专 业
  []
 
 
-Underfull \hbox (badness 10000) detected at line 135
+Underfull \hbox (badness 10000) detected at line 138
 \TU/SimHei(0)/m/n/14.05249 学 院
  []
 
 
-Underfull \hbox (badness 10000) detected at line 135
+Underfull \hbox (badness 10000) detected at line 138
 \TU/SimHei(0)/m/n/14.05249 答 辩 日 期
  []
 
 
-Underfull \hbox (badness 10000) detected at line 135
+Underfull \hbox (badness 10000) detected at line 138
 \TU/SimHei(0)/m/n/14.05249 学 校
  []
 
@@ -2188,7 +2216,7 @@ Underfull \hbox (badness 10000) detected at line 135
 
 
 ]
-Underfull \hbox (badness 2418) in paragraph at lines 135--135
+Underfull \hbox (badness 2418) in paragraph at lines 138--138
 []\TU/TeXGyreTermesX(0)/m/n/12.045 To meet the demands of manned spaceflight tr
 aining and complex motion-
  []
@@ -2270,38 +2298,6 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
 
 (body/pre_introduction.tex
 第1章
-
-Package natbib Warning: Citation `barker1961simulator' on page 1 undefined on i
-nput line 16.
-
-
-Package natbib Warning: Citation `mohajer2021centrifugedesign' on page 1 undefi
-ned on input line 20.
-
-
-Package natbib Warning: Citation `winter2023centrifugeopt' on page 1 undefined 
-on input line 20.
-
-
-Package natbib Warning: Citation `tu2020gtolerance' on page 1 undefined on inpu
-t line 20.
-
-
-Package natbib Warning: Citation `liu2024centrifuge' on page 1 undefined on inp
-ut line 20.
-
-
-Package natbib Warning: Citation `barker1961simulator' on page 1 undefined on i
-nput line 27.
-
-
-Package natbib Warning: Citation `mohajer2021centrifugedesign' on page 1 undefi
-ned on input line 27.
-
-
-Package natbib Warning: Citation `winter2023centrifugeopt' on page 1 undefined 
-on input line 27.
-
 File: figures/atfs400_31.jpg Graphic file (type bmp)
 <figures/atfs400_31.jpg>
 File: figures/atfs400_25.jpg Graphic file (type bmp)
@@ -2310,46 +2306,46 @@ File: figures/airfox_asd.png Graphic file (type bmp)
 <figures/airfox_asd.png>
 File: figures/desdemona.jpg Graphic file (type bmp)
 <figures/desdemona.jpg>
-
-Package natbib Warning: Citation `zhang2020groundsimulation' on page 1 undefine
-d on input line 56.
-
-
-Package natbib Warning: Citation `liu2024centrifuge' on page 1 undefined on inp
-ut line 56.
-
-
-Package natbib Warning: Citation `mohajer2021centrifugedesign' on page 1 undefi
-ned on input line 56.
-
-
-Package natbib Warning: Citation `winter2023centrifugeopt' on page 1 undefined 
-on input line 56.
-
-
-Package natbib Warning: Citation `zhang2022stateoftheart' on page 1 undefined o
-n input line 72.
-
-
-Package natbib Warning: Citation `wang2025review' on page 1 undefined on input 
-line 72.
-
-
-Package natbib Warning: Citation `chen2025cdprreview' on page 1 undefined on in
-put line 72.
-
-
-Package natbib Warning: Citation `tempel2015expo' on page 1 undefined on input 
-line 78.
-
-
-Package natbib Warning: Citation `lan2022sprayreview' on page 1 undefined on in
-put line 82.
-
-
-Package natbib Warning: Citation `zhang2009greenhouse' on page 1 undefined on i
-nput line 82.
-
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 7.0pt on input line 22.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 5.0pt on input line 22.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 7.0pt on input line 22.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 5.0pt on input line 22.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 7.0pt on input line 22.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 5.0pt on input line 22.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 7.0pt on input line 22.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 5.0pt on input line 22.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 7.0pt on input line 22.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 5.0pt on input line 22.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 7.0pt on input line 22.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 5.0pt on input line 22.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 7.0pt on input line 22.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 5.0pt on input line 22.
+LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
+(Font)              scaled to size 7.0pt on input line 22.
+LaTeX Font Info:    Font shape `OML/ntxmi/b/it' will be
+(Font)              scaled to size 5.0pt on input line 22.
+LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
+(Font)              scaled to size 7.0pt on input line 22.
+LaTeX Font Info:    Font shape `LMS/ntxsy/b/n' will be
+(Font)              scaled to size 5.0pt on input line 22.
+LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
+(Font)              scaled to size 7.0pt on input line 22.
+LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
+(Font)              scaled to size 5.0pt on input line 22.
 [1
 
 
@@ -2358,126 +2354,7 @@ nput line 82.
 ]
 File: figures/加速度模拟器方案对比图.pdf Graphic file (type pdf)
 <use figures/加速度模拟器方案对比图.pdf>
-
-
-Package natbib Warning: Citation `gouttefarde2007wrench' on page 2 undefined on
- input line 109.
-
-
-Package natbib Warning: Citation `phan2021wrenchclosure' on page 2 undefined on
- input line 109.
-
-
-Package natbib Warning: Citation `wang2022schonflies' on page 2 undefined on in
-put line 115.
-
-
-Package natbib Warning: Citation `gonzalez2023singleloop' on page 2 undefined o
-n input line 115.
-
-
-Package natbib Warning: Citation `juarez2022dynamiccontrol' on page 2 undefined
- on input line 115.
-
-[2]
-
-Package natbib Warning: Citation `tang2015trajectory' on page 3 undefined on in
-put line 124.
-
-
-Package natbib Warning: Citation `feiler2023mechatronic' on page 3 undefined on
- input line 124.
-
-
-Package natbib Warning: Citation `chen2025cdprreview' on page 3 undefined on in
-put line 132.
-
-
-Package natbib Warning: Citation `wang2024dynamictension' on page 3 undefined o
-n input line 132.
-
-
-Package natbib Warning: Citation `piao2019indirectforce' on page 3 undefined on
- input line 136.
-
-
-Package natbib Warning: Citation `cao2023realtimetension' on page 3 undefined o
-n input line 136.
-
-
-Package natbib Warning: Citation `song2024realtimemethod' on page 3 undefined o
-n input line 136.
-
-
-Package natbib Warning: Citation `gonzalez2023singleloop' on page 3 undefined o
-n input line 147.
-
-
-Package natbib Warning: Citation `juarez2022dynamiccontrol' on page 3 undefined
- on input line 147.
-
-
-Package natbib Warning: Citation `wang2024dynamictension' on page 3 undefined o
-n input line 147.
-
-[3]
-
-Package natbib Warning: Citation `zhang2022stateoftheart' on page 4 undefined o
-n input line 161.
-
-
-Package natbib Warning: Citation `wang2025review' on page 4 undefined on input 
-line 161.
-
-
-Package natbib Warning: Citation `su2016cablemass' on page 4 undefined on input
- line 165.
-
-
-Package natbib Warning: Citation `cao2023realtimetension' on page 4 undefined o
-n input line 165.
-
-
-Package natbib Warning: Citation `wang2024dynamictension' on page 4 undefined o
-n input line 165.
-
-
-Package natbib Warning: Citation `tempel2015expo' on page 4 undefined on input 
-line 170.
-
-
-Package natbib Warning: Citation `lan2022sprayreview' on page 4 undefined on in
-put line 170.
-
-
-Package natbib Warning: Citation `zhang2009greenhouse' on page 4 undefined on i
-nput line 170.
-
-
-Package natbib Warning: Citation `barker1961simulator' on page 4 undefined on i
-nput line 180.
-
-
-Package natbib Warning: Citation `mohajer2021centrifugedesign' on page 4 undefi
-ned on input line 189.
-
-
-Package natbib Warning: Citation `winter2023centrifugeopt' on page 4 undefined 
-on input line 192.
-
-
-Package natbib Warning: Citation `tu2020gtolerance' on page 4 undefined on inpu
-t line 196.
-
-
-Package natbib Warning: Citation `zhang2020groundsimulation' on page 4 undefine
-d on input line 207.
-
-
-Package natbib Warning: Citation `liu2024centrifuge' on page 4 undefined on inp
-ut line 211.
-
-[4]
+ [2] [3] [4]
 File: figures/applsci-g.png Graphic file (type bmp)
 <figures/applsci-g.png>
 File: figures/applsci-verify.png Graphic file (type bmp)
@@ -2490,262 +2367,29 @@ File: figures/rabo.png Graphic file (type bmp)
 <figures/rabo.png>
 File: figures/nerebot.png Graphic file (type bmp)
 <figures/nerebot.png>
-
-
-Package natbib Warning: Citation `zhang2022stateoftheart' on page 5 undefined o
-n input line 257.
-
-
-Package natbib Warning: Citation `wang2025review' on page 5 undefined on input 
-line 261.
-
-
-Package natbib Warning: Citation `chen2025cdprreview' on page 5 undefined on in
-put line 265.
-
-
-Package natbib Warning: Citation `tempel2015expo' on page 5 undefined on input 
-line 270.
-
-
-Package natbib Warning: Citation `chen2019waistrehab' on page 5 undefined on in
-put line 280.
-
-
-Package natbib Warning: Citation `lan2022sprayreview' on page 5 undefined on in
-put line 284.
-
-
-Package natbib Warning: Citation `zhang2009greenhouse' on page 5 undefined on i
-nput line 284.
-
-[5] [6]
-
-Package natbib Warning: Citation `qian2018review' on page 7 undefined on input 
-line 297.
-
-
-Package natbib Warning: Citation `tho2022overview' on page 7 undefined on input
- line 297.
-
-
-Package natbib Warning: Citation `begey2019dynamiccontrol' on page 7 undefined 
-on input line 297.
-
-
-Package natbib Warning: Citation `you2019vision' on page 7 undefined on input l
-ine 297.
-
-
-Package natbib Warning: Citation `gouttefarde2007wrench' on page 7 undefined on
- input line 313.
-
-
-Package natbib Warning: Citation `phan2021wrenchclosure' on page 7 undefined on
- input line 318.
-
-
-Package natbib Warning: Citation `wang2022schonflies' on page 7 undefined on in
-put line 330.
-
+ [5] [6]
 File: figures/actuators-12-00200-g002.png Graphic file (type bmp)
 <figures/actuators-12-00200-g002.png>
 File: figures/actuators-12-00200-g005.png Graphic file (type bmp)
 <figures/actuators-12-00200-g005.png>
-
-Package natbib Warning: Citation `gonzalez2023singleloop' on page 7 undefined o
-n input line 345.
-
-
-Package natbib Warning: Citation `juarez2022dynamiccontrol' on page 7 undefined
- on input line 348.
-
-
-Package natbib Warning: Citation `feiler2023mechatronic' on page 7 undefined on
- input line 359.
-
-[7] [8]
+ [7]
 File: figures/旋转机构原理.pdf Graphic file (type pdf)
 <use figures/旋转机构原理.pdf>
-
-
-Package natbib Warning: Citation `tang2015trajectory' on page 9 undefined on in
-put line 376.
-
-
-Package natbib Warning: Citation `zhang2016highspeedtraj' on page 9 undefined o
-n input line 376.
-
-
-Package natbib Warning: Citation `zhang2018spatialtraj' on page 9 undefined on 
-input line 376.
-
-
-Package natbib Warning: Citation `gouttefarde2007wrench' on page 9 undefined on
- input line 394.
-
-
-Package natbib Warning: Citation `phan2021wrenchclosure' on page 9 undefined on
- input line 394.
-
-
-Package natbib Warning: Citation `cao2023realtimetension' on page 9 undefined o
-n input line 394.
-
-
-Package natbib Warning: Citation `song2024realtimemethod' on page 9 undefined o
-n input line 394.
-
-[9]
-
-Package natbib Warning: Citation `su2016cablemass' on page 10 undefined on inpu
-t line 401.
-
-
-Package natbib Warning: Citation `chen2025cdprreview' on page 10 undefined on i
-nput line 405.
-
-
-Package natbib Warning: Citation `tao2021tensiondistribution' on page 10 undefi
-ned on input line 407.
-
+ [8]
 File: figures/jxkxyjs-1.jpg Graphic file (type bmp)
 <figures/jxkxyjs-1.jpg>
 File: figures/jxkxyjs-2.jpg Graphic file (type bmp)
 <figures/jxkxyjs-2.jpg>
-
-Package natbib Warning: Citation `chen2023hybrid' on page 10 undefined on input
- line 424.
-
-
-Package natbib Warning: Citation `li2019spherical' on page 10 undefined on inpu
-t line 427.
-
-
-Package natbib Warning: Citation `piao2019indirectforce' on page 10 undefined o
-n input line 431.
-
-
-Package natbib Warning: Citation `cheah2024adaptive' on page 10 undefined on in
-put line 435.
-
 File: figures/张力分配与控制流程图.pdf Graphic file (type pdf)
 <use figures/张力分配与控制流程图.pdf>
-
-Package natbib Warning: Citation `cao2023realtimetension' on page 10 undefined 
-on input line 451.
-
-
-Package natbib Warning: Citation `song2024realtimemethod' on page 10 undefined 
-on input line 454.
-
-
-Package natbib Warning: Citation `wang2024dynamictension' on page 10 undefined 
-on input line 457.
-
-[10]
-
-Package natbib Warning: Citation `paty2021pulley' on page 11 undefined on input
- line 467.
-
-
-Package natbib Warning: Citation `zhang2022calibration' on page 11 undefined on
- input line 467.
-
-
-Package natbib Warning: Citation `santos2022nmpc' on page 11 undefined on input
- line 467.
-
-
-Package natbib Warning: Citation `bettega2023pathtracking' on page 11 undefined
- on input line 467.
-
-
-Package natbib Warning: Citation `jin2024controlreview' on page 11 undefined on
- input line 467.
-
-
-Package natbib Warning: Citation `yu2024stability' on page 11 undefined on inpu
-t line 467.
-
-[11]
-
-Package natbib Warning: Citation `liu2024centrifuge' on page 12 undefined on in
-put line 517.
-
-
-Package natbib Warning: Citation `zhang2020groundsimulation' on page 12 undefin
-ed on input line 517.
-
-
-Package natbib Warning: Citation `qian2018review' on page 12 undefined on input
- line 517.
-
-
-Package natbib Warning: Citation `wang2025review' on page 12 undefined on input
- line 517.
-
-
-Package natbib Warning: Citation `gonzalez2023singleloop' on page 12 undefined 
-on input line 530.
-
-
-Package natbib Warning: Citation `feiler2023mechatronic' on page 12 undefined o
-n input line 530.
-
-
-Package natbib Warning: Citation `paty2021pulley' on page 12 undefined on input
- line 530.
-
-
-Package natbib Warning: Citation `zhang2022calibration' on page 12 undefined on
- input line 530.
-
-
-Package natbib Warning: Citation `chen2023hybrid' on page 12 undefined on input
- line 546.
-
-
-Package natbib Warning: Citation `piao2019indirectforce' on page 12 undefined o
-n input line 546.
-
-
-Package natbib Warning: Citation `cao2023realtimetension' on page 12 undefined 
-on input line 546.
-
-
-Package natbib Warning: Citation `song2024realtimemethod' on page 12 undefined 
-on input line 546.
-
-
-Package natbib Warning: Citation `santos2022nmpc' on page 12 undefined on input
- line 546.
-
-
-Package natbib Warning: Citation `bettega2023pathtracking' on page 12 undefined
- on input line 546.
-
-[12]
-
-Package natbib Warning: Citation `su2016cablemass' on page 13 undefined on inpu
-t line 556.
-
-
-Package natbib Warning: Citation `wang2024dynamictension' on page 13 undefined 
-on input line 556.
-
-
-Package natbib Warning: Citation `zhao2023fast' on page 13 undefined on input l
-ine 556.
-
-
-Package natbib Warning: Citation `jin2024controlreview' on page 13 undefined on
- input line 556.
-
-[13] [14]) [15]
+ [9] [10] [11]
+File: figures/文章技术路线图.pdf Graphic file (type pdf)
+<use figures/文章技术路线图.pdf>
+ [12] [13] [14]) [15]
 \openout2 = `body/mech_design.aux'.
 
- (body/mech_design.tex
+
+(body/mech_design.tex
 第2章
 ) [16
 
@@ -2761,7 +2405,7 @@ Package natbib Warning: Citation `jin2024controlreview' on page 13 undefined on
 File: figures/系统构型示意图.pdf Graphic file (type pdf)
 <use figures/系统构型示意图.pdf>
 Package hyperref Info: bookmark level for unknown equation defaults to 0 on inp
-ut line 87.
+ut line 29.
 [17
 
 
@@ -2769,27 +2413,39 @@ ut line 87.
 
 
 ] [18] [19] [20]
-File: figures/绕线示意图.pdf Graphic file (type pdf)
-<use figures/绕线示意图.pdf>
- [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31])
+File: figures/线长度示意图.pdf Graphic file (type pdf)
+<use figures/线长度示意图.pdf>
+ [21] [22] [23] [24] [25] [26] [27] [28] [29] [30] [31]
 [32]
+File: figures/典型末端参考轨迹示意图.png Graphic file (type bmp)
+<figures/典型末端参考轨迹示意图.png>
+File: figures/末端位姿跟踪结果对比.png Graphic file (type bmp)
+<figures/末端位姿跟踪结果对比.png>
+File: figures/末端位姿误差曲线.png Graphic file (type bmp)
+<figures/末端位姿误差曲线.png>
+File: figures/四电机位置响应曲线.png Graphic file (type bmp)
+<figures/四电机位置响应曲线.png>
+ [33] [34] [35]
+File: figures/末端加速度响应与抖振示意图.png Graphic file (type bmp)
+<figures/末端加速度响应与抖振示意图.png>
+ [36]) [37]
 \openout2 = `body/control.aux'.
 
  (body/control.tex
 第4章
-[33
+[38
 
 
 
 
 
-] [34] [35] [36] [37] [38] [39] [40] [41] [42]) [43]
+] [39] [40] [41] [42] [43] [44] [45] [46] [47]) [48]
 \openout2 = `body/force_assign.aux'.
 
  (body/force_assign.tex)
 \openout2 = `back/conclusion.aux'.
 
-(back/conclusion.tex) [44
+(back/conclusion.tex) [49
 
 
 
@@ -2799,22 +2455,27 @@ File: figures/绕线示意图.pdf Graphic file (type pdf)
 
 
 
-] (d:\桌面\毕业设计\毕业论文latex\build\thesis.bbl
-
-LaTeX Warning: Empty`thebibliography'environment on input line 27.
-
-) [45
+] (d:\桌面\毕业设计\毕业论文latex\build\thesis.bbl [50
 
 
 
 
-] [46
+] [51]
+[52]
+Underfull \hbox (badness 1122) in paragraph at lines 355--360
+[]\TU/SimSun(0)/m/n/12.045 赵 雅 聪\TU/TeXGyreTermesX(0)/m/n/12.045 , \TU/SimSun(0
+)/m/n/12.045 王 启 明\TU/TeXGyreTermesX(0)/m/n/12.045 . \TU/SimSun(0)/m/n/12.045 基
+ 于 \TU/TeXGyreTermesX(0)/m/n/12.045 FAST \TU/SimSun(0)/m/n/12.045 馈 源 支 撑 系 统 的
+ 索 牵 引 并 联 机 构 的 力 学 分
+ []
+
+) [53] [54
 
 
 ]
 \openout2 = `back/acknowledgements.aux'.
 
- (back/acknowledgements.tex) [47
+ (back/acknowledgements.tex) [55
 
 
 
@@ -2822,9 +2483,6 @@ LaTeX Warning: Empty`thebibliography'environment on input line 27.
 \tf@thm=\write7
 \openout7 = `thesis.thm'.
 
-
-
-Package natbib Warning: There were undefined citations.
 
 (d:\桌面\毕业设计\毕业论文latex\build\thesis.aux
 (d:\桌面\毕业设计\毕业论文latex\build\body/pre_introduction.aux)
@@ -2844,16 +2502,16 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.47188pt have occurred.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: D975789F4D8EDCBF6D4A08CB5B8D42B7;7540.
+(rerunfilecheck)             Checksum: 7FF2AA060DFCC3E46863A310135D7D0B;7897.
  ) 
 Here is how much of TeX's memory you used:
- 50270 strings out of 409617
- 1097276 string characters out of 5781321
+ 51765 strings out of 409617
+ 1132259 string characters out of 5781321
  1948191 words of memory out of 5000000
- 71568 multiletter control sequences out of 15000+600000
- 602384 words of font info for 201 fonts, out of 8000000 for 9000
+ 73032 multiletter control sequences out of 15000+600000
+ 616124 words of font info for 234 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 107i,12n,111p,3288b,995s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,12n,111p,3288b,1351s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on d:\桌面\毕业设计\毕业论文latex\build\thesis.xdv (54 pages, 658240 bytes
+Output written on d:\桌面\毕业设计\毕业论文latex\build\thesis.xdv (62 pages, 829668 bytes
 ).

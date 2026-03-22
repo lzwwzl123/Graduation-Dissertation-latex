@@ -6,43 +6,45 @@
 \contentsline {subsection}{\numberline {1.2.1}加速度模拟与地面训练装备研究现状}{4}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}绳驱并联机器人构型与应用研究现状}{5}{subsection.1.2.2}%
 \contentsline {subsection}{\numberline {1.2.3}工作空间、动力学建模与连续旋转研究现状}{7}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}张力分配与力控制研究现状}{9}{subsection.1.2.4}%
-\contentsline {section}{\numberline {1.3}现有研究存在的问题}{12}{section.1.3}%
-\contentsline {section}{\numberline {1.4}本文研究内容与技术路线}{13}{section.1.4}%
-\contentsline {section}{\numberline {1.5}论文结构安排}{14}{section.1.5}%
-\contentsline {section}{\numberline {1.6}本章小结}{15}{section.1.6}%
+\contentsline {subsection}{\numberline {1.2.4}张力分配与力控制研究现状}{8}{subsection.1.2.4}%
+\contentsline {section}{\numberline {1.3}现有研究存在的问题}{10}{section.1.3}%
+\contentsline {section}{\numberline {1.4}本文研究内容与技术路线}{12}{section.1.4}%
+\contentsline {section}{\numberline {1.5}论文结构安排}{13}{section.1.5}%
+\contentsline {section}{\numberline {1.6}本章小结}{14}{section.1.6}%
 \contentsline {chapter}{\numberline {第2章}机器人系统方案设计与机械结构实现}{16}{chapter.2}%
 \contentsline {section}{\numberline {2.1}系统总体方案与构型设计}{16}{section.2.1}%
-\contentsline {chapter}{\numberline {第3章}运动学建模与位置控制基础验证}{17}{chapter.3}%
+\contentsline {chapter}{\numberline {第3章}运动学与动力学建模及位置控制基础验证}{17}{chapter.3}%
 \contentsline {section}{\numberline {3.1}引言}{17}{section.3.1}%
 \contentsline {section}{\numberline {3.2}系统构型与符号定义}{17}{section.3.2}%
 \contentsline {section}{\numberline {3.3}逆运动学建模}{19}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}几何切线关系}{19}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}绳长表达式}{21}{subsection.3.3.2}%
 \contentsline {section}{\numberline {3.4}正运动学建模}{23}{section.3.4}%
-\contentsline {section}{\numberline {3.5}绳长速度关系与运动学雅可比矩阵}{25}{section.3.5}%
-\contentsline {section}{\numberline {3.6}位置控制流程设计}{26}{section.3.6}%
-\contentsline {section}{\numberline {3.7}位置控制基础验证}{28}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}末端轨迹规划与指令生成}{28}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}位置控制实验流程}{28}{subsection.3.7.2}%
-\contentsline {subsection}{\numberline {3.7.3}位置跟踪结果与误差分析}{29}{subsection.3.7.3}%
-\contentsline {section}{\numberline {3.8}位置控制局限性分析}{31}{section.3.8}%
-\contentsline {section}{\numberline {3.9}本章小结}{32}{section.3.9}%
-\contentsline {chapter}{\numberline {第4章}控制算法设计}{33}{chapter.4}%
-\contentsline {section}{\numberline {4.1}引言}{33}{section.4.1}%
-\contentsline {section}{\numberline {4.2}控制系统总体架构}{33}{section.4.2}%
-\contentsline {section}{\numberline {4.3}单电机闭环力矩控制方法}{35}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}控制对象与问题描述}{35}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}基于PID的力矩闭环控制}{35}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}摩擦补偿设计}{36}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}扰动观测器设计}{37}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}基于正运动学反馈的末端位姿闭环补偿方法}{38}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}末端位姿误差定义}{38}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}任务空间误差到广义力修正量的构造}{39}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}广义力修正到各电机张力增量的映射}{40}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}控制算法实现流程}{41}{section.4.5}%
-\contentsline {section}{\numberline {4.6}本章小结}{42}{section.4.6}%
-\contentsline {chapter}{\heiti 结\hspace {\ccwd }论}{44}{section*.12}%
-\contentsline {chapter}{\heiti 参考文献}{45}{section*.15}%
-\contentsline {chapter}{哈尔滨工业大学本科毕业论文（设计）原创性声明和使用权限}{46}{chapter*.17}%
-\contentsline {chapter}{\heiti 致\hspace {\ccwd }谢}{47}{section*.18}%
+\contentsline {section}{\numberline {3.5}绳长速度关系与运动学雅可比矩阵}{24}{section.3.5}%
+\contentsline {section}{\numberline {3.6}动力学建模}{26}{section.3.6}%
+\contentsline {section}{\numberline {3.7}从动力学模型到广义力/张力映射}{29}{section.3.7}%
+\contentsline {section}{\numberline {3.8}位置控制流程设计}{30}{section.3.8}%
+\contentsline {section}{\numberline {3.9}位置控制基础验证}{32}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}末端轨迹规划与指令生成}{32}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}位置控制实验流程}{33}{subsection.3.9.2}%
+\contentsline {subsection}{\numberline {3.9.3}位置跟踪结果与误差分析}{33}{subsection.3.9.3}%
+\contentsline {section}{\numberline {3.10}位置控制局限性分析}{34}{section.3.10}%
+\contentsline {section}{\numberline {3.11}本章小结}{37}{section.3.11}%
+\contentsline {chapter}{\numberline {第4章}控制算法设计}{38}{chapter.4}%
+\contentsline {section}{\numberline {4.1}引言}{38}{section.4.1}%
+\contentsline {section}{\numberline {4.2}控制系统总体架构}{38}{section.4.2}%
+\contentsline {section}{\numberline {4.3}单电机闭环力矩控制方法}{40}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}控制对象与问题描述}{40}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}基于PID的力矩闭环控制}{40}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}摩擦补偿设计}{41}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}扰动观测器设计}{42}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}基于正运动学反馈的末端位姿闭环补偿方法}{43}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}末端位姿误差定义}{43}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}任务空间误差到广义力修正量的构造}{44}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}广义力修正到各电机张力增量的映射}{45}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}控制算法实现流程}{46}{section.4.5}%
+\contentsline {section}{\numberline {4.6}本章小结}{47}{section.4.6}%
+\contentsline {chapter}{\heiti 结\hspace {\ccwd }论}{49}{section*.12}%
+\contentsline {chapter}{\heiti 参考文献}{50}{section*.15}%
+\contentsline {chapter}{哈尔滨工业大学本科毕业论文（设计）原创性声明和使用权限}{54}{chapter*.17}%
+\contentsline {chapter}{\heiti 致\hspace {\ccwd }谢}{55}{section*.18}%
