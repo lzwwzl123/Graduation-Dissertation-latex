@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2026.3.15)  23 MAR 2026 06:24
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 24.1) (preloaded format=xelatex 2026.3.15)  25 MAR 2026 02:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2288,11 +2288,11 @@ LaTeX Font Info:    Font shape `LMX/ntxexx/b/n' will be
  [4
 
 
-])
+] [5])
 \tf@toc=\write6
 \openout6 = `thesis.toc'.
 
- [5]
+ [6]
 \openout2 = `body/pre_introduction.aux'.
 
 
@@ -2419,16 +2419,16 @@ File: figures/线长度示意图.pdf Graphic file (type pdf)
 File: figures/典型末端参考轨迹示意图.png Graphic file (type bmp)
 <figures/典型末端参考轨迹示意图.png>
  [31]
-File: figures/末端位姿跟踪结果对比.png Graphic file (type bmp)
-<figures/末端位姿跟踪结果对比.png>
-File: figures/末端位姿误差曲线.png Graphic file (type bmp)
-<figures/末端位姿误差曲线.png>
-File: figures/四电机位置响应曲线.png Graphic file (type bmp)
-<figures/四电机位置响应曲线.png>
+File: figures/末端位姿跟踪结果对比.pdf Graphic file (type pdf)
+<use figures/末端位姿跟踪结果对比.pdf>
+File: figures/末端位姿误差曲线.pdf Graphic file (type pdf)
+<use figures/末端位姿误差曲线.pdf>
+File: figures/四电机位置响应曲线.pdf Graphic file (type pdf)
+<use figures/四电机位置响应曲线.pdf>
 
 [32]
-File: figures/末端加速度响应与抖振示意图.png Graphic file (type bmp)
-<figures/末端加速度响应与抖振示意图.png>
+File: figures/末端加速度响应与抖振示意图.pdf Graphic file (type pdf)
+<use figures/末端加速度响应与抖振示意图.pdf>
  [33] [34]) [35] [36]
 \openout2 = `body/control.aux'.
 
@@ -2440,43 +2440,118 @@ File: figures/末端加速度响应与抖振示意图.png Graphic file (type bmp
 
 
 
-] [38] [39] [40] [41] [42] [43] [44] [45] [46]) [47]
-\openout2 = `body/force_assign.aux'.
-
- (body/force_assign.tex)
-\openout2 = `back/conclusion.aux'.
-
-(back/conclusion.tex) [48
-
-
-
-
-
-
-
-
-
-] (d:\桌面\毕业设计\毕业论文latex\build\thesis.bbl [49
-
-
-
-
-] [50]
-[51]
-Underfull \hbox (badness 1122) in paragraph at lines 355--360
-[]\TU/SimSun(0)/m/n/12.045 赵 雅 聪\TU/TeXGyreTermesX(0)/m/n/12.045 , \TU/SimSun(0
-)/m/n/12.045 王 启 明\TU/TeXGyreTermesX(0)/m/n/12.045 . \TU/SimSun(0)/m/n/12.045 基
- 于 \TU/TeXGyreTermesX(0)/m/n/12.045 FAST \TU/SimSun(0)/m/n/12.045 馈 源 支 撑 系 统 的
- 索 牵 引 并 联 机 构 的 力 学 分
+]
+Overfull \hbox (29.1846pt too wide) in paragraph at lines 180--181
+ [][] 
  []
 
-) [52] [53
+[38] [39] [40]
+File: figures/摩擦补偿特性曲线示意图.pdf Graphic file (type pdf)
+<use figures/摩擦补偿特性曲线示意图.pdf>
+ [41] [42] [43] [44]
+Overfull \hbox (34.60756pt too wide) in paragraph at lines 519--520
+ [][] 
+ []
+
+[45] [46]) [47]
+\openout2 = `body/force_assign.aux'.
+
+ (body/force_assign.tex
+第5章
+[48
+
+
+
+
+
+] [49] [50] [51] [52]
+Underfull \hbox (badness 7203) in paragraph at lines 191--193
+\TU/SimSun(0)/m/n/12.045 对 于 一 维 区 间 而 言，|  中 点 就 是 几 何 意 义 下 的 重 心，|  因 此 该 方 
+法 实 现 简 单、|
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--193
+\TU/SimSun(0)/m/n/12.045 计 算 量 极 小，|  并 且 能 够 在 一 定 程 度 上 使 解 远 离 边 界。|  本 文 仿 
+真 程 序 中 的
+ []
+
+[53] [54]
+File: figures/工作空间张力分配算法对比图.pdf Graphic file (type pdf)
+<use figures/工作空间张力分配算法对比图.pdf>
+ [55]
+File: figures/典型轨迹工况下不同张力分配算法张力曲线对比图.pdf Graphic file (type pdf)
+<use figures/典型轨迹工况下不同张力分配算法张力曲线对比图.pdf>
+ [56]
+File: figures/最小范数法张力一阶导数变化图.pdf Graphic file (type pdf)
+<use figures/最小范数法张力一阶导数变化图.pdf>
+File: figures/重心法张力一阶导数变化图.pdf Graphic file (type pdf)
+<use figures/重心法张力一阶导数变化图.pdf>
+File: figures/解析中心法张力一阶导数变化图.pdf Graphic file (type pdf)
+<use figures/解析中心法张力一阶导数变化图.pdf>
+ [57] [58]) [59]
+\openout2 = `back/conclusion.aux'.
+
+ (back/conclusion.tex) [60
+
+
+
+
+
+
+]
+(d:\桌面\毕业设计\毕业论文latex\build\thesis.bbl
+Underfull \hbox (badness 5374) in paragraph at lines 93--97
+[]\TU/SimSun(0)/m/n/12.045 陈 彦 霖，|  邓 小 恒，|  张 宪 民，|  等\TU/TeXGyreTermesX(0)/m/
+n/12.045 . \TU/SimSun(0)/m/n/12.045 绳 驱 机 器 人 动 力 学 建 模 与 控 制 研 究 综
+ []
+
+[61
+
+
+
+
+] [62]
+Underfull \hbox (badness 10000) in paragraph at lines 222--227
+[]\TU/TeXGyreTermesX(0)/m/n/12.045 ALBUS J S\TU/SimSun(0)/m/n/12.045 ，| \TU/TeX
+GyreTermesX(0)/m/n/12.045 BOSTELMAN R V\TU/SimSun(0)/m/n/12.045 ，| \TU/TeXGyreT
+ermesX(0)/m/n/12.045 DAGALAKIS N G. The NIST
+ []
+
+
+Underfull \hbox (badness 4013) in paragraph at lines 222--227
+\TU/TeXGyreTermesX(0)/m/n/12.045 robocrane[]. Journal of Robotic Systems\TU/Sim
+Sun(0)/m/n/12.045 ，| \TU/TeXGyreTermesX(0)/m/n/12.045 1993\TU/SimSun(0)/m/n/12.
+045 ，| \TU/TeXGyreTermesX(0)/m/n/12.045 10 |\TU/SimSun(0)/m/n/12.045 （\TU/TeXGy
+reTermesX(0)/m/n/12.045 5\TU/SimSun(0)/m/n/12.045 ）| ：| \TU/TeXGyreTermesX(0)/m
+/n/12.045 709-724.
+ []
+
+
+Overfull \vbox (0.87363pt too high) has occurred while \output is active []
+
+
+[63]
+Underfull \hbox (badness 2277) in paragraph at lines 237--243
+[]\TU/TeXGyreTermesX(0)/m/n/12.045 QIAN S\TU/SimSun(0)/m/n/12.045 ，| \TU/TeXGyr
+eTermesX(0)/m/n/12.045 ZI B\TU/SimSun(0)/m/n/12.045 ，| \TU/TeXGyreTermesX(0)/m/
+n/12.045 SHANG W-W\TU/SimSun(0)/m/n/12.045 ，| \TU/TeXGyreTermesX(0)/m/n/12.045 
+et al. A Review on Cable-driven Parallel
+ []
+
+
+Underfull \hbox (badness 1783) in paragraph at lines 254--260
+\TU/TeXGyreTermesX(0)/m/n/12.045 allel Robots Driven by Flexible Cables and Act
+uated by Position-Controlled
+ []
+
+[64]) [65] [66
 
 
 ]
 \openout2 = `back/acknowledgements.aux'.
 
- (back/acknowledgements.tex) [54
+ (back/acknowledgements.tex) [67
 
 
 
@@ -2503,16 +2578,16 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.47188pt have occurred.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 7FF2AA060DFCC3E46863A310135D7D0B;7897.
+(rerunfilecheck)             Checksum: 812DDFF410863E9A3371D4140B0B594E;10762.
  ) 
 Here is how much of TeX's memory you used:
- 51765 strings out of 409617
- 1132259 string characters out of 5781321
- 1948191 words of memory out of 5000000
- 73032 multiletter control sequences out of 15000+600000
- 616124 words of font info for 234 fonts, out of 8000000 for 9000
+ 52285 strings out of 409617
+ 1144069 string characters out of 5781321
+ 1959191 words of memory out of 5000000
+ 73545 multiletter control sequences out of 15000+600000
+ 616132 words of font info for 235 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 107i,12n,111p,3288b,1351s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 107i,12n,111p,3288b,1350s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on d:\桌面\毕业设计\毕业论文latex\build\thesis.xdv (61 pages, 850796 bytes
-).
+Output written on d:\桌面\毕业设计\毕业论文latex\build\thesis.xdv (75 pages, 1165832 byte
+s).

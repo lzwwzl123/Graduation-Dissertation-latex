@@ -13,14 +13,14 @@ Reallocating 'name_of_file' (item size: 1) to 22 items.
 A level-1 auxiliary file: body/force_assign.aux
 Reallocating 'name_of_file' (item size: 1) to 20 items.
 A level-1 auxiliary file: back/conclusion.aux
-Reallocating 'name_of_file' (item size: 1) to 9 items.
-The style file: hithesis.bst
+Reallocating 'name_of_file' (item size: 1) to 12 items.
+The style file: hitszthesis.bst
 Reallocating 'name_of_file' (item size: 1) to 10 items.
 Reallocating 'name_of_file' (item size: 1) to 26 items.
 A level-1 auxiliary file: back/acknowledgements.aux
 Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: reference.bib
 Warning--Require citedate: barker1961simulator
 Warning--Require citedate: mohajer2021centrifugedesign
@@ -34,6 +34,7 @@ Warning--Require citedate: chen2025cdprreview
 Warning--Require citedate: tempel2015expo
 Warning--Require citedate: lan2022sprayreview
 Warning--Require citedate: zhang2009greenhouse
+Warning--Require address: gouttefarde2007wrench
 Warning--Require citedate: gouttefarde2007wrench
 Warning--Require citedate: phan2021wrenchclosure
 Warning--Require citedate: wang2022schonflies
@@ -66,44 +67,44 @@ Warning--Require citedate: jin2024controlreview
 Warning--Require citedate: yu2024stability
 Warning--Require citedate: zhao2023fast
 You've used 44 entries,
-            3027 wiz_defined-function locations,
-            1047 strings with 18362 characters,
-and the built_in function-call counts, 203174 in all, are:
-= -- 26044
+            3182 wiz_defined-function locations,
+            1065 strings with 18525 characters,
+and the built_in function-call counts, 215195 in all, are:
+= -- 27655
 > -- 229
 < -- 229
-+ -- 23761
++ -- 25372
 - -- 812
-* -- 3220
-:= -- 26361
+* -- 3311
+:= -- 28017
 add.period$ -- 0
 call.type$ -- 44
-change.case$ -- 0
+change.case$ -- 370
 chr.to.int$ -- 0
-cite$ -- 87
-duplicate$ -- 29081
-empty$ -- 3388
+cite$ -- 88
+duplicate$ -- 30692
+empty$ -- 3435
 format.name$ -- 740
-if$ -- 55663
+if$ -- 58981
 int.to.chr$ -- 0
 int.to.str$ -- 44
 missing$ -- 0
 newline$ -- 159
 num.names$ -- 44
-pop$ -- 1471
+pop$ -- 1427
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 512
+skip$ -- 513
 stack$ -- 0
-substring$ -- 26644
-swap$ -- 2438
+substring$ -- 28255
+swap$ -- 2486
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 43
+warning$ -- 44
 while$ -- 1438
 width$ -- 46
-write$ -- 675
-(There were 43 warnings)
+write$ -- 763
+(There were 44 warnings)

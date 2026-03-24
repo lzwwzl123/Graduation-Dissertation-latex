@@ -6,18 +6,18 @@
 \begin{figure}[htbp]
   \centering
   \subfigure[NASTAR ATFS-400-31\label{fig:intro-atfs31}]{%
-    \includegraphics[width=0.4\textwidth]{figures/atfs400_31.jpg}}
+    \includegraphics[width=0.46\textwidth]{figures/atfs400_31.jpg}}
   \hfill
   \subfigure[NASTAR ATFS-400-25\label{fig:intro-atfs25}]{%
-    \includegraphics[width=0.4\textwidth]{figures/atfs400_25.jpg}}
+    \includegraphics[width=0.46\textwidth]{figures/atfs400_25.jpg}}
 
   \vspace{0.6em}
 
   \subfigure[AMST AIRFOX ASD\label{fig:intro-airfox}]{%
-    \includegraphics[width=0.4\textwidth]{figures/airfox_asd.png}}
+    \includegraphics[width=0.46\textwidth]{figures/airfox_asd.png}}
   \hfill
   \subfigure[DESDEMONA\label{fig:intro-desdemona}]{%
-    \includegraphics[width=0.4\textwidth]{figures/desdemona.jpg}}
+    \includegraphics[width=0.46\textwidth]{figures/desdemona.jpg}}
 
   \caption{典型地面加速度与运动模拟装备图片\cite{winter2023centrifugeopt}}
   \label{fig:intro-training-equipment}
@@ -29,7 +29,7 @@
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.85\textwidth]{figures/加速度模拟器方案对比图.pdf}
+  \includegraphics[width=0.9\textwidth]{figures/加速度模拟器方案对比图.pdf}
   \caption{传统加速度模拟装备与绳驱并联机器人方案对比图}
   \label{fig:intro-compare-solutions}
   \vspace{0.3em}
@@ -91,8 +91,7 @@
 \end{figure}
 在新型运动平台研究方面，绳驱并联机器人因其结构轻量化和大尺度运动潜力而受到广泛关注。Zhang 等对绳驱并联机器人的理论与应用进行了系统综述，概括了其在构型设计、工作空间分析、控制方法及工程应用等方面的发展现状\cite{zhang2022stateoftheart}；Wang等则从设计、建模与控制三方面对绳驱并联机器人的最新进展进行了综述，指出绳驱系统未来的重要发展方向包括高精度建模、高动态控制以及面向复杂任务的多模态应用\cite{wang2025review}。国内的综述工作也表明，随着柔索动力学、张力分配和自适应控制等研究的深入，绳驱机器人正在从传统的大型低速应用逐步走向高动态、高精度和复杂交互任务\cite{chen2025cdprreview}。
 
-从工程应用角度看，绳驱并联机器人已经不再局限于实验室环境。德国馆 EXPO 2015 项目是典型的大型应用案例之一，Tempel 等对其设计与编程过程进行了总结\cite{tempel2015expo},如\cref{fig:cdpr-app_1}。1985 年，August Design 公司的 Cone 和 Lawrence 设
-计了著名的有线高速摄像系统“SkyCam”\cite{tanaka1988skycam}。如\cref{fig:cdpr-app_2}所示，该系统由4根绳索驱动，最高移动速度可达44.8km/h，广泛应用于大范围场地的现场播，尤其适用于体育比赛的高速跟踪拍摄，。。1989年美国国家标准与技术研究院(NIST)启动了“RoboCrane”项目\cite{albus1993nistrobocrane},应用于机械加工、港口货物装卸、桥梁建设和焊接等领域,如\cref{fig:cdpr-app_3}所示，可以看出绳驱并联机器人在大尺度空间中的协调控制、任务组织和系统集成方面已经具备较高的工程成熟度。来自意大利帕多瓦大学的Rosati等人也将绳驱机器人应用于医疗康复领域，为需要上肢康复训练的患者设计了一种如\cref{fig:cdpr-app_4}的名为“NeReBot”的绳驱并联机构系统\cite{chen2019waistrehab},将绳驱机器人应用于医疗康复领域;。在面向作业任务的机器人研究中，农业喷雾和智能施药机器人也体现出对大工作空间、轻量化执行机构与复杂环境适应能力的强烈需求\cite{lan2022sprayreview,zhang2009greenhouse}。虽然这类应用与本文的加速度模拟场景并不相同，但它们说明绳驱或轻量化驱动结构在复杂环境中的广泛适用性，也从侧面验证了绳驱并联技术路线的工程潜力。
+从工程应用角度看，绳驱并联机器人已经不再局限于实验室环境。德国馆 EXPO 2015 项目是典型的大型应用案例之一，Tempel 等对其设计与编程过程进行了总结\cite{tempel2015expo},如\cref{fig:cdpr-app_1}。1985 年，August Design 公司的 Cone 和 Lawrence 设计了著名的有线高速摄像系统“SkyCam”\cite{tanaka1988skycam}。如\cref{fig:cdpr-app_2}所示，该系统由4根绳索驱动，最高移动速度可达44.8km/h，广泛应用于大范围场地的现场播，尤其适用于体育比赛的高速跟踪拍摄，。。1989年美国国家标准与技术研究院(NIST)启动了“RoboCrane”项目\cite{albus1993nistrobocrane},应用于机械加工、港口货物装卸、桥梁建设和焊接等领域,如\cref{fig:cdpr-app_3}所示，可以看出绳驱并联机器人在大尺度空间中的协调控制、任务组织和系统集成方面已经具备较高的工程成熟度。来自意大利帕多瓦大学的Rosati等人也将绳驱机器人应用于医疗康复领域，为需要上肢康复训练的患者设计了一种如\cref{fig:cdpr-app_4}的名为“NeReBot”的绳驱并联机构系统\cite{chen2019waistrehab},将绳驱机器人应用于医疗康复领域;。在面向作业任务的机器人研究中，农业喷雾和智能施药机器人也体现出对大工作空间、轻量化执行机构与复杂环境适应能力的强烈需求\cite{lan2022sprayreview,zhang2009greenhouse}。虽然这类应用与本文的加速度模拟场景并不相同，但它们说明绳驱或轻量化驱动结构在复杂环境中的广泛适用性，也从侧面验证了绳驱并联技术路线的工程潜力。
 
 
 从典型代表系统看，SkyCam、RoboCrane绳驱并联平台分别用于体育赛事直播和重载搬运，NeReBot系统则用于人机协作，体现了索驱机构在高速大范围跟踪、重载搬运、和人机协作等方向上的应用潜力。相关综述进一步指出，绳驱并联机器人的研究重点正在由大尺度低速搬运逐步拓展到高动态轨迹跟踪、视觉伺服、柔顺控制与复杂约束下的在线优化控制\cite{qian2018review,tho2022overview,begey2019dynamiccontrol,you2019vision}。这意味着，对于本文所关注的加速度模拟任务，绳驱并联平台不能仅被视为一般意义上的“位姿搬运装置”，而应被视为面向广义力输出与动态品质约束的综合运动执行平台。

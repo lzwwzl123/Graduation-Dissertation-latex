@@ -25,337 +25,341 @@
 \providecommand{\biburl}[1]{\newline\url{#1}}
 
 \bibitem{barker1961simulator}
-\bibauthor{{, et~al}{Charles~L Barker J}}\nolinebreak\@. \bibtitle{Space flight
-  acceleration simulator}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Planetary
-  and Space Science}, \bibyear{1961}, \bibvolume{7}\textnormal{:
-  }\bibpages{335\textnormal{-}344}\nolinebreak\@.
+\bibauthor{{，et~al}{Charles~L BARKER J}}\nolinebreak\@. \bibtitle{Space
+  flight acceleration simulator}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{Planetary and Space
+  Science}，\bibyear{1961}，\bibvolume{7}\thinspace{}\textnormal{：}\bibpages{335\textnormal{-}344}\nolinebreak\@.
+  \url{https://www.sciencedirect.com/science/article/pii/0032063361903117}\nolinebreak\@.
 
 \bibitem{mohajer2021centrifugedesign}
-\bibauthor{{, et~al}{Mohajer N}{, Nahavandi D}{, Watson M}{, Nahavandi
+\bibauthor{{，et~al}{MOHAJER N}{，NAHAVANDI D}{，WATSON M}{，NAHAVANDI
   S}}\nolinebreak\@. \bibtitle{Motion and dynamic analyses of a human
   centrifuge system with an efficient design
-  configuration}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Aerospace Science
-  and Technology}, \bibyear{2021}, \bibvolume{117}\textnormal{:
-  }\bibpages{106972}\nolinebreak\@.
+  configuration}\bibmark{\,［J/OL］}\nolinebreak\@. \bibjournal{Aerospace
+  Science and
+  Technology}，\bibyear{2021}，\bibvolume{117}\thinspace{}\textnormal{：}\bibpages{106972}\nolinebreak\@.
+  \url{https://www.sciencedirect.com/science/article/abs/pii/S127096382100482X}\nolinebreak\@.
 
 \bibitem{winter2023centrifugeopt}
-\bibauthor{{, et~al}{Winter A}{, Mohajer N}{, Nahavandi D}{, Mohamed
+\bibauthor{{，et~al}{WINTER A}{，MOHAJER N}{，NAHAVANDI D}{，MOHAMED
   S}}\nolinebreak\@. \bibtitle{Performance Improvement of Human Centrifuge
   Systems through Multi-Objective Configurational Design
-  Optimisation}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Aerospace},
-  \bibyear{2023}, \bibvolume{10}\bibnumber{(12)}\textnormal{:
-  }\bibpages{1013}\nolinebreak\@.
+  Optimisation}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{Aerospace}，\bibyear{2023}，\bibvolume{10}\bibnumber{（12）\!\!}\thinspace{}\textnormal{：}\bibpages{1013}\nolinebreak\@.
+  \url{https://www.mdpi.com/2226-4310/10/12/1013}\nolinebreak\@.
 
 \bibitem{tu2020gtolerance}
-\bibauthor{{, et~al}{Tu M-Y}{, Chu H}{, Lin Y-J}{, Chiang K-T}{, Chen C-M}{,
-  Chen H-H}{, Yang C-S}{, Lai C-Y}}\nolinebreak\@. \bibtitle{Combined effect of
-  heart rate responses and the anti-G straining manoeuvre effectiveness on G
-  tolerance in a human centrifuge}\bibmark{[J/OL]}\nolinebreak\@.
-  \bibjournal{Scientific Reports}, \bibyear{2020},
-  \bibvolume{10}\bibnumber{(1)}\textnormal{: }\bibpages{21611}\nolinebreak\@.
+\bibauthor{{，et~al}{TU M-Y}{，CHU H}{，LIN Y-J}{，CHIANG K-T}{，CHEN
+  C-M}{，CHEN H-H}{，YANG C-S}{，LAI C-Y}}\nolinebreak\@. \bibtitle{Combined
+  effect of heart rate responses and the anti-G straining manoeuvre
+  effectiveness on G tolerance in a human
+  centrifuge}\bibmark{\,［J/OL］}\nolinebreak\@. \bibjournal{Scientific
+  Reports}，\bibyear{2020}，\bibvolume{10}\bibnumber{（1）\!\!}\thinspace{}\textnormal{：}\bibpages{21611}\nolinebreak\@.
+  \url{https://www.nature.com/articles/s41598-020-78687-3}\nolinebreak\@.
 
 \bibitem{liu2024centrifuge}
-\bibauthor{{, 等}{Liu C}{, Ding Y}{, Sun G}{, Wang P}{, Han S}{, Wang C}{,
-  Tian Q}}\nolinebreak\@.
-  \bibtitle{三轴载人离心机加速度过载模拟算法开发与验证}\bibmark{[J/OL]}\nolinebreak\@.
-  \bibjournal{Journal of Dynamics and Control}, \bibyear{2024},
-  \bibvolume{22}\bibnumber{(6)}\textnormal{:
-  }\bibpages{1\textnormal{-}8}\nolinebreak\@.
+\bibauthor{{，等}{LIU C}{，DING Y}{，SUN G}{，WANG P}{，HAN S}{，WANG
+  C}{，TIAN Q}}\nolinebreak\@.
+  \bibtitle{三轴载人离心机加速度过载模拟算法开发与验证}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{Journal of Dynamics and
+  Control}，\bibyear{2024}，\bibvolume{22}\bibnumber{（6）\!\!}\thinspace{}\textnormal{：}\bibpages{1\textnormal{-}8}\nolinebreak\@.
+  \url{https://doi.org/10.6052/1672-6553-2024-006}\nolinebreak\@.
 
 \bibitem{zhang2020groundsimulation}
-\bibauthor{{, et~al}{Zhang Y}{, Ma T}{, Zhang H}{, Wu Y}{, Wu Z}{, Yu
+\bibauthor{{，et~al}{ZHANG Y}{，MA T}{，ZHANG H}{，WU Y}{，WU Z}{，YU
   J}}\nolinebreak\@. \bibtitle{Ground Simulation Tests in Two-Dimensional
-  Dynamic Acceleration Environment}\bibmark{[J/OL]}\nolinebreak\@.
-  \bibjournal{Applied Sciences}, \bibyear{2020},
-  \bibvolume{10}\bibnumber{(3)}\textnormal{: }\bibpages{910}\nolinebreak\@.
+  Dynamic Acceleration Environment}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{Applied
+  Sciences}，\bibyear{2020}，\bibvolume{10}\bibnumber{（3）\!\!}\thinspace{}\textnormal{：}\bibpages{910}\nolinebreak\@.
+  \url{https://www.mdpi.com/2076-3417/10/3/910}\nolinebreak\@.
 
 \bibitem{zhang2022stateoftheart}
-\bibauthor{{, et~al}{Zhang Z}{, Shao Z}{, You Z}{, Tang X}{, Zi B}{, Yang G}{,
-  Gosselin C}{, Caro S}}\nolinebreak\@. \bibtitle{State-of-the-art on theories
-  and applications of cable-driven parallel
-  robots}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Frontiers of Mechanical
-  Engineering}, \bibyear{2022}, \bibvolume{17}\bibnumber{(3)}\textnormal{:
-  }\bibpages{37}\nolinebreak\@.
+\bibauthor{{，et~al}{ZHANG Z}{，SHAO Z}{，YOU Z}{，TANG X}{，ZI B}{，YANG
+  G}{，GOSSELIN C}{，CARO S}}\nolinebreak\@. \bibtitle{State-of-the-art on
+  theories and applications of cable-driven parallel
+  robots}\bibmark{\,［J/OL］}\nolinebreak\@. \bibjournal{Frontiers of
+  Mechanical
+  Engineering}，\bibyear{2022}，\bibvolume{17}\bibnumber{（3）\!\!}\thinspace{}\textnormal{：}\bibpages{37}\nolinebreak\@.
+  \url{https://link.springer.com/article/10.1007/s11465-022-0693-3}\nolinebreak\@.
 
 \bibitem{wang2025review}
-\bibauthor{{, et~al}{Wang R}{, Li J}{, Li Y}}\nolinebreak\@. \bibtitle{A Review
-  on Design, Modeling and Control Technology of Cable-Driven Parallel
-  Robots}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Robotics}, \bibyear{2025},
-  \bibvolume{14}\bibnumber{(9)}\textnormal{: }\bibpages{116}\nolinebreak\@.
+\bibauthor{{，et~al}{WANG R}{，LI J}{，LI Y}}\nolinebreak\@. \bibtitle{A
+  Review on Design, Modeling and Control Technology of Cable-Driven Parallel
+  Robots}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{Robotics}，\bibyear{2025}，\bibvolume{14}\bibnumber{（9）\!\!}\thinspace{}\textnormal{：}\bibpages{116}\nolinebreak\@.
+  \url{https://www.mdpi.com/2218-6581/14/9/116}\nolinebreak\@.
 
 \bibitem{chen2025cdprreview}
-\bibauthor{{, 等}{陈彦霖}{, 邓小恒}{, 张宪民}{,
-  黄沿江}}\nolinebreak\@.
-  \bibtitle{绳驱机器人动力学建模与控制研究综述}\bibmark{[J/OL]}\nolinebreak\@.
-  \bibjournal{机械工程学报}, \bibyear{2025},
-  \bibvolume{61}\bibnumber{(19)}\textnormal{:
-  }\bibpages{1\textnormal{-}17}\nolinebreak\@.
+\bibauthor{{，等}{陈彦霖}{，邓小恒}{，张宪民}{，黄沿江}}\nolinebreak\@.
+  \bibtitle{绳驱机器人动力学建模与控制研究综述}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{机械工程学报}，\bibyear{2025}，\bibvolume{61}\bibnumber{（19）\!\!}\thinspace{}\textnormal{：}\bibpages{1\textnormal{-}17}\nolinebreak\@.
+  \url{https://qikan.cmes.org/jxgcxb/CN/10.3901/JME.2025.19.001}\nolinebreak\@.
 
 \bibitem{tempel2015expo}
-\bibauthor{{, et~al}{Tempel P}{, Schnelle F}{, Pott A}{, Eberhard
+\bibauthor{{，et~al}{TEMPEL P}{，SCHNELLE F}{，POTT A}{，EBERHARD
   P}}\nolinebreak\@. \bibtitle{Design and Programming for Cable-Driven Parallel
   Robots in the German Pavilion at the EXPO
-  2015}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Machines}, \bibyear{2015},
-  \bibvolume{3}\bibnumber{(3)}\textnormal{:
-  }\bibpages{223\textnormal{-}241}\nolinebreak\@.
+  2015}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{Machines}，\bibyear{2015}，\bibvolume{3}\bibnumber{（3）\!\!}\thinspace{}\textnormal{：}\bibpages{223\textnormal{-}241}\nolinebreak\@.
+  \url{https://www.mdpi.com/2075-1702/3/3/223}\nolinebreak\@.
 
 \bibitem{lan2022sprayreview}
-\bibauthor{{, 等}{兰玉彬}{, 闫瑜}{, 王宝聚}{, 宋灿灿}{,
-  王国宾}}\nolinebreak\@.
-  \bibtitle{智能施药机器人关键技术研究现状及发展趋势}\bibmark{[J/OL]}\nolinebreak\@.
-  \bibjournal{农业工程学报}, \bibyear{2022},
-  \bibvolume{38}\bibnumber{(20)}\textnormal{:
-  }\bibpages{30\textnormal{-}40}\nolinebreak\@.
+\bibauthor{{，等}{兰玉彬}{，闫瑜}{，王宝聚}{，宋灿灿}{，王国宾}}\nolinebreak\@.
+  \bibtitle{智能施药机器人关键技术研究现状及发展趋势}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{农业工程学报}，\bibyear{2022}，\bibvolume{38}\bibnumber{（20）\!\!}\thinspace{}\textnormal{：}\bibpages{30\textnormal{-}40}\nolinebreak\@.
+  \url{https://www.aeeisp.com/nygcxb/cn/article/Y2022/I20/30}\nolinebreak\@.
 
 \bibitem{zhang2009greenhouse}
-\bibauthor{{, 等}{张俊雄}{, 曹峥勇}{, 耿长兴}{,
-  李伟}}\nolinebreak\@.
-  \bibtitle{温室精准对靶喷雾机器人研制}\bibmark{[J/OL]}\nolinebreak\@.
-  \bibjournal{农业工程学报}, \bibyear{2009},
-  \bibvolume{25}\bibnumber{(13)}\textnormal{:
-  }\bibpages{70\textnormal{-}73}\nolinebreak\@.
+\bibauthor{{，等}{张俊雄}{，曹峥勇}{，耿长兴}{，李伟}}\nolinebreak\@.
+  \bibtitle{温室精准对靶喷雾机器人研制}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{农业工程学报}，\bibyear{2009}，\bibvolume{25}\bibnumber{（13）\!\!}\thinspace{}\textnormal{：}\bibpages{70\textnormal{-}73}\nolinebreak\@.
+  \url{https://www.aeeisp.com/cn/article/id/20091314}\nolinebreak\@.
 
 \bibitem{gouttefarde2007wrench}
-\bibauthor{{, et~al}{Gouttefarde M}{, Merlet J-P}{, Daney D}}\nolinebreak\@.
+\bibauthor{{，et~al}{GOUTTEFARDE M}{，MERLET J-P}{，DANEY D}}\nolinebreak\@.
   \bibtitle{Wrench-Feasible Workspace of Parallel Cable-Driven
-  Mechanisms}\bibmark{[C/OL]} //\thinspace{}\bibbooktitle{Proceedings 2007 IEEE
-  International Conference on Robotics and Automation}\nolinebreak\@.
-  \bibyear{2007}\textnormal{: }\bibpages{1492\textnormal{-}1497}\nolinebreak\@.
+  Mechanisms}\bibmark{\,［C/OL］} //\thinspace{}\bibbooktitle{Proceedings
+  2007 IEEE International Conference on Robotics and
+  Automation}，\bibaddress{［S.l.］}，\bibyear{2007}\thinspace{}\textnormal{：}\bibpages{1492\textnormal{-}1497}\nolinebreak\@.
+  \url{https://ieeexplore.ieee.org/document/363195}\nolinebreak\@.
 
 \bibitem{phan2021wrenchclosure}
-\bibauthor{{, et~al}{Luan P~G}{, Thinh N~T}}\nolinebreak\@.
+\bibauthor{{，et~al}{LUAN P~G}{，THINH N~T}}\nolinebreak\@.
   \bibtitle{Wrench-Closure Condition of Cable-Driven Parallel
-  Manipulators}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Applied Sciences},
-  \bibyear{2021}, \bibvolume{11}\bibnumber{(9)}\textnormal{:
-  }\bibpages{4228}\nolinebreak\@.
+  Manipulators}\bibmark{\,［J/OL］}\nolinebreak\@. \bibjournal{Applied
+  Sciences}，\bibyear{2021}，\bibvolume{11}\bibnumber{（9）\!\!}\thinspace{}\textnormal{：}\bibpages{4228}\nolinebreak\@.
+  \url{https://www.mdpi.com/2076-3417/11/9/4228}\nolinebreak\@.
 
 \bibitem{wang2022schonflies}
-\bibauthor{{, et~al}{Wang R}{, Xie Y}{, Chen X}{, Li Y}}\nolinebreak\@.
+\bibauthor{{，et~al}{WANG R}{，XIE Y}{，CHEN X}{，LI Y}}\nolinebreak\@.
   \bibtitle{Kinematic and Dynamic Modeling and Workspace Analysis of a
   Suspended Cable-Driven Parallel Robot for Sch{\"o}nflies
-  Motions}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Machines},
-  \bibyear{2022}, \bibvolume{10}\bibnumber{(6)}\textnormal{:
-  }\bibpages{451}\nolinebreak\@.
+  Motions}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{Machines}，\bibyear{2022}，\bibvolume{10}\bibnumber{（6）\!\!}\thinspace{}\textnormal{：}\bibpages{451}\nolinebreak\@.
+  \url{https://www.mdpi.com/2075-1702/10/6/451}\nolinebreak\@.
 
 \bibitem{gonzalez2023singleloop}
-\bibauthor{{, et~al}{Gonz{\'a}lez-Rodr{\'i}guez A}{, Mart{\'i}n-Parra A}{,
-  Ju{\'a}rez-P{\'e}rez S}{, Rodr{\'i}guez-Rosa D}{, Moya-Fern{\'a}ndez F}{,
-  Castillo-Garc{\'i}a F~J}{, Rosado-Linares J}}\nolinebreak\@.
+\bibauthor{{，et~al}{GONZ{\'A}LEZ-RODR{\'I}GUEZ A}{，MART{\'I}N-PARRA
+  A}{，JU{\'A}REZ-P{\'E}REZ S}{，RODR{\'I}GUEZ-ROSA D}{，MOYA-FERN{\'A}NDEZ
+  F}{，CASTILLO-GARC{\'I}A F~J}{，ROSADO-LINARES J}}\nolinebreak\@.
   \bibtitle{Dynamic Model of a Novel Planar Cable Driven Parallel Robot with a
-  Single Cable Loop}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Actuators},
-  \bibyear{2023}, \bibvolume{12}\bibnumber{(5)}\textnormal{:
-  }\bibpages{200}\nolinebreak\@.
+  Single Cable Loop}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{Actuators}，\bibyear{2023}，\bibvolume{12}\bibnumber{（5）\!\!}\thinspace{}\textnormal{：}\bibpages{200}\nolinebreak\@.
+  \url{https://www.mdpi.com/2076-0825/12/5/200}\nolinebreak\@.
 
 \bibitem{juarez2022dynamiccontrol}
-\bibauthor{{, et~al}{Ju{\'a}rez-P{\'e}rez S}{, Mart{\'i}n-Parra A}{, Arena A}{,
-  Ottaviano E}{, Gattulli V}{, Castillo-Garc{\'i}a F~J}}\nolinebreak\@.
+\bibauthor{{，et~al}{JU{\'A}REZ-P{\'E}REZ S}{，MART{\'I}N-PARRA A}{，ARENA
+  A}{，OTTAVIANO E}{，GATTULLI V}{，CASTILLO-GARC{\'I}A F~J}}\nolinebreak\@.
   \bibtitle{Dynamic Control of a Novel Planar Cable-Driven Parallel Robot with
-  a Large Wrench Feasible Workspace}\bibmark{[J/OL]}\nolinebreak\@.
-  \bibjournal{Actuators}, \bibyear{2022},
-  \bibvolume{11}\bibnumber{(12)}\textnormal{: }\bibpages{367}\nolinebreak\@.
+  a Large Wrench Feasible Workspace}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{Actuators}，\bibyear{2022}，\bibvolume{11}\bibnumber{（12）\!\!}\thinspace{}\textnormal{：}\bibpages{367}\nolinebreak\@.
+  \url{https://www.mdpi.com/2076-0825/11/12/367}\nolinebreak\@.
 
 \bibitem{tang2015trajectory}
-\bibauthor{{, et~al}{Tang L}{, Tang X}{, Jiang X}{, Gosselin C}}\nolinebreak\@.
-  \bibtitle{Dynamic trajectory planning study of planar two-dof redundantly
-  actuated cable-suspended parallel robots}\bibmark{[J/OL]}\nolinebreak\@.
-  \bibjournal{Mechatronics}, \bibyear{2015}, \bibvolume{30}\textnormal{:
-  }\bibpages{187\textnormal{-}197}\nolinebreak\@.
+\bibauthor{{，et~al}{TANG L}{，TANG X}{，JIANG X}{，GOSSELIN
+  C}}\nolinebreak\@. \bibtitle{Dynamic trajectory planning study of planar
+  two-dof redundantly actuated cable-suspended parallel
+  robots}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{Mechatronics}，\bibyear{2015}，\bibvolume{30}\thinspace{}\textnormal{：}\bibpages{187\textnormal{-}197}\nolinebreak\@.
+  \url{https://www.sciencedirect.com/science/article/abs/pii/S0957415815001208}\nolinebreak\@.
 
 \bibitem{feiler2023mechatronic}
-\bibauthor{{, et~al}{Feiler G}{, Knechtelsdorfer U}{, Schwegel M}{, Kugi
+\bibauthor{{，et~al}{FEILER G}{，KNECHTELSDORFER U}{，SCHWEGEL M}{，KUGI
   A}}\nolinebreak\@. \bibtitle{Mechatronic design of a class of planar
-  cable-driven parallel robots}\bibmark{[J/OL]}\nolinebreak\@.
-  \bibjournal{Mechatronics}, \bibyear{2023}, \bibvolume{94}\textnormal{:
-  }\bibpages{103034}\nolinebreak\@.
+  cable-driven parallel robots}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{Mechatronics}，\bibyear{2023}，\bibvolume{94}\thinspace{}\textnormal{：}\bibpages{103034}\nolinebreak\@.
+  \url{https://www.sciencedirect.com/science/article/pii/S0957415823000909}\nolinebreak\@.
 
 \bibitem{wang2024dynamictension}
-\bibauthor{{, et~al}{Wang K}{, Hu Z~H}{, Zhang C~S}{, Han Z~W}{, Deng
+\bibauthor{{，et~al}{WANG K}{，HU Z~H}{，ZHANG C~S}{，HAN Z~W}{，DENG
   C~W}}\nolinebreak\@. \bibtitle{Dynamic Modeling and Optimization of Tension
   Distribution for a Cable-Driven Parallel
-  Robot}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Applied Sciences},
-  \bibyear{2024}, \bibvolume{14}\bibnumber{(15)}\textnormal{:
-  }\bibpages{6478}\nolinebreak\@.
+  Robot}\bibmark{\,［J/OL］}\nolinebreak\@. \bibjournal{Applied
+  Sciences}，\bibyear{2024}，\bibvolume{14}\bibnumber{（15）\!\!}\thinspace{}\textnormal{：}\bibpages{6478}\nolinebreak\@.
+  \url{https://www.mdpi.com/2076-3417/14/15/6478}\nolinebreak\@.
 
 \bibitem{piao2019indirectforce}
-\bibauthor{{, et~al}{Piao J}{, Kim E-S}{, Choi H}{, Moon C-B}{, Choi E}{, Park
-  J-O}{, Kim C-S}}\nolinebreak\@. \bibtitle{Indirect Force Control of a
-  Cable-Driven Parallel Robot: Tension Estimation using Artificial Neural
-  Network trained by Force Sensor Measurements}\bibmark{[J/OL]}\nolinebreak\@.
-  \bibjournal{Sensors}, \bibyear{2019},
-  \bibvolume{19}\bibnumber{(11)}\textnormal{: }\bibpages{2520}\nolinebreak\@.
+\bibauthor{{，et~al}{PIAO J}{，KIM E-S}{，CHOI H}{，MOON C-B}{，CHOI
+  E}{，PARK J-O}{，KIM C-S}}\nolinebreak\@. \bibtitle{Indirect Force Control
+  of a Cable-Driven Parallel Robot: Tension Estimation using Artificial Neural
+  Network trained by Force Sensor
+  Measurements}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{Sensors}，\bibyear{2019}，\bibvolume{19}\bibnumber{（11）\!\!}\thinspace{}\textnormal{：}\bibpages{2520}\nolinebreak\@.
+  \url{https://www.mdpi.com/1424-8220/19/11/2520}\nolinebreak\@.
 
 \bibitem{cao2023realtimetension}
-\bibauthor{{, et~al}{Cao S}{, Luo Z}{, Quan C}}\nolinebreak\@.
+\bibauthor{{，et~al}{CAO S}{，LUO Z}{，QUAN C}}\nolinebreak\@.
   \bibtitle{Real-Time Tension Distribution Design for Cable-Driven Parallel
-  Robot}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Applied Sciences},
-  \bibyear{2023}, \bibvolume{13}\bibnumber{(1)}\textnormal{:
-  }\bibpages{10}\nolinebreak\@.
+  Robot}\bibmark{\,［J/OL］}\nolinebreak\@. \bibjournal{Applied
+  Sciences}，\bibyear{2023}，\bibvolume{13}\bibnumber{（1）\!\!}\thinspace{}\textnormal{：}\bibpages{10}\nolinebreak\@.
+  \url{https://www.mdpi.com/2076-3417/13/1/10}\nolinebreak\@.
 
 \bibitem{song2024realtimemethod}
-\bibauthor{{, et~al}{Song D}{, Lu M}{, Zhao L}{, Sun Z}{, Wang H}{, Zhang
+\bibauthor{{，et~al}{SONG D}{，LU M}{，ZHAO L}{，SUN Z}{，WANG H}{，ZHANG
   L}}\nolinebreak\@. \bibtitle{A novel real-time tension distribution method
-  for cable-driven parallel robots}\bibmark{[J/OL]}\nolinebreak\@.
-  \bibjournal{Robotica}, \bibyear{2024},
-  \bibvolume{42}\bibnumber{(11)}\textnormal{:
-  }\bibpages{3692\textnormal{-}3708}\nolinebreak\@.
+  for cable-driven parallel robots}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{Robotica}，\bibyear{2024}，\bibvolume{42}\bibnumber{（11）\!\!}\thinspace{}\textnormal{：}\bibpages{3692\textnormal{-}3708}\nolinebreak\@.
+  \url{https://www.cambridge.org/core/journals/robotica/article/novel-realtime-tension-distribution-method-for-cabledriven-parallel-robots/EC5DF4EC869863D3726880FEB8B27180}\nolinebreak\@.
 
 \bibitem{su2016cablemass}
-\bibauthor{{, 等}{苏宇}{, 仇原鹰}{, 韦慧玲}}\nolinebreak\@.
-  \bibtitle{考虑绳索质量和惯性力影响的绳牵引并联机器人动力学建模与张力优化分布}\bibmark{[J/OL]}\nolinebreak\@.
-  \bibjournal{工程力学}, \bibyear{2016},
-  \bibvolume{33}\bibnumber{(11)}\textnormal{:
-  }\bibpages{231\textnormal{-}239}\nolinebreak\@.
+\bibauthor{{，等}{苏宇}{，仇原鹰}{，韦慧玲}}\nolinebreak\@.
+  \bibtitle{考虑绳索质量和惯性力影响的绳牵引并联机器人动力学建模与张力优化分布}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{工程力学}，\bibyear{2016}，\bibvolume{33}\bibnumber{（11）\!\!}\thinspace{}\textnormal{：}\bibpages{231\textnormal{-}239}\nolinebreak\@.
+  \url{https://pubs.cstam.org.cn/article/doi/10.6052/j.issn.1000-4750.2015.03.0230}\nolinebreak\@.
 
 \bibitem{tanaka1988skycam}
-\bibauthor{{, et~al}{Tanaka M}{, Seguchi Y}{, Shimada S}}\nolinebreak\@.
-  \bibtitle{Kineto-statics of skycam-type wire transport system}\bibmark{[C]}
-  //\thinspace{}\bibbooktitle{Proceedings of the USA-Japan Symposium on
-  Flexible Automation: Crossing Bridges---Advances in Flexible Automation and
-  Robotics}\nolinebreak\@. \bibaddress{Minneapolis, MN, USA}\textnormal{:
-  }\bibpublisher{American Society of Mechanical Engineers (ASME)},
-  \bibyear{1988}\textnormal{: }\bibpages{689\textnormal{-}694}\nolinebreak\@.
+\bibauthor{{，et~al}{TANAKA M}{，SEGUCHI Y}{，SHIMADA S}}\nolinebreak\@.
+  \bibtitle{Kineto-statics of skycam-type wire transport
+  system}\bibmark{\,［C］} //\thinspace{}\bibbooktitle{Proceedings of the
+  USA-Japan Symposium on Flexible Automation: Crossing Bridges---Advances in
+  Flexible Automation and Robotics}，\bibaddress{Minneapolis, MN,
+  USA}\thinspace{}\textnormal{：}\bibpublisher{American Society of Mechanical
+  Engineers
+  (ASME)}，\bibyear{1988}\thinspace{}\textnormal{：}\bibpages{689\textnormal{-}694}\nolinebreak\@.
 
 \bibitem{albus1993nistrobocrane}
-\bibauthor{{, et~al}{Albus J~S}{, Bostelman R~V}{, Dagalakis
+\bibauthor{{，et~al}{ALBUS J~S}{，BOSTELMAN R~V}{，DAGALAKIS
   N~G}}\nolinebreak\@. \bibtitle{The NIST
-  robocrane}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Journal of Robotic
-  Systems}, \bibyear{1993}, \bibvolume{10}\bibnumber{(5)}\textnormal{:
-  }\bibpages{709\textnormal{-}724}\nolinebreak\@.
+  robocrane}\bibmark{\,［J/OL］}\nolinebreak\@. \bibjournal{Journal of
+  Robotic
+  Systems}，\bibyear{1993}，\bibvolume{10}\bibnumber{（5）\!\!}\thinspace{}\textnormal{：}\bibpages{709\textnormal{-}724}\nolinebreak\@.
+  \url{https://doi.org/10.1002/rob.4620100509}\nolinebreak\@.
 
 \bibitem{chen2019waistrehab}
-\bibauthor{{, et~al}{Chen Q}{, Zi B}{, Sun Z}{, Li Y}{, Xu Q}}\nolinebreak\@.
-  \bibtitle{Design and Development of a New Cable-Driven Parallel Robot for
-  Waist Rehabilitation}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{IEEE/ASME
-  Transactions on Mechatronics}, \bibyear{2019},
-  \bibvolume{24}\bibnumber{(4)}\textnormal{:
-  }\bibpages{1497\textnormal{-}1507}\nolinebreak\@.
+\bibauthor{{，et~al}{CHEN Q}{，ZI B}{，SUN Z}{，LI Y}{，XU
+  Q}}\nolinebreak\@. \bibtitle{Design and Development of a New Cable-Driven
+  Parallel Robot for Waist Rehabilitation}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{IEEE/ASME Transactions on
+  Mechatronics}，\bibyear{2019}，\bibvolume{24}\bibnumber{（4）\!\!}\thinspace{}\textnormal{：}\bibpages{1497\textnormal{-}1507}\nolinebreak\@.
+  \url{https://doi.org/10.1109/TMECH.2019.2917294}\nolinebreak\@.
 
 \bibitem{qian2018review}
-\bibauthor{{, et~al}{Qian S}{, Zi B}{, Shang W-W}{, Xu Q-S}}\nolinebreak\@.
+\bibauthor{{，et~al}{QIAN S}{，ZI B}{，SHANG W-W}{，XU Q-S}}\nolinebreak\@.
   \bibtitle{A Review on Cable-driven Parallel
-  Robots}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Chinese Journal of
-  Mechanical Engineering}, \bibyear{2018},
-  \bibvolume{31}\bibnumber{(4)}\textnormal{: }\bibpages{66}\nolinebreak\@.
+  Robots}\bibmark{\,［J/OL］}\nolinebreak\@. \bibjournal{Chinese Journal of
+  Mechanical
+  Engineering}，\bibyear{2018}，\bibvolume{31}\bibnumber{（4）\!\!}\thinspace{}\textnormal{：}\bibpages{66}\nolinebreak\@.
+  \url{https://link.springer.com/article/10.1186/s10033-018-0267-9}\nolinebreak\@.
 
 \bibitem{tho2022overview}
-\bibauthor{{, et~al}{Tho T~P}{, Thinh N~T}}\nolinebreak\@. \bibtitle{An
+\bibauthor{{，et~al}{THO T~P}{，THINH N~T}}\nolinebreak\@. \bibtitle{An
   Overview of Cable-Driven Parallel Robots: Workspace, Tension Distribution,
-  and Cable Sagging}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Mathematical
-  Problems in Engineering}, \bibyear{2022},
-  \bibvolume{2022}\bibnumber{(1)}\textnormal{:
-  }\bibpages{2199748}\nolinebreak\@.
+  and Cable Sagging}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{Mathematical Problems in
+  Engineering}，\bibyear{2022}，\bibvolume{2022}\bibnumber{（1）\!\!}\thinspace{}\textnormal{：}\bibpages{2199748}\nolinebreak\@.
+  \url{https://onlinelibrary.wiley.com/doi/10.1155/2022/2199748}\nolinebreak\@.
 
 \bibitem{begey2019dynamiccontrol}
-\bibauthor{{, et~al}{Begey J}{, Cuvillon L}{, Lesellier M}{, Gouttefarde M}{,
-  Gangloff J}}\nolinebreak\@. \bibtitle{Dynamic Control of Parallel Robots
-  Driven by Flexible Cables and Actuated by Position-Controlled
-  Winches}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{IEEE Transactions on
-  Robotics}, \bibyear{2019}, \bibvolume{35}\bibnumber{(1)}\textnormal{:
-  }\bibpages{286\textnormal{-}293}\nolinebreak\@.
+\bibauthor{{，et~al}{BEGEY J}{，CUVILLON L}{，LESELLIER M}{，GOUTTEFARDE
+  M}{，GANGLOFF J}}\nolinebreak\@. \bibtitle{Dynamic Control of Parallel
+  Robots Driven by Flexible Cables and Actuated by Position-Controlled
+  Winches}\bibmark{\,［J/OL］}\nolinebreak\@. \bibjournal{IEEE Transactions
+  on
+  Robotics}，\bibyear{2019}，\bibvolume{35}\bibnumber{（1）\!\!}\thinspace{}\textnormal{：}\bibpages{286\textnormal{-}293}\nolinebreak\@.
+  \url{https://doi.org/10.1109/TRO.2018.2875415}\nolinebreak\@.
 
 \bibitem{you2019vision}
-\bibauthor{{, 等}{游虹}{, 尚伟伟}{, 张彬}{, 张飞}{,
-  丛爽}}\nolinebreak\@.
-  \bibtitle{基于高速视觉的绳索牵引并联机器人轨迹跟踪控制}\bibmark{[J/OL]}\nolinebreak\@.
-  \bibjournal{机械工程学报}, \bibyear{2019},
-  \bibvolume{55}\bibnumber{(5)}\textnormal{:
-  }\bibpages{19\textnormal{-}26}\nolinebreak\@.
+\bibauthor{{，等}{游虹}{，尚伟伟}{，张彬}{，张飞}{，丛爽}}\nolinebreak\@.
+  \bibtitle{基于高速视觉的绳索牵引并联机器人轨迹跟踪控制}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{机械工程学报}，\bibyear{2019}，\bibvolume{55}\bibnumber{（5）\!\!}\thinspace{}\textnormal{：}\bibpages{19\textnormal{-}26}\nolinebreak\@.
+  \url{https://qikan.cmes.org/jxgcxb/EN/10.3901/JME.2019.05.019}\nolinebreak\@.
 
 \bibitem{zhang2016highspeedtraj}
-\bibauthor{{, 等}{张文佳}{, 尚伟伟}}\nolinebreak\@.
-  \bibtitle{2自由度绳索牵引并联机器人的高速点到点轨迹规划方法}\bibmark{[J/OL]}\nolinebreak\@.
-  \bibjournal{机械工程学报}, \bibyear{2016},
-  \bibvolume{52}\bibnumber{(3)}\textnormal{:
-  }\bibpages{1\textnormal{-}8}\nolinebreak\@.
+\bibauthor{{，等}{张文佳}{，尚伟伟}}\nolinebreak\@.
+  \bibtitle{2自由度绳索牵引并联机器人的高速点到点轨迹规划方法}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{机械工程学报}，\bibyear{2016}，\bibvolume{52}\bibnumber{（3）\!\!}\thinspace{}\textnormal{：}\bibpages{1\textnormal{-}8}\nolinebreak\@.
+  \url{https://qikan.cmes.org/jxgcxb/EN/10.3901/JME.2016.03.001}\nolinebreak\@.
 
 \bibitem{zhang2018spatialtraj}
-\bibauthor{{, et~al}{Zhang N}{, Shang W}{, Cong S}}\nolinebreak\@.
+\bibauthor{{，et~al}{ZHANG N}{，SHANG W}{，CONG S}}\nolinebreak\@.
   \bibtitle{Dynamic Trajectory Planning for a Spatial 3-DoF Cable-Suspended
-  Parallel Robot}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Mechanism and
-  Machine Theory}, \bibyear{2018}, \bibvolume{122}\textnormal{:
-  }\bibpages{177\textnormal{-}196}\nolinebreak\@.
+  Parallel Robot}\bibmark{\,［J/OL］}\nolinebreak\@. \bibjournal{Mechanism
+  and Machine
+  Theory}，\bibyear{2018}，\bibvolume{122}\thinspace{}\textnormal{：}\bibpages{177\textnormal{-}196}\nolinebreak\@.
+  \url{https://www.sciencedirect.com/science/article/abs/pii/S0094114X17312041}\nolinebreak\@.
 
 \bibitem{tao2021tensiondistribution}
-\bibauthor{{, et~al}{陶冶}{, 张尚盈}{, 王彦伟}}\nolinebreak\@.
-  \bibtitle{冗余约束绳驱并联机器人的张力分配研究}\bibmark{[J/OL]}\nolinebreak\@.
-  \bibjournal{机械科学与技术}, \bibyear{2021},
-  \bibvolume{40}\bibnumber{(3)}\textnormal{:
-  }\bibpages{344\textnormal{-}349}\nolinebreak\@.
+\bibauthor{{，et~al}{陶冶}{，张尚盈}{，王彦伟}}\nolinebreak\@.
+  \bibtitle{冗余约束绳驱并联机器人的张力分配研究}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{机械科学与技术}，\bibyear{2021}，\bibvolume{40}\bibnumber{（3）\!\!}\thinspace{}\textnormal{：}\bibpages{344\textnormal{-}349}\nolinebreak\@.
+  \url{https://journals.nwpu.edu.cn/jxkxyjs/article/doi/10.13433/j.cnki.1003-8728.20200061?viewType=HTML}\nolinebreak\@.
 
 \bibitem{chen2023hybrid}
-\bibauthor{{, 等}{陈科举}{, 张尚盈}{, 张继磊}{, 罗诗洋}{,
-  张博伟}}\nolinebreak\@.
-  \bibtitle{基于绳驱并联机器人系统刚度的力/位混合控制}\bibmark{[J/OL]}\nolinebreak\@.
-  \bibjournal{机械传动}, \bibyear{2023},
-  \bibvolume{47}\bibnumber{(8)}\textnormal{:
-  }\bibpages{130\textnormal{-}134}\nolinebreak\@.
+\bibauthor{{，等}{陈科举}{，张尚盈}{，张继磊}{，罗诗洋}{，张博伟}}\nolinebreak\@.
+  \bibtitle{基于绳驱并联机器人系统刚度的力/位混合控制}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{机械传动}，\bibyear{2023}，\bibvolume{47}\bibnumber{（8）\!\!}\thinspace{}\textnormal{：}\bibpages{130\textnormal{-}134}\nolinebreak\@.
+  \url{https://qikan.cmes.org/jxcd/CN/10.16578/j.issn.1004.2539.2023.08.018}\nolinebreak\@.
 
 \bibitem{li2019spherical}
-\bibauthor{{, 等}{李永泉}{, 吴鹏涛}{, 张阳}{,
-  张立杰}}\nolinebreak\@.
-  \bibtitle{球面二自由度冗余驱动并联机器人系统动力学参数辨识及控制}\bibmark{[J/OL]}\nolinebreak\@.
-  \bibjournal{中国机械工程}, \bibyear{2019},
-  \bibvolume{30}\bibnumber{(16)}\textnormal{:
-  }\bibpages{1967\textnormal{-}1975}\nolinebreak\@.
+\bibauthor{{，等}{李永泉}{，吴鹏涛}{，张阳}{，张立杰}}\nolinebreak\@.
+  \bibtitle{球面二自由度冗余驱动并联机器人系统动力学参数辨识及控制}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{中国机械工程}，\bibyear{2019}，\bibvolume{30}\bibnumber{（16）\!\!}\thinspace{}\textnormal{：}\bibpages{1967\textnormal{-}1975}\nolinebreak\@.
+  \url{https://qikan.cmes.org/zgjxgc/CN/10.3969/j.issn.1004-132X.2019.16.011}\nolinebreak\@.
 
 \bibitem{cheah2024adaptive}
-\bibauthor{{, et~al}{Cheah S~K}{, Hayes A}{, Caverly R~J}}\nolinebreak\@.
+\bibauthor{{，et~al}{CHEAH S~K}{，HAYES A}{，CAVERLY R~J}}\nolinebreak\@.
   \bibtitle{Adaptive Passivity-Based Pose Tracking Control of Cable-Driven
   Parallel Robots for Multiple Attitude
-  Parameterizations}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{IEEE
-  Transactions on Control Systems Technology}, \bibyear{2024},
-  \bibvolume{32}\bibnumber{(1)}\textnormal{:
-  }\bibpages{202\textnormal{-}213}\nolinebreak\@.
+  Parameterizations}\bibmark{\,［J/OL］}\nolinebreak\@. \bibjournal{IEEE
+  Transactions on Control Systems
+  Technology}，\bibyear{2024}，\bibvolume{32}\bibnumber{（1）\!\!}\thinspace{}\textnormal{：}\bibpages{202\textnormal{-}213}\nolinebreak\@.
+  \url{https://ieeexplore.ieee.org/document/10251408/}\nolinebreak\@.
 
 \bibitem{paty2021pulley}
-\bibauthor{{, et~al}{Paty T}{, Binaud N}{, Caro S}{, Segonds S}}\nolinebreak\@.
-  \bibtitle{Cable-driven Parallel Robot Modelling Considering Pulley Kinematics
-  and Cable Elasticity}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Mechanism
-  and Machine Theory}, \bibyear{2021}, \bibvolume{159}\textnormal{:
-  }\bibpages{104263}\nolinebreak\@.
+\bibauthor{{，et~al}{PATY T}{，BINAUD N}{，CARO S}{，SEGONDS
+  S}}\nolinebreak\@. \bibtitle{Cable-driven Parallel Robot Modelling
+  Considering Pulley Kinematics and Cable
+  Elasticity}\bibmark{\,［J/OL］}\nolinebreak\@. \bibjournal{Mechanism and
+  Machine
+  Theory}，\bibyear{2021}，\bibvolume{159}\thinspace{}\textnormal{：}\bibpages{104263}\nolinebreak\@.
+  \url{https://www.sciencedirect.com/science/article/abs/pii/S0094114X21000215}\nolinebreak\@.
 
 \bibitem{zhang2022calibration}
-\bibauthor{{, et~al}{Zhang Z}{, Xie G}{, Shao Z}{, Gosselin C}}\nolinebreak\@.
-  \bibtitle{Kinematic Calibration of Cable-Driven Parallel Robots Considering
-  the Pulley Kinematics}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Mechanism
-  and Machine Theory}, \bibyear{2022}, \bibvolume{169}\textnormal{:
-  }\bibpages{104648}\nolinebreak\@.
+\bibauthor{{，et~al}{ZHANG Z}{，XIE G}{，SHAO Z}{，GOSSELIN
+  C}}\nolinebreak\@. \bibtitle{Kinematic Calibration of Cable-Driven Parallel
+  Robots Considering the Pulley
+  Kinematics}\bibmark{\,［J/OL］}\nolinebreak\@. \bibjournal{Mechanism and
+  Machine
+  Theory}，\bibyear{2022}，\bibvolume{169}\thinspace{}\textnormal{：}\bibpages{104648}\nolinebreak\@.
+  \url{https://www.sciencedirect.com/science/article/abs/pii/S0094114X21003797}\nolinebreak\@.
 
 \bibitem{santos2022nmpc}
-\bibauthor{{, et~al}{Santos J~C}{, Gouttefarde M}{, Chemori A}}\nolinebreak\@.
-  \bibtitle{A Nonlinear Model Predictive Control for the Position Tracking of
-  Cable-Driven Parallel Robots}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{IEEE
-  Transactions on Robotics}, \bibyear{2022},
-  \bibvolume{38}\bibnumber{(4)}\textnormal{:
-  }\bibpages{2597\textnormal{-}2616}\nolinebreak\@.
+\bibauthor{{，et~al}{SANTOS J~C}{，GOUTTEFARDE M}{，CHEMORI
+  A}}\nolinebreak\@. \bibtitle{A Nonlinear Model Predictive Control for the
+  Position Tracking of Cable-Driven Parallel
+  Robots}\bibmark{\,［J/OL］}\nolinebreak\@. \bibjournal{IEEE Transactions on
+  Robotics}，\bibyear{2022}，\bibvolume{38}\bibnumber{（4）\!\!}\thinspace{}\textnormal{：}\bibpages{2597\textnormal{-}2616}\nolinebreak\@.
+  \url{https://doi.org/10.1109/TRO.2022.3152705}\nolinebreak\@.
 
 \bibitem{bettega2023pathtracking}
-\bibauthor{{, et~al}{Bettega J}{, Piva G}{, Richiedei D}{, Trevisani
+\bibauthor{{，et~al}{BETTEGA J}{，PIVA G}{，RICHIEDEI D}{，TREVISANI
   A}}\nolinebreak\@. \bibtitle{Model Predictive Control for Path Tracking in
   Cable Driven Parallel Robots with Flexible Cables: Collocated vs.
-  Noncollocated Control}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Multibody
-  System Dynamics}, \bibyear{2023}, \bibvolume{58}\textnormal{:
-  }\bibpages{47\textnormal{-}81}\nolinebreak\@.
+  Noncollocated Control}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{Multibody System
+  Dynamics}，\bibyear{2023}，\bibvolume{58}\thinspace{}\textnormal{：}\bibpages{47\textnormal{-}81}\nolinebreak\@.
+  \url{https://link.springer.com/article/10.1007/s11044-023-09881-0}\nolinebreak\@.
 
 \bibitem{jin2024controlreview}
-\bibauthor{{, et~al}{Jin X}{, Zhang H}{, Wang L}{, Li Q}}\nolinebreak\@.
+\bibauthor{{，et~al}{JIN X}{，ZHANG H}{，WANG L}{，LI Q}}\nolinebreak\@.
   \bibtitle{Review on Control Strategies for Cable-Driven Parallel Robots with
-  Model Uncertainties}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Chinese
-  Journal of Mechanical Engineering}, \bibyear{2024},
-  \bibvolume{37}\textnormal{: }\bibpages{156}\nolinebreak\@.
+  Model Uncertainties}\bibmark{\,［J/OL］}\nolinebreak\@. \bibjournal{Chinese
+  Journal of Mechanical
+  Engineering}，\bibyear{2024}，\bibvolume{37}\thinspace{}\textnormal{：}\bibpages{156}\nolinebreak\@.
+  \url{https://link.springer.com/article/10.1186/s10033-024-01149-8}\nolinebreak\@.
 
 \bibitem{yu2024stability}
-\bibauthor{{, et~al}{Yu J}{, Tao J}{, Wang G}{, Li X}{, Wang H}}\nolinebreak\@.
-  \bibtitle{Stability Analysis and Optimal Design of a Cable-Driven Parallel
-  Robot}\bibmark{[J/OL]}\nolinebreak\@. \bibjournal{Robotics and Autonomous
-  Systems}, \bibyear{2024}, \bibvolume{173}\textnormal{:
-  }\bibpages{104611}\nolinebreak\@.
+\bibauthor{{，et~al}{YU J}{，TAO J}{，WANG G}{，LI X}{，WANG
+  H}}\nolinebreak\@. \bibtitle{Stability Analysis and Optimal Design of a
+  Cable-Driven Parallel Robot}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{Robotics and Autonomous
+  Systems}，\bibyear{2024}，\bibvolume{173}\thinspace{}\textnormal{：}\bibpages{104611}\nolinebreak\@.
+  \url{https://www.sciencedirect.com/science/article/abs/pii/S0921889023002506}\nolinebreak\@.
 
 \bibitem{zhao2023fast}
-\bibauthor{{, 等}{赵雅聪}{, 王启明}}\nolinebreak\@.
-  \bibtitle{基于FAST馈源支撑系统的索牵引并联机构的力学分析}\bibmark{[J/OL]}\nolinebreak\@.
-  \bibjournal{机器人}, \bibyear{2023},
-  \bibvolume{45}\bibnumber{(4)}\textnormal{:
-  }\bibpages{431\textnormal{-}438}\nolinebreak\@.
+\bibauthor{{，等}{赵雅聪}{，王启明}}\nolinebreak\@.
+  \bibtitle{基于FAST馈源支撑系统的索牵引并联机构的力学分析}\bibmark{\,［J/OL］}\nolinebreak\@.
+  \bibjournal{机器人}，\bibyear{2023}，\bibvolume{45}\bibnumber{（4）\!\!}\thinspace{}\textnormal{：}\bibpages{431\textnormal{-}438}\nolinebreak\@.
+  \url{https://robot.sia.cn/article/doi/10.13973/j.cnki.robot.220105?viewType=HTML}\nolinebreak\@.
 
 \end{thebibliography}

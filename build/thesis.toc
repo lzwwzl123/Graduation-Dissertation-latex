@@ -9,7 +9,7 @@
 \contentsline {subsection}{\numberline {1.2.4}张力分配与力控制研究现状}{8}{subsection.1.2.4}%
 \contentsline {section}{\numberline {1.3}现有研究存在的问题}{10}{section.1.3}%
 \contentsline {section}{\numberline {1.4}本文研究内容与技术路线}{12}{section.1.4}%
-\contentsline {section}{\numberline {1.5}论文结构安排}{13}{section.1.5}%
+\contentsline {section}{\numberline {1.5}论文结构安排}{14}{section.1.5}%
 \contentsline {section}{\numberline {1.6}本章小结}{14}{section.1.6}%
 \contentsline {chapter}{\numberline {第2章}机器人系统方案设计与机械结构实现}{16}{chapter.2}%
 \contentsline {section}{\numberline {2.1}系统总体方案与构型设计}{16}{section.2.1}%
@@ -35,16 +35,34 @@
 \contentsline {section}{\numberline {4.2}控制系统总体架构}{37}{section.4.2}%
 \contentsline {section}{\numberline {4.3}单电机闭环力矩控制方法}{39}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}控制对象与问题描述}{39}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}基于PID的力矩闭环控制}{39}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.2}基于PID的力矩闭环控制}{40}{subsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.3.3}摩擦补偿设计}{40}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}扰动观测器设计}{41}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.4}扰动观测器设计}{42}{subsection.4.3.4}%
 \contentsline {section}{\numberline {4.4}基于正运动学反馈的末端位姿闭环补偿方法}{43}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}末端位姿误差定义}{43}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}任务空间误差到广义力修正量的构造}{43}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}广义力修正到各电机张力增量的映射}{44}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}控制算法实现流程}{45}{section.4.5}%
-\contentsline {section}{\numberline {4.6}本章小结}{47}{section.4.6}%
-\contentsline {chapter}{\heiti 结\hspace {\ccwd }论}{48}{section*.12}%
-\contentsline {chapter}{\heiti 参考文献}{49}{section*.15}%
-\contentsline {chapter}{哈尔滨工业大学本科毕业论文（设计）原创性声明和使用权限}{53}{chapter*.17}%
-\contentsline {chapter}{\heiti 致\hspace {\ccwd }谢}{54}{section*.18}%
+\contentsline {section}{\numberline {4.5}控制算法实现流程}{46}{section.4.5}%
+\contentsline {section}{\numberline {4.6}本章小结}{46}{section.4.6}%
+\contentsline {chapter}{\numberline {第5章}张力分配算法设计与仿真比较}{48}{chapter.5}%
+\contentsline {section}{\numberline {5.1}引言}{48}{section.5.1}%
+\contentsline {section}{\numberline {5.2}张力分配问题建模}{48}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}目标广义力与张力平衡关系}{48}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}张力分配评价目标}{49}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}单冗余张力通解与可行区间推导}{50}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}张力通解表达式}{50}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}上下界约束诱导的可行区间}{51}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}张力分配算法构造}{52}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}最小范数优化基线法}{52}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}重心法}{53}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}解析中心法}{53}{subsection.5.4.3}%
+\contentsline {section}{\numberline {5.5}仿真比较与算法选择}{54}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}比较工况与评价指标}{54}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}工作空间采样下的张力分布比较}{54}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}典型轨迹工况下的张力变化比较}{56}{subsection.5.5.3}%
+\contentsline {subsection}{\numberline {5.5.4}算法选择与后续应用}{58}{subsection.5.5.4}%
+\contentsline {section}{\numberline {5.6}本章小结}{58}{section.5.6}%
+\contentsline {chapter}{\heiti 结\hspace {\ccwd }论}{60}{section*.13}%
+\contentsline {chapter}{\heiti 参考文献}{61}{section*.16}%
+\contentsline {chapter}{哈尔滨工业大学本科毕业论文（设计）原创性声明和使用权限}{66}{chapter*.18}%
+\contentsline {chapter}{\heiti 致\hspace {\ccwd }谢}{67}{section*.19}%
